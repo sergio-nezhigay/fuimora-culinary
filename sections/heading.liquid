@@ -1,5 +1,13 @@
 {%- render 'custom-colors', id: section.id, background: section.settings.custom_background, text: section.settings.custom_text -%}
 
+{% style %}
+  #section-{{ section.id }} .box--small-fl-auto {
+    --box-auto-top: {{ section.settings.section_padding }}px;
+    padding-top: var(--box-auto-top);
+    padding-bottom: var(--box-auto-top);
+  }
+{% endstyle %}
+
 <div id="section-{{ section.id }}" class="site-box-container container--fullscreen">
 
   <div id="block-{{ section.id }}" class="site-box box--small-fl-auto lap--box--small-fl box__announcement box--typo-big box--center-align box--text-align-{{ section.settings.text_alignment }} box--column-flow" data-order="0" style="min-height:var(--box-min-height)">
@@ -26,7 +34,7 @@
 
             {%- when 'button' -%}
              <a class="button button--solid button--with-icon" href="{{ block.settings.button_link | escape }}" title="{{ block.settings.button_label | escape }}" {{ block.shopify_attributes }}>
-                <span>{{ block.settings.button_label | escape }}</span> 
+                <span>{{ block.settings.button_label | escape }}</span>
                 <span class="icon" aria-hidden="true" role="img">{%- render 'theme-symbols', icon: 'arrow_icon_smallest' -%}</span>
               </a>
 
@@ -70,7 +78,7 @@
             "id": "heading",
             "label": "t:sections.rich-text.blocks.heading.settings.heading.label",
             "default": "Talk about your brand"
-          }, 
+          },
           {
             "type": "select",
             "id": "heading_size",
@@ -126,7 +134,7 @@
           }
         ]
       },
-      { 
+      {
         "type": "text",
         "name": "t:sections.rich-text.blocks.text.name",
         "settings": [
@@ -165,6 +173,16 @@
     ],
     "settings": [
       {
+        "type": "range",
+        "id": "section_padding",
+        "label": "Section padding",
+        "min": 0,
+        "max": 140,
+        "step": 2,
+        "unit": "px",
+        "default": 100
+      },
+      {
         "type": "select",
         "id": "text_alignment",
         "label": "t:sections.rich-text.settings.text_alignment.label",
@@ -196,7 +214,7 @@
         "label": "t:sections.split-extra-words.settings_schema.colors.settings.text",
         "default": "rgba(0,0,0,0)"
       }
-    ], 
+    ],
     "presets": [{
       "name": "t:sections.heading.name",
       "blocks": [

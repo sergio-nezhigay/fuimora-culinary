@@ -84,6 +84,7 @@
       ],
       "disabled": true,
       "settings": {
+        "section_padding": 100,
         "text_alignment": "left",
         "custom_background": "rgba(0,0,0,0)",
         "custom_text": "rgba(0,0,0,0)"
@@ -205,6 +206,7 @@
         "custom_liquid_dLnEyg"
       ],
       "settings": {
+        "section_padding": 100,
         "text_alignment": "left",
         "custom_background": "#eceeed",
         "custom_text": "rgba(0,0,0,0)"
@@ -250,6 +252,7 @@
         "h3 {font-family: \"Libre Franklin\", sans-serif; font-size: 28px;}"
       ],
       "settings": {
+        "section_padding": 100,
         "text_alignment": "left",
         "custom_background": "#262221",
         "custom_text": "#ffffff"
@@ -450,6 +453,7 @@
         "text_YqBCtP"
       ],
       "settings": {
+        "section_padding": 100,
         "text_alignment": "left",
         "custom_background": "#eceeed",
         "custom_text": "rgba(0,0,0,0)"
@@ -625,6 +629,7 @@
         "button_xNemT6"
       ],
       "settings": {
+        "section_padding": 50,
         "text_alignment": "left",
         "custom_background": "#eceeed",
         "custom_text": "rgba(0,0,0,0)"
@@ -649,6 +654,7 @@
         ".box--small-fl-auto {min-height: 25vh !important; padding-bottom: 0;}"
       ],
       "settings": {
+        "section_padding": 100,
         "text_alignment": "center",
         "custom_background": "#262221",
         "custom_text": "#ffffff"
