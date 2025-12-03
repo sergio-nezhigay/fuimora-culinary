@@ -1,4 +1,35 @@
-<div class="site-box-container container--fullscreen box--can-stick">
+<style>
+  #section-{{ section.id }} {
+    --contact-padding-top: {{ section.settings.section_padding_top }}px;
+    --contact-padding-bottom: {{ section.settings.section_padding_bottom }}px;
+    --contact-form-spacing: {{ section.settings.form_spacing }}px;
+  }
+
+  {% unless section.settings.enable_fullheight %}
+  #section-{{ section.id }} .site-box {
+    min-height: auto !important;
+  }
+  #section-{{ section.id }} .reduce-top-margin {
+    min-height: auto !important;
+  }
+  {% endunless %}
+
+  #section-{{ section.id }} .box__text .site-box-content {
+    padding-top: var(--contact-padding-top);
+    padding-bottom: var(--contact-padding-bottom);
+  }
+
+  #section-{{ section.id }} .simple-grid .grid__item {
+    margin-bottom: var(--contact-form-spacing);
+  }
+
+  #section-{{ section.id }} .form-vertical {
+    margin-top: calc(var(--contact-form-spacing) * 1.5);
+    margin-bottom: calc(var(--contact-form-spacing) * 1.5);
+  }
+</style>
+
+<div class="site-box-container container--fullscreen box--can-stick" id="section-{{ section.id }}">
   {% comment %} -- BEGIN Anchor Link -- {% endcomment %}
   <div id="free-guide"></div>
   {% comment %} -- END Anchor Link -- {% endcomment %}
@@ -237,6 +268,47 @@
           }
         ],
         "default": "h2"
+      },
+      {
+        "type": "header",
+        "content": "Spacing"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_fullheight",
+        "label": "Enable full viewport height",
+        "default": false,
+        "info": "When disabled, section will be content-sized"
+      },
+      {
+        "type": "range",
+        "id": "section_padding_top",
+        "min": 0,
+        "max": 150,
+        "step": 10,
+        "unit": "px",
+        "label": "Top padding",
+        "default": 60
+      },
+      {
+        "type": "range",
+        "id": "section_padding_bottom",
+        "min": 0,
+        "max": 150,
+        "step": 10,
+        "unit": "px",
+        "label": "Bottom padding",
+        "default": 60
+      },
+      {
+        "type": "range",
+        "id": "form_spacing",
+        "min": 10,
+        "max": 80,
+        "step": 5,
+        "unit": "px",
+        "label": "Form field spacing",
+        "default": 20
       }
     ],
     "blocks": [

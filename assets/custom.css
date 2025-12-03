@@ -777,3 +777,25 @@ cart-form {
   ;
   padding: 4px 35px !important;
 }
+
+/* ----- Contact Form Section - Responsive Spacing ----- */
+
+/* Tablet adjustments (769-1024px) */
+@media (max-width: 1024px) {
+  [id^="section-template--"][id$="contact_form"] .box__text .site-box-content {
+    padding-top: max(40px, calc(var(--contact-padding-top, 60px) * 0.7));
+    padding-bottom: max(40px, calc(var(--contact-padding-bottom, 60px) * 0.7));
+  }
+}
+
+/* Mobile adjustments (≤768px) */
+@media (max-width: 768px) {
+  [id^="section-template--"][id$="contact_form"] .box__text .site-box-content {
+    padding-top: max(30px, calc(var(--contact-padding-top, 60px) * 0.5));
+    padding-bottom: max(30px, calc(var(--contact-padding-bottom, 60px) * 0.5));
+  }
+
+  [id^="section-template--"][id$="contact_form"] .simple-grid .grid__item {
+    margin-bottom: max(15px, calc(var(--contact-form-spacing, 20px) * 0.75));
+  }
+}

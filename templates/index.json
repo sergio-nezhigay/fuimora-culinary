@@ -971,7 +971,11 @@
         "map_address": "",
         "map_api": "",
         "map_style": "light",
-        "seo_h_tag": "h2"
+        "seo_h_tag": "h2",
+        "enable_fullheight": false,
+        "section_padding_top": 60,
+        "section_padding_bottom": 60,
+        "form_spacing": 20
       }
     },
     "final_cta_new": {
