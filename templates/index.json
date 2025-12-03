@@ -973,6 +973,20 @@
         "map_style": "light",
         "seo_h_tag": "h2"
       }
+    },
+    "final_cta_new": {
+      "type": "final-cta",
+      "settings": {
+        "image": "shopify://shop_images/final-cta-bg-image-for-restaurants-close-company.png",
+        "height": 500,
+        "overlay_color": "#000000",
+        "overlay_opacity": 50,
+        "title": "Final value prop and reason someone should purchase your product today",
+        "text": "<p>Our product does X, Y, Z (articulate main benefit your product provides & explain how you do it in a proprietary or unique way).</p>",
+        "text_color": "#ffffff",
+        "button_label": "SHOP NOW",
+        "button_link": "shopify://collections/all"
+      }
     }
   },
   "order": [
@@ -997,6 +1011,7 @@
     "image_with_text_tTxgdM",
     "16372498804121dda9",
     "image_with_text_K77c33",
-    "contact_form_nHGEkH"
+    "contact_form_nHGEkH",
+    "final_cta_new"
   ]
 }
