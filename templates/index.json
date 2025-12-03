@@ -995,6 +995,39 @@
         "button_label": "SHOP NOW",
         "button_link": "shopify://collections/all"
       }
+    },
+    "testimonials_v2": {
+      "type": "testimonials-v2",
+      "blocks": {
+        "testimonial_1": {
+          "type": "text",
+          "settings": {
+            "quote_content": "<p>This is a testimonial for the new section. It looks great and works perfectly on all devices.</p>",
+            "quote_author": "John Doe",
+            "quote_caption": "CEO, Example Corp"
+          }
+        },
+        "testimonial_2": {
+          "type": "text",
+          "settings": {
+            "quote_content": "<p>Another testimonial to test the slider functionality. Swiping and navigation should work smoothly.</p>",
+            "quote_author": "Jane Smith",
+            "quote_caption": "CTO, Tech Inc"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_1",
+        "testimonial_2"
+      ],
+      "settings": {
+        "title": "New Testimonials",
+        "subtitle": "See what people are saying",
+        "show_avatars": true,
+        "custom_background": "rgba(0,0,0,0)",
+        "custom_text": "rgba(0,0,0,0)",
+        "seo_h_tag": "h2"
+      }
     }
   },
   "order": [
@@ -1008,6 +1041,7 @@
     "1636106675d59d7642",
     "rich_text_MBckaU",
     "1636106673daa45393",
+    "testimonials_v2",
     "heading_QtRPz9",
     "image_with_text_Nj8R6X",
     "16371348113d6d6d6d",
