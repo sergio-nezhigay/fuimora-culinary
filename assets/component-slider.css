@@ -153,7 +153,7 @@ html[dir=rtl] .css-slider-dot-navigation {
   background: transparent;
   position: relative;
   margin-top: 40px;
-  margin-bottom: 0;
+  margin-bottom: 40px;
   padding: 0;
 }
 
