@@ -1,0 +1,163 @@
+{{- 'image-with-form.out.css' | asset_url | stylesheet_tag -}}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top_mb }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mb }}px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<section
+  class="section-{{ section.id }} image-with-form custom-container section-{{ section.id }}-padding"
+>
+  <div class="image-with-form__block--content">
+    {% if section.settings.title != blank and section.settings.subtitle != blank %}
+      <div class="image-with-form__text-content">
+        <h2>{{ section.settings.title }}</h2>
+        <h4>{{ section.settings.subtitle }}</h4>
+      </div>
+    {% endif %}
+    {% if section.settings.form_id != blank %}
+      <div style="margin:0 auto;" class="pxFormGenerator" id="{{ section.settings.form_id }}"></div>
+    {% endif %}
+  </div>
+
+  <div class="image-with-form__block--image{% if section.settings.image_left == true %} image-left {% endif %}">
+    {% if section.settings.video_url_visible == true %}
+      {% if section.settings.video_url != blank %}
+        {% if section.settings.video_url.type == 'youtube' %}
+          <iframe src="//www.youtube.com/embed/{{ section.settings.video_url.id }}?rel=0&showinfo=0&vq=720" width="850" height="480" frameborder="0" allowfullscreen></iframe>
+        {% endif %}
+        {% if section.settings.video_url.type == 'vimeo' %}
+          <iframe src="//player.vimeo.com/video/{{ section.settings.video_url.id }}?color={{ settings.color_button | remove: "#" }}&byline=0&portrait=0&badge=0" width="850" height="480" frameborder="0" allowfullscreen></iframe>
+        {% endif %}
+      {% else %}
+        {% if section.settings.image != blank %}
+          {%- liquid
+            assign image_width = section.settings.image.width
+            assign image_height = image_width | divided_by: section.settings.image.aspect_ratio
+          -%}
+          {{ section.settings.image | image_url: width: 1400, format: 'webp' | image_tag: width: image_width, height: image_height, loading: 'lazy', fetchpriority: 'high', sizes: '(max-width: 750px) 350px, 700px', widths: '350, 700, 1100, 1400', alt: 'Banner image near form' }}
+        {% endif %}
+      {% endif %}
+    {% else %}
+      {%- if section.settings.video != blank -%}
+        {{ section.settings.video | video_tag: autoplay: true, loop: true, playsinline: true, muted: true, controls: false, image_size: '800x' }}
+      {% else %}
+        {% if section.settings.image != blank %}
+          {%- liquid
+            assign image_width = section.settings.image.width
+            assign image_height = image_width | divided_by: section.settings.image.aspect_ratio
+          -%}
+          {{ section.settings.image | image_url: width: 1400, format: 'webp' | image_tag: width: image_width, height: image_height, loading: 'lazy', fetchpriority: 'high', sizes: '(max-width: 750px) 350px, 700px', widths: '350, 700, 1100, 1400', alt: 'Banner image near form' }}
+        {% endif %}
+      {%- endif -%}
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Image with form",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle"
+    },
+    {
+      "type": "text",
+      "id": "form_id",
+      "label": "Form id"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "image_left",
+      "label": "Image left",
+      "default": false
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "Video"
+    },
+    {
+      "type": "checkbox",
+      "id": "video_url_visible",
+      "label": "Video url visible"
+    },
+    {
+      "type": "video_url",
+      "id": "video_url",
+      "label": "Video link",
+      "accept": ["youtube", "vimeo"]
+    },
+    {
+      "type": "header",
+      "content": "Paddings"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding top (desktop)",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding bottom (desktop)",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mb",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding top (mobile)",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mb",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding bottom (mobile)",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image with form"
+    }
+  ]
+}
+{% endschema %}

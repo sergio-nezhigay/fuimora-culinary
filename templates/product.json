@@ -1,0 +1,115 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "judge_me_reviews_preview_badge_E8nbjf": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "show_vendor": false,
+            "show_badge": true,
+            "show_reviews": true,
+            "show_tax_info": false,
+            "show_sku": false,
+            "show_barcode": false,
+            "stick_product_header_on_mobile": true
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variants_style": "select",
+            "show_color_swatches": true,
+            "unavailable_variants": "show"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_preorder": false,
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": false,
+            "btn_bg_color": "#bb2826",
+            "btn_border_color": "#bb2826",
+            "btn_text_color": "#ffffff"
+          }
+        },
+        "custom_liquid_BiRbW3": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div style=\"display: flex; align-items: center; justify-content: space-evenly; text-align: center;\">\n\t<div class=\"text-w-icon__container\" style=\"padding: 0 2.5%;\">\n\t\t<div class=\"text-w-icon__icon\">\n\t\t\t<span><svg height=\"64\" viewBox=\"0 0 64 64\" width=\"64\" xmlns=\"http://www.w3.org/2000/svg\" style=\"stroke: #262221; stroke-width: 2px;\"><g style=\"fill:none;stroke-miterlimit:10;;stroke-linejoin:round;stroke-linecap:round\"><ellipse cx=\"42\" cy=\"33\" rx=\"12\" ry=\"4\"></ellipse><path d=\"m54 41c0 2.2-5.4 4-12 4s-12-1.8-12-4m24 8c0 2.2-5.4 4-12 4s-12-1.8-12-4\"></path><path d=\"m30 39h-28v-36h60v36h-8\"></path><circle cx=\"32\" cy=\"21\" r=\"8\"></circle><path d=\"m12 21h4m32 0h4m-40-18a10 10 0 0 1 -10 10m60 0a10 10 0 0 1 -10-10m-50 26a10 10 0 0 1 10 10\"></path><path d=\"m30 33v24c0 2.2 5.4 4 12 4s12-1.8 12-4v-24\"></path></g></svg></span>\n\t\t</div>\n\t\t<div class=\"text-w-icon__content\">\n\t\t\t<h3 class=\"text-w-icon__title h5\">30-Day Money Back Guarantee</h3>\n\t\t</div>\n\t</div>\n\t<div class=\"text-w-icon__container\" style=\"padding: 0 2.5%;\">\n\t\t<div class=\"text-w-icon__icon\">\n\t\t\t<span><svg height=\"64\" viewBox=\"0 0 64 64\" width=\"64\" xmlns=\"http://www.w3.org/2000/svg\" style=\"stroke: #262221; stroke-width: 2px;\"><g style=\"fill:none;stroke-linecap:round;stroke-miterlimit:10;;stroke-linejoin:round\"><path d=\"m54 6v10h-10m-12 43a27 27 0 1 1 21.751-43m-8.766 39.678a26.819 26.819 0 0 1 -6.985 2.653m15.751-10.331a27.159 27.159 0 0 1 -4.711 4.945m8.751-12.932a26.821 26.821 0 0 1 -1.58 3.952\"></path><circle cx=\"32\" cy=\"32\" r=\"3\"></circle><path d=\"m33.961 34.261 10.039 7.739m-12-30v17\"></path></g></svg></span>\n\t\t</div>\n\t\t<div class=\"text-w-icon__content\">\n\t\t\t<h3 class=\"text-w-icon__title h5\">Easy 30-Day Returns</h3>\n\t\t</div>\n\t</div>\n\t<div class=\"text-w-icon__container\" style=\"padding: 0 2.5%;\">\n\t\t<div class=\"text-w-icon__icon\">\n\t\t\t<span><svg height=\"64\" viewBox=\"0 0 64 64\" width=\"64\" xmlns=\"http://www.w3.org/2000/svg\" style=\"stroke: #262221; stroke-width: 2px;\"><g style=\";stroke-miterlimit:10;fill:none;stroke-linejoin:round;stroke-linecap:round\"><path d=\"m10 36.125v14.037l22 11.58 22-11.58v-14.037\"></path><path d=\"m54 23.246 7-8.549-21.742-11.42-7.324 8.42z\"></path><path d=\"m32 61.742v-27\"></path><path d=\"m31.934 11.704-7.258-8.42-21.676 11.485 7 8.742z\"></path><path d=\"m32 34.742-8.584 8.929-20.449-11.676 7.033-8.484zm22-11.496 7 8.742-20.324 11.743-8.676-8.989z\"></path></g></svg></span>\n\t\t</div>\n\t\t<div class=\"text-w-icon__content\">\n\t\t\t<h3 class=\"text-w-icon__title h5\">Size Exchange Program</h3>\n\t\t</div>\n\t</div>\n</div>"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_preview_badge_E8nbjf",
+        "header",
+        "variant_picker",
+        "buy_buttons",
+        "custom_liquid_BiRbW3",
+        "description",
+        "share"
+      ],
+      "settings": {
+        "gallery_style": "slider",
+        "gallery_aspect": false,
+        "gallery_pagination": "thumbnails",
+        "enable_zoom": true,
+        "enable_video_looping": false,
+        "btn_bg_color": "#bb2826",
+        "btn_border_color": "#bb2826",
+        "btn_text_color": "#ffffff"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "heading": "You may also like"
+      }
+    },
+    "17389228358a2d122a": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_BPjfjJ": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_BPjfjJ"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "product-recommendations",
+    "17389228358a2d122a"
+  ]
+}

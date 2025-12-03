@@ -1,0 +1,143 @@
+{{- 'icons.out.css' | asset_url | stylesheet_tag -}}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top_mb }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mb }}px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .section-{{ section.id }} {
+    background: {{ section.settings.bg_color }};
+    overflow: hidden;
+  }
+{%- endstyle -%}
+
+<section class="section-{{ section.id }} section-icons section-{{ section.id }}-padding">
+  <div class="section-icons__wrapper" id="icons-marquee">
+    {% for block in section.blocks %}
+      <div class="section-icons__item">
+        {% if block.settings.image != blank %}
+          {{ block.settings.image | image_url: width: 100 | image_tag: alt: 'Icon' }}
+        {% else %}
+          {{ 'icon-placeholder.svg' | inline_asset_content }}
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const wrapper = document.querySelector('#icons-marquee');
+    if (!wrapper) return;
+
+    const speed = 0.5;
+
+    wrapper.innerHTML += wrapper.innerHTML;
+
+    const items = wrapper.querySelectorAll('.section-icons__item');
+    const totalItems = items.length / 2; 
+
+    let position = 0;
+
+    function animate() {
+      position -= speed;
+
+      const firstHalfWidth = Array.from(items)
+        .slice(0, totalItems)
+        .reduce((acc, el) => acc + el.offsetWidth + 40, 0); // +40px за gap
+
+      if (Math.abs(position) >= firstHalfWidth) {
+        position += firstHalfWidth;
+      }
+
+      wrapper.style.transform = `translateX(${position}px)`;
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Icons",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color",
+      "default": "#262221"
+    },
+    {
+      "type": "header",
+      "content": "Paddings"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding top (desktop)",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding bottom (desktop)",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mb",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding top (mobile)",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mb",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding bottom (mobile)",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "Image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Icons"
+    }
+  ]
+}
+{% endschema %}

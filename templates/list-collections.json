@@ -1,0 +1,67 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-list-collections",
+      "blocks": {
+        "collection_QH4HCN": {
+          "type": "collection",
+          "settings": {
+            "collection": "coats",
+            "image": "shopify://shop_images/Fiumara-Culinary-Bragard-Julia-6718-1532x862.jpg"
+          }
+        },
+        "collection_zXknG9": {
+          "type": "collection",
+          "settings": {
+            "collection": "chef-pants",
+            "image": "shopify://shop_images/Fiumara-Culinary-Birkenstock-24AW-Chef-OM-68021-1532x862.jpg"
+          }
+        },
+        "collection_9z9V66": {
+          "type": "collection",
+          "settings": {
+            "collection": "aprons",
+            "image": "shopify://shop_images/Fiumara-Culinary-Kentaur-23516-105-1532x862.jpg"
+          }
+        },
+        "collection_qiaEgN": {
+          "type": "collection",
+          "settings": {
+            "collection": "chef-shoes",
+            "image": "shopify://shop_images/Fiumara-Culinary-Birkenstock-24AW-1532x862.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "collection_QH4HCN",
+        "collection_zXknG9",
+        "collection_9z9V66",
+        "collection_qiaEgN"
+      ],
+      "custom_css": [
+        ".site-box .site-box-background.with-image:after {background: #262221;}",
+        ".title.h3 {color: #fff;}",
+        ".underline-animation {background-image: linear-gradient(to right, white, white);}"
+      ],
+      "settings": {
+        "text_alignment": "horizontal-left vertical-bottom",
+        "custom_text": "rgba(0,0,0,0)",
+        "custom_overlay": "rgba(0,0,0,0)",
+        "display_type": "selected",
+        "sort": "alphabetical"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

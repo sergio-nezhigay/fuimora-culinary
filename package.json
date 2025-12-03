@@ -1,0 +1,16 @@
+{
+  "name": "fuimora-culinary",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "shopify theme dev --store=fiumara-apparel.myshopify.com --theme 136398012479",
+    "push": "shopify theme push --store=fiumara-apparel.myshopify.com --theme 136398012479",
+    "pull": "shopify theme pull --store=fiumara-apparel.myshopify.com --theme 136398012479"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}

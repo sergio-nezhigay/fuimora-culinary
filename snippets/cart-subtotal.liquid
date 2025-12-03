@@ -1,0 +1,185 @@
+<div class="cart-subtotal" id="AjaxCartSubtotal">
+  <h3 class="cart-subtotal__title">Order Summary</h3>
+
+  <div
+    {% if cart.item_count == 0 %}
+      data-cart-empty
+    {% endif %}
+  >
+    <div class="cart-out">
+      <div id="CartDetails">
+        {%- if cart.cart_level_discount_applications != blank -%}
+          <div>
+            <p id="CartSubTotal">
+              <span>{{ 'cart.subtotal' | t }}</span>
+              <span>{{ cart.items_subtotal_price | money }}</span>
+            </p>
+            <p id="CartDiscounts">
+              <span>{{ 'cart.discounts' | t }}</span>
+              {%- for discount_application in cart.cart_level_discount_applications -%}
+                <span style="display: inline-block">
+                  {{- discount_application.title }}
+                  <span style="display: inline-block">
+                    -{{ discount_application.total_allocated_amount | money -}}
+                  </span></span
+                >
+              {%- endfor -%}
+            </p>
+          </div>
+        {%- endif -%}
+      </div>
+
+      <span id="CartTotal">
+        {{- 'cart.total' | t }}
+        <span class="text-size--large">{{ cart.total_price | money }}</span></span
+      >
+      {% comment %}
+        <small class="text-size--smallest">
+          {%- liquid
+            if cart.taxes_included and shop.shipping_policy.body != blank
+              echo 'cart.policies.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url
+            elsif cart.taxes_included
+              echo 'cart.policies.taxes_included_but_shipping_at_checkout' | t
+            elsif shop.shipping_policy.body != blank
+              echo 'cart.policies.taxes_and_shipping_policy_at_checkout_html' | t: link: shop.shipping_policy.url
+            else
+              echo 'cart.policies.taxes_and_shipping_at_checkout' | t
+            endif
+          -%}
+        </small>
+      {% endcomment %}
+
+      <div class="cart-actions buttons-holder" style="margin-top:30px">
+        {%- if settings.cart_drawer_actions contains 'show-view' -%}
+          <a href="{{ routes.cart_url }}" class="button button--outline" style="text-align:center">
+            <span class="button-scroll-in">{{ 'cart.view_cart' | t }}</span>
+          </a>
+        {%- endif -%}
+
+        <noscript>
+          <button name="update" class="button button--outline" form="cart">{{ 'cart.update' | t }}</button>
+        </noscript>
+
+        {%- if settings.cart_notes_enable -%}
+          <cart-note class="accordion-item">
+            <button class="accordion-header"><span>Add Personal Notes (optional)</span><span>{{ 'icon-plus-v2.svg' | inline_asset_content }}{{ 'icon-minus-v2.svg' | inline_asset_content }}</span></button>
+            <div class="accordion-content">
+              <textarea
+                id="cartSpecialInstructions"
+                placeholder="{{ 'cart.note' | t }}"
+                name="note"
+              >{{ cart.note }}</textarea>
+            </div>
+          </cart-note>
+        {%- endif -%}
+        <p class="small-text">Secure checkout – encrypted payment.</p>
+        {%- if settings.cart_drawer_actions contains 'show-checkout' or template contains 'cart' -%}
+          <button type="submit" name="checkout" class="button button--solid js-click-from-sticky-button" form="cart">
+            <span class="button-scroll-in">{{ 'cart.checkout' | t }}</span>
+          </button>
+        {%- endif -%}
+        <a href="{{ section.settings.button_url }}" class="button--additional button button--solid">
+          <span>Continue Shopping</span>
+        </a>
+        {% comment %} -- BEGIN Icons -- {% endcomment %}
+        <div
+          class="cart-subtotal__footer"
+          style="display: flex; align-items: center; justify-content: space-evenly; text-align: center; padding-top: 24px;"
+        >
+          <div class="text-w-icon__container" style="padding: 0 2.5%;">
+            <div class="text-w-icon__icon">
+              <span>
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M33.7499 3.75V10H27.4999M19.9999 36.875C17.117 36.8747 14.2821 36.1359 11.7658 34.7289C9.24945 33.3218 7.13556 31.2936 5.62571 28.8376C4.11586 26.3816 3.26042 23.5797 3.14096 20.6992C3.0215 17.8187 3.64202 14.9556 4.94333 12.383C6.24464 9.81045 8.18334 7.61416 10.5745 6.00363C12.9657 4.3931 15.7297 3.42204 18.6027 3.18307C21.4758 2.94411 24.3622 3.4452 26.9866 4.63856C29.611 5.83192 31.8859 7.67775 33.5943 10M28.1156 34.7988C26.7449 35.5525 25.2754 36.1106 23.7499 36.4569M33.5943 30C32.7468 31.15 31.7575 32.1884 30.6499 33.0906M36.1193 25.0081C35.8561 25.8563 35.5259 26.6823 35.1318 27.4781" stroke="#262221" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M20 21.875C21.0355 21.875 21.875 21.0355 21.875 20C21.875 18.9645 21.0355 18.125 20 18.125C18.9645 18.125 18.125 18.9645 18.125 20C18.125 21.0355 18.9645 21.875 20 21.875Z" stroke="#262221" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M21.2256 21.4131L27.5 26.25M20 7.5V18.125" stroke="#262221" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </div>
+            <div class="text-w-icon__content">
+              <h3 class="text-w-icon__title h5">Easy 30-Day Returns</h3>
+            </div>
+          </div>
+          <div class="text-w-icon__container" style="padding: 0 2.5%;">
+            <div class="text-w-icon__icon">
+              <span>
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M26.25 23.125C30.3921 23.125 33.75 22.0057 33.75 20.625C33.75 19.2443 30.3921 18.125 26.25 18.125C22.1079 18.125 18.75 19.2443 18.75 20.625C18.75 22.0057 22.1079 23.125 26.25 23.125Z" stroke="#262221" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M33.75 25.625C33.75 27 30.375 28.125 26.25 28.125C22.125 28.125 18.75 27 18.75 25.625M33.75 30.625C33.75 32 30.375 33.125 26.25 33.125C22.125 33.125 18.75 32 18.75 30.625" stroke="#262221" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M18.75 24.375H1.25V1.875H38.75V24.375H33.75" stroke="#262221" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M20 18.125C22.7614 18.125 25 15.8864 25 13.125C25 10.3636 22.7614 8.125 20 8.125C17.2386 8.125 15 10.3636 15 13.125C15 15.8864 17.2386 18.125 20 18.125Z" stroke="#262221" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M7.5 13.125H10M30 13.125H32.5M7.5 1.875C7.5 2.69576 7.33834 3.50849 7.02425 4.26677C6.71016 5.02506 6.24978 5.71405 5.66942 6.29442C5.08905 6.87478 4.40006 7.33516 3.64177 7.64925C2.88349 7.96334 2.07076 8.125 1.25 8.125M38.75 8.125C37.0924 8.125 35.5027 7.46652 34.3306 6.29442C33.1585 5.12231 32.5 3.5326 32.5 1.875M1.25 18.125C2.07076 18.125 2.88349 18.2867 3.64177 18.6008C4.40006 18.9148 5.08905 19.3752 5.66942 19.9556C6.24978 20.5359 6.71016 21.2249 7.02425 21.9832C7.33834 22.7415 7.5 23.5542 7.5 24.375" stroke="#262221" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M18.75 20.625V35.625C18.75 37 22.125 38.125 26.25 38.125C30.375 38.125 33.75 37 33.75 35.625V20.625" stroke="#262221" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </div>
+            <div class="text-w-icon__content">
+              <h3 class="text-w-icon__title h5">30-Day Money Back Guarantee</h3>
+            </div>
+          </div>
+          <div class="text-w-icon__container" style="padding: 0 2.5%;">
+            <div class="text-w-icon__icon">
+              <span>
+                <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.39551 21.53V30.3032L19.1455 37.5407L32.8955 30.3032V21.53" stroke="#262221" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M32.8957 13.4806L37.2707 8.1375L23.682 1L19.1045 6.2625L32.8957 13.4806Z" stroke="#262221" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M19.1455 37.5406V20.6656" stroke="#262221" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M19.1043 6.26689L14.568 1.00439L1.02051 8.18252L5.39551 13.6463L19.1043 6.26689Z" stroke="#262221" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M19.1456 20.6656L13.7806 26.2462L1 18.9487L5.39562 13.6462L19.1456 20.6656ZM19.1456 20.6656L24.5681 26.2837L37.2706 18.9443L32.8956 13.4806L19.1456 20.6656Z" stroke="#262221" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </div>
+            <div class="text-w-icon__content">
+              <h3 class="text-w-icon__title h5">Size Exchange Program</h3>
+            </div>
+          </div>
+        </div>
+        {% comment %} -- END Icons -- {% endcomment %}
+      </div>
+
+      {%- unless template contains 'order' -%}
+        {%- if additional_checkout_buttons and settings.cart_additional_buttons -%}
+          {%- if settings.cart_drawer_actions contains 'show-checkout' or template contains 'cart' -%}
+            <div class="additional-checkout-buttons additional-checkout-buttons--vertical" style="margin-top:12px">
+              {%- if template contains 'cart' -%}<div>{%- endif -%}
+              {{ content_for_additional_checkout_buttons }}
+              {%- if template contains 'cart' -%}</div>{%- endif -%}
+            </div>
+          {%- endif -%}
+        {%- endif -%}
+      {%- endunless -%}
+    </div>
+
+    <div class="cart-continue">
+      <a href="{{ routes.all_products_collection_url }}" class="button button--solid">
+        <span class="button-scroll-in">{{ 'cart.continue_browsing' | t }}</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.accordion-item').forEach((item) => {
+    const header = item.querySelector('.accordion-header');
+    const content = item.querySelector('.accordion-content');
+
+    header.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+
+      document.querySelectorAll('.accordion-item.active').forEach((openItem) => {
+        if (openItem !== item) {
+          openItem.classList.remove('active');
+          openItem.querySelector('.accordion-content').style.maxHeight = null;
+        }
+      });
+
+      if (isActive) {
+        item.classList.remove('active');
+        content.style.maxHeight = null;
+      } else {
+        item.classList.add('active');
+        content.style.maxHeight = content.scrollHeight + 'px';
+      }
+    });
+  });
+</script>

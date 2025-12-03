@@ -1,0 +1,82 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-cart",
+      "settings": {
+        "cart_description": "Your cart is empty, but here are some items you might like.",
+        "button_url": "https://fiumaraculinary.com/collections/best-chef-uniforms",
+        "button_label": "Continue Shopping",
+        "btn_bg_color": "#bb2826",
+        "btn_border_color": "#bb2826",
+        "btn_text_color": "#ffffff"
+      }
+    },
+    "product-recommendations": {
+      "type": "main-cart-recommendations",
+      "settings": {
+        "heading": "You may also like"
+      }
+    },
+    "featured_collection_JbKCV8": {
+      "type": "featured-collection",
+      "custom_css": [],
+      "name": "t:sections.featured-collection.name",
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "collection": "bragard",
+        "collection_rows": 1,
+        "show_view_all": false,
+        "seo_h_tag": "h2"
+      }
+    },
+    "rich_text_kz3tcT": {
+      "type": "rich-text",
+      "blocks": {
+        "button_NXfRxz": {
+          "type": "button",
+          "settings": {
+            "button_label": "Continue Shopping",
+            "button_link": "https://fiumaraculinary.com/collections/best-chef-uniforms"
+          }
+        }
+      },
+      "block_order": [
+        "button_NXfRxz"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "title": "",
+        "btn_label": "",
+        "btn_url": "",
+        "desktop_image_positioning": "image-on-left",
+        "bg_overlay": false,
+        "custom_background": "#eceeed",
+        "custom_text": "rgba(0,0,0,0)",
+        "seo_h_tag": "h2",
+        "custom_position_content": true,
+        "position_content": "center",
+        "custom_paddings": true,
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_top_mb": 20,
+        "padding_bottom_mb": 20
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product-recommendations",
+    "featured_collection_JbKCV8",
+    "rich_text_kz3tcT"
+  ]
+}

@@ -1,0 +1,42 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "custom.overlay",
+  "name": "t:sections.refactor_words.labels.overlay_group",
+  "sections": {
+    "popup": {
+      "type": "popup",
+      "settings": {
+        "title": "Get Your Discount!",
+        "content": "<p><strong>Enjoy 10% OFF your first order.<br/></strong>Save up to 25% OFF on bulk orders.</p>",
+        "newsletter_enable": false,
+        "popup_enable": false,
+        "newsletter_auto": 10,
+        "newsletter_frequent": "week",
+        "image_link": "",
+        "image_mobile": false,
+        "popup_bgcolor": "#ffffff",
+        "popup_txtcolor": "#000000"
+      }
+    },
+    "cookie": {
+      "type": "cookie",
+      "disabled": true,
+      "settings": {
+        "bg_color": "#f7f7f7",
+        "txt_color": "#000000"
+      }
+    }
+  },
+  "order": [
+    "popup",
+    "cookie"
+  ]
+}

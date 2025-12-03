@@ -1,0 +1,506 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "layout": "split"
+      }
+    },
+    "image_with_form_VfqNWm": {
+      "type": "image-with-form",
+      "name": "Image with form",
+      "settings": {
+        "title": "",
+        "subtitle": "",
+        "form_id": "tzTr6gKqFHZsa5FT_7xnYw",
+        "image": "shopify://shop_images/Section.webp",
+        "image_left": false,
+        "video": "shopify://files/videos/FCVE_v3.mp4",
+        "video_url_visible": false,
+        "video_url": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mb": 0,
+        "padding_bottom_mb": 0
+      }
+    },
+    "icons_iNLMRC": {
+      "type": "icons",
+      "blocks": {
+        "image_D3d7gm": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_9529.png"
+          }
+        },
+        "image_JRjk8a": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_9523.jpg"
+          }
+        },
+        "image_NVgGmY": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_9548.png"
+          }
+        },
+        "image_ymmNkP": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_9551_1.jpg"
+          }
+        },
+        "image_mapATV": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_9549.jpg"
+          }
+        },
+        "image_Tfn7qJ": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_9550.jpg"
+          }
+        },
+        "image_FJCPMG": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_9553.jpg"
+          }
+        },
+        "image_9A8gL4": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_9554.png"
+          }
+        },
+        "image_cqAYEb": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_9555.jpg"
+          }
+        },
+        "image_mXEimB": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_9556.jpg"
+          }
+        },
+        "image_Cf6JRk": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_9557.jpg"
+          }
+        },
+        "image_GR9Cbh": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_9558.jpg"
+          }
+        },
+        "image_TfgeHj": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/Remove_background_project_1.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_D3d7gm",
+        "image_JRjk8a",
+        "image_NVgGmY",
+        "image_ymmNkP",
+        "image_mapATV",
+        "image_Tfn7qJ",
+        "image_FJCPMG",
+        "image_9A8gL4",
+        "image_cqAYEb",
+        "image_mXEimB",
+        "image_Cf6JRk",
+        "image_GR9Cbh",
+        "image_TfgeHj"
+      ],
+      "name": "Icons",
+      "settings": {
+        "bg_color": "#ffffff",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mb": 0,
+        "padding_bottom_mb": 0
+      }
+    },
+    "image_with_text_v2_AGNxKP": {
+      "type": "image-with-text-v2",
+      "blocks": {
+        "title_pcAPbD": {
+          "type": "title",
+          "settings": {
+            "title": "Trusted Expertise, Proven in Every Setting"
+          }
+        },
+        "text_LKex7P": {
+          "type": "text",
+          "settings": {
+            "text": "From Divina Italian to Disneyland, brands trust Fiumara for premium apparel — We have top-tier partnerships and broad experience to help elevate your image and guest experience."
+          }
+        },
+        "button_UfmtXk": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "btn_url": "shopify://collections/all",
+            "btn_label": "LEARN MORE"
+          }
+        }
+      },
+      "block_order": [
+        "title_pcAPbD",
+        "text_LKex7P",
+        "button_UfmtXk"
+      ],
+      "name": "Image with text v2",
+      "settings": {
+        "image": "shopify://shop_images/76d72942f0327f932f492d0a7a0738f7b2173eff.webp",
+        "image_left": false,
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "padding_top_mb": 40,
+        "padding_bottom_mb": 40
+      }
+    },
+    "cards_with_text_CUBFhP": {
+      "type": "cards-with-text",
+      "blocks": {
+        "card_R3RzTe": {
+          "type": "card",
+          "settings": {
+            "title": "15+",
+            "text": "Years in <br>the industry"
+          }
+        },
+        "card_PFP7iM": {
+          "type": "card",
+          "settings": {
+            "title": "10K+",
+            "text": "Happy Chefs"
+          }
+        },
+        "card_64TcAN": {
+          "type": "card",
+          "settings": {
+            "title": "25%",
+            "text": "Have Michelin Stars, Bibs or Keys,"
+          }
+        },
+        "card_k4H9Hx": {
+          "type": "card",
+          "settings": {
+            "title": "25%",
+            "text": "Repeat<br>Customers"
+          }
+        }
+      },
+      "block_order": [
+        "card_R3RzTe",
+        "card_PFP7iM",
+        "card_64TcAN",
+        "card_k4H9Hx"
+      ],
+      "name": "Cards with text",
+      "settings": {
+        "bg_color": "#262221",
+        "text_color": "#ffffff",
+        "style_2": true,
+        "title": "Trusted by Top Professionals",
+        "subtitle": "Join chefs who trust our premium workwear every day",
+        "btn_url": "",
+        "btn_label": "",
+        "bg_color_button": "#ffffff",
+        "text_color_button": "#262221",
+        "padding_top": 64,
+        "padding_bottom": 24,
+        "padding_top_mb": 48,
+        "padding_bottom_mb": 0
+      }
+    },
+    "reviews_gallery_9NdYfx": {
+      "type": "reviews-gallery",
+      "blocks": {
+        "card_Dw77fy": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/img_1.png",
+            "image_reviews": "shopify://shop_images/Frame_1000006349.svg",
+            "author": "Lisa S",
+            "author_text_2": "Chef",
+            "text": "\"The chef coat is high quality and looks great. They were able to move the embroidery slightly at my request...I'm very appreciative of their communication and accommodation.\""
+          }
+        },
+        "card_9iTgk9": {
+          "type": "card",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/img_2.png",
+            "image_reviews": "shopify://shop_images/Frame_1000006349.svg",
+            "author": "Laurence A.",
+            "author_text_2": "Chef",
+            "text": "\"Love my jackets and aprons...I've been a chef for over 25 years and I've finally found the perfect chef jackets and aprons! I recommend them to my team and they really give us a great professional look for our guests to see\""
+          }
+        },
+        "card_xrMHwP": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/img_2.png",
+            "image_reviews": "shopify://shop_images/Frame_1000006349.svg",
+            "author": "Matt A.",
+            "author_text_2": "Chef",
+            "text": "\"Excellent service and quality. 5 Stars. I entered the wrong address and customer support redirected the shipment immediately with no extra charge or hassle.\""
+          }
+        },
+        "card_EQLJdX": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/img.png",
+            "image_reviews": "shopify://shop_images/Frame_1000006349.svg",
+            "author": "Chef Angelo P.",
+            "author_text_2": "NFL",
+            "text": "\"Hands down the best shoes I have ever purchased in years.\""
+          }
+        },
+        "card_U3f6dg": {
+          "type": "card",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/img_2.png",
+            "image_reviews": "shopify://shop_images/Frame_1000006349.svg",
+            "author": "Johnathan C.",
+            "author_text_2": "Chef",
+            "text": "\"Great coat, better customer service...Return and exchange process was super easy and polite even though I had to call back twice because of my own mistakes.\""
+          }
+        }
+      },
+      "block_order": [
+        "card_Dw77fy",
+        "card_9iTgk9",
+        "card_xrMHwP",
+        "card_EQLJdX",
+        "card_U3f6dg"
+      ],
+      "name": "Reviews gallery",
+      "settings": {
+        "bg_color": "#262221",
+        "bg_color_card": "#ffffff",
+        "text_color": "#262221",
+        "bg_color_button": "#262221",
+        "border_color_button": "#ffffff",
+        "text_color_button": "#ffffff",
+        "padding_top": 0,
+        "padding_bottom": 64,
+        "padding_top_mb": 48,
+        "padding_bottom_mb": 32
+      }
+    },
+    "cards_with_text_jRT7gD": {
+      "type": "cards-with-text",
+      "blocks": {
+        "card_wKTwky": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Frame_1000006341.webp",
+            "title": "01. Browse & Select",
+            "text": "Choose from our curated collection of professional workwear"
+          }
+        },
+        "card_En7baw": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Frame_1000006341_1.webp",
+            "title": "02. Size & Customize",
+            "text": "Use our sizing guide and add custom embroidery options"
+          }
+        },
+        "card_8dC6E8": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Frame_1000006341_2.webp",
+            "title": "03. Fast Delivery",
+            "text": "Standard orders ship within a few business days and custom embroidery orders ship 2-3 weeks after you approve the design."
+          }
+        }
+      },
+      "block_order": [
+        "card_wKTwky",
+        "card_En7baw",
+        "card_8dC6E8"
+      ],
+      "name": "Cards with text",
+      "settings": {
+        "bg_color": "#ffffff",
+        "text_color": "#262221",
+        "style_2": false,
+        "title": "Get Your Perfect Fit",
+        "subtitle": "Follow 3 quick steps to find the uniform made for you",
+        "btn_url": "https://fiumaraculinary.com/collections/new-chef-uniforms",
+        "btn_label": "Shop Now",
+        "bg_color_button": "#262221",
+        "text_color_button": "#ffffff",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "padding_top_mb": 32,
+        "padding_bottom_mb": 32
+      }
+    },
+    "faq_v2_4ANR39": {
+      "type": "faq-v2",
+      "blocks": {
+        "card_VEgCRt": {
+          "type": "card",
+          "settings": {
+            "title": "How quickly can I get uniforms delivered?",
+            "description": "Most standard orders ship within a few business days, and expedited delivery is available when you need uniforms fast. Every order is tracked and managed with care, so your team always has what they need—on time, every time."
+          }
+        },
+        "card_wxRVr3": {
+          "type": "card",
+          "settings": {
+            "title": "Do you handle reorders for new staff?",
+            "description": "Yes. Once your selections are in our system, reordering is quick and seamless. Whether you’re hiring a new chef or expanding your front-of-house team, we make it easy to keep your look consistent."
+          }
+        },
+        "card_e9PAiU": {
+          "type": "card",
+          "settings": {
+            "title": "What is your policy on returns and exchanges?",
+            "description": "We want your team to be fully satisfied with their uniforms. Standard items can be easily exchanged or returned if the fit or style isn’t right. For customized orders, once embroidery designs have been approved, those items cannot be returned—but our team works closely with you upfront to ensure every detail is correct before production begins."
+          }
+        },
+        "card_A4nP3A": {
+          "type": "card",
+          "settings": {
+            "title": "Do you offer sustainable apparel options?",
+            "description": "Yes. We partner with brands that use eco-friendly fabrics and responsible sourcing. Our durable, long-lasting uniforms also reduce waste, helping you align with sustainability goals without compromising quality."
+          }
+        },
+        "card_Xh6kEM": {
+          "type": "card",
+          "settings": {
+            "title": "Do you provide dedicated account managers for business customers?",
+            "description": "Absolutely. Our business accounts come with a dedicated account manager who understands your brand and ordering needs. You’ll always have a trusted point of contact for new orders, reorders, and support."
+          }
+        },
+        "card_qzKnz6": {
+          "type": "card",
+          "settings": {
+            "title": "Why should I choose premium uniforms instead of cheaper options?",
+            "description": "Low-cost uniforms wear out quickly, fit poorly, and can weaken your brand image. Premium apparel lasts longer, performs better, and elevates the guest experience—saving you money in the long run and inspiring staff confidence."
+          }
+        },
+        "card_dLBK8r": {
+          "type": "card",
+          "settings": {
+            "title": "Can you support multiple locations or growing restaurant groups?",
+            "description": "Yes. From single-location cafés to multi-unit resorts and hospitality groups, we provide consistent apparel programs across every site. With bulk ordering, reordering support, and account management, we grow alongside your business."
+          }
+        },
+        "card_AembXV": {
+          "type": "card",
+          "settings": {
+            "title": "Which restaurants and hospitality brands already trust you for uniforms?",
+            "description": "We’re proud to outfit a wide range of customers—from Michelin-starred restaurants like Jônt, to destinations like Disneyland and The Thompson Hotels, to vineyards, resorts, and caterers. Our track record proves we deliver the same precision, quality, and care no matter the size or style of your business."
+          }
+        }
+      },
+      "block_order": [
+        "card_VEgCRt",
+        "card_wxRVr3",
+        "card_e9PAiU",
+        "card_A4nP3A",
+        "card_Xh6kEM",
+        "card_qzKnz6",
+        "card_dLBK8r",
+        "card_AembXV"
+      ],
+      "name": "FAQ v2",
+      "settings": {
+        "title": "Frequently Asked Questions",
+        "bg_color": "#ffffff",
+        "text_color": "#262221",
+        "btn_url": "",
+        "btn_label": "",
+        "bg_color_button": "#ffffff",
+        "border_color_button": "#262221",
+        "text_color_button": "#262221",
+        "padding_top": 128,
+        "padding_bottom": 64,
+        "padding_top_mb": 32,
+        "padding_bottom_mb": 32
+      }
+    },
+    "contact_form_nHGEkH": {
+      "type": "contact-form",
+      "blocks": {
+        "custom_html_WmD9iw": {
+          "type": "custom_html",
+          "settings": {
+            "custom_html_content": "<div style=\"max-width: 200px;\npadding: 0 0 20px 15px;\nwidth: 100%;\">\n<img style=\"border: 1px solid var(--grid-borders);\" alt=\"Fiumara Culinary - Guide to Premium Workwear\" src=\"https://cdn.shopify.com/s/files/1/0116/8492/files/Fiumara-Culinary-Guide-To-Premium-Workwear.jpg\">\n</div>"
+          }
+        },
+        "title_MEdwG4": {
+          "type": "title",
+          "settings": {
+            "title": "Discover the 5 mistakes chefs make when choosing new apparel and how to avoid them."
+          }
+        },
+        "email_cg8Qd8": {
+          "type": "email",
+          "disabled": true,
+          "settings": {}
+        },
+        "button_dxLzRT": {
+          "type": "button",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "custom_html_WmD9iw",
+        "title_MEdwG4",
+        "email_cg8Qd8",
+        "button_dxLzRT"
+      ],
+      "custom_css": [
+        ".site-box-container:not(.remove-background) {background: url(https://cdn.shopify.com/s/files/1/0116/8492/files/Fiumara-Culinary-ISP-2164900943-2560x1440.jpg); background-size: cover;}"
+      ],
+      "settings": {
+        "title": "Free Guide to Premium Workwear",
+        "map_enable": false,
+        "map_address": "",
+        "map_api": "",
+        "map_style": "light",
+        "seo_h_tag": "h2"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_form_VfqNWm",
+    "icons_iNLMRC",
+    "image_with_text_v2_AGNxKP",
+    "cards_with_text_CUBFhP",
+    "reviews_gallery_9NdYfx",
+    "cards_with_text_jRT7gD",
+    "faq_v2_4ANR39",
+    "contact_form_nHGEkH"
+  ]
+}

@@ -1,0 +1,289 @@
+{{- 'reviews-gallery.out.css' | asset_url | stylesheet_tag -}}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top_mb }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mb }}px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  .section-{{ section.id }} {
+    background: {{ section.settings.bg_color }};
+    overflow: hidden;
+  }
+  .section-{{ section.id }} p, .section-{{ section.id }} h2, .section-{{ section.id }} h3,.section-{{ section.id }} h4,.section-{{ section.id }} h5,.section-{{ section.id }} h6 {
+    color: {{ section.settings.text_color }};
+  }
+  .section-{{ section.id }} .button {
+      color: {{ section.settings.text_color_button }};
+      background: {{ section.settings.bg_color_button }};
+      border-color: {{ section.settings.border_color_button }};
+  }
+   .section-{{ section.id }} .reviews-gallery__card {
+      background: {{ section.settings.bg_color_card }};
+  }
+{%- endstyle -%}
+
+<section
+  class="section-{{ section.id }}{% if section.settings.style_2 == true %} reviews-gallery--style-2{% endif %} reviews-gallery custom-container section-{{ section.id }}-padding"
+>
+  <div id="reviews_gallery" class="reviews-gallery__content">
+    {% for block in section.blocks %}
+      <div class="reviews-gallery__card">
+        <div class="top-content">
+          {% if block.settings.image != blank %}
+            {%- liquid
+              assign image_width = block.settings.image.width
+              assign image_height = image_width | divided_by: section.settings.image.aspect_ratio
+            -%}
+            {{
+              block.settings.image
+              | image_url: width: 1400, format: 'webp'
+              | image_tag:
+                width: image_width,
+                height: image_height,
+                loading: 'lazy',
+                fetchpriority: 'high',
+                class: 'main-image',
+                sizes: '(max-width: 750px) 350px, 700px',
+                widths: '350, 700, 1100, 1400',
+                alt: 'Image card'
+            }}
+          {% endif %}
+          <div>
+            <h4 class="small-text--bold">{{ block.settings.author }}</h4>
+            <p class="small-text">{{ block.settings.author_text_2 }}</p>
+            {% if block.settings.image_reviews != blank %}
+              {%- liquid
+                assign image_width = block.settings.image_reviews.width
+                assign image_height = image_width | divided_by: section.settings.image_reviews.aspect_ratio
+              -%}
+              {{
+                block.settings.image_reviews
+                | image_url: width: 1400, format: 'webp'
+                | image_tag:
+                  width: image_width,
+                  height: image_height,
+                  loading: 'lazy',
+                  class: 'reviews-image',
+                  fetchpriority: 'high',
+                  sizes: '(max-width: 750px) 350px, 700px',
+                  widths: '350, 700, 1100, 1400',
+                  alt: 'Image card'
+              }}
+            {% endif %}
+          </div>
+        </div>
+        <p class="small-text">{{ block.settings.text }}</p>
+      </div>
+    {% endfor %}
+  </div>
+  <button id="btn_show_more" class="button {% if section.blocks.size < 4 %}hidden{% endif %}">
+    {{ section.settings.btn_label }}
+  </button>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const gallery = document.getElementById('reviews_gallery');
+    const btn = document.getElementById('btn_show_more');
+
+    if (!gallery || !btn) return;
+
+    const cards = Array.from(gallery.querySelectorAll('.reviews-gallery__card'));
+    const VISIBLE_COUNT = 3;
+    let expanded = false;
+
+    function setCardState(card, show, animate) {
+      if (!animate) {
+        card.classList.toggle('is-visible', show);
+        card.classList.toggle('is-hidden', !show);
+        card.style.maxHeight = show ? '' : '0px';
+        return;
+      }
+
+      const current = card.getBoundingClientRect().height;
+      card.style.maxHeight = current + 'px';
+      card.offsetHeight;
+
+      if (show) {
+        card.classList.add('is-visible');
+        card.classList.remove('is-hidden');
+        const target = card.scrollHeight;
+        card.style.maxHeight = target + 'px';
+      } else {
+        card.style.maxHeight = current + 'px';
+        card.offsetHeight;
+        card.style.maxHeight = '0px';
+        card.classList.add('is-hiding');
+      }
+
+      const onEnd = (e) => {
+        if (e.propertyName !== 'max-height') return;
+        card.removeEventListener('transitionend', onEnd);
+
+        if (show) {
+          card.style.maxHeight = '';
+        } else {
+          card.classList.remove('is-visible');
+          card.classList.add('is-hidden');
+          card.classList.remove('is-hiding');
+        }
+      };
+      card.addEventListener('transitionend', onEnd);
+    }
+
+    function updateView({ animate = true } = {}) {
+      cards.forEach((card, index) => {
+        const show = expanded || index < VISIBLE_COUNT;
+        setCardState(card, show, animate);
+      });
+      btn.textContent = expanded ? 'Read less Reviews' : 'Read more Reviews';
+    }
+
+    btn.addEventListener('click', () => {
+      expanded = !expanded;
+      updateView({ animate: true });
+      if (!expanded) {
+        gallery.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+
+    updateView({ animate: false });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Reviews gallery",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "bg_color_card",
+      "label": "Card background color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#262221"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "color",
+      "id": "bg_color_button",
+      "label": "Button background color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "border_color_button",
+      "label": "Button border color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "text_color_button",
+      "label": "Button text color",
+      "default": "#262221"
+    },
+    {
+      "type": "header",
+      "content": "Paddings"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding top (desktop)",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding bottom (desktop)",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mb",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding top (mobile)",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mb",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding bottom (mobile)",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_reviews",
+          "label": "Image reviews"
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Author"
+        },
+        {
+          "type": "text",
+          "id": "author_text_2",
+          "label": "Text after author"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Review text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Reviews gallery"
+    }
+  ]
+}
+{% endschema %}

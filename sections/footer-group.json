@@ -1,0 +1,67 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "t:sections.refactor_words.labels.footer_group",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "menu-1": {
+          "type": "menu",
+          "settings": {
+            "title": "Menu",
+            "menu": "footer-2025"
+          }
+        },
+        "social": {
+          "type": "social",
+          "settings": {
+            "title": "Follow Us"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "title": "About Us",
+            "content": "<p>Most culinary professionals struggle to find unique, high-quality uniforms that meet their standards. At Fiumara Culinary, we make it easy to access exclusive, fashion-forward workwear designed for performance and prestige. </p>",
+            "size": ""
+          }
+        },
+        "image_TKBidy": {
+          "type": "image",
+          "settings": {
+            "title": "",
+            "image": "shopify://shop_images/Fiumara-Apparel-Icon-White.png"
+          }
+        }
+      },
+      "block_order": [
+        "menu-1",
+        "social",
+        "text",
+        "image_TKBidy"
+      ],
+      "settings": {
+        "show_payment_icons": true,
+        "only_show_custom_icons": false,
+        "show_locale_selector": false,
+        "show_country_selector": false,
+        "enable_follow_on_shop": false,
+        "custom_background": "#262221",
+        "custom_text": "#ffffff",
+        "seo_h_tag": "h4"
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

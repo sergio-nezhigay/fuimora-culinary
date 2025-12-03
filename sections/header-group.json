@@ -1,0 +1,77 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "t:sections.refactor_words.labels.header_group",
+  "sections": {
+    "announcement": {
+      "type": "announcement-bar",
+      "blocks": {
+        "content_cGJKNX": {
+          "type": "content",
+          "settings": {
+            "text": "FREE SHIPPING on all SHOE ORDERS!",
+            "link": "",
+            "target": false
+          }
+        },
+        "content_TDktH3": {
+          "type": "content",
+          "settings": {
+            "text": "Write an important announcement here",
+            "link": "",
+            "target": false
+          }
+        }
+      },
+      "block_order": [
+        "content_cGJKNX",
+        "content_TDktH3"
+      ],
+      "settings": {
+        "visibility": "all",
+        "bar_txtcolor": "#ffffff",
+        "bar_bgcolor": "#bb2826",
+        "bar_bordercolor": "#d4d5d4"
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "logo_src": "shopify://shop_images/Fiumara-Culinary-Logo.png",
+        "logo_height": 60,
+        "main_linklist": "fiumara-culinary",
+        "menu_style": "classic",
+        "menu_sticky": "sticky--scroll",
+        "menu_hide_border": false,
+        "collection_linklist": "shop",
+        "show_collection_image": true,
+        "show_promotion_block": false,
+        "promotion_header": "20% Off Sitewide",
+        "promotion_content": "<p>SHOP the latest styles and hottest brands with 20% off sitewide.<br/><strong>Code CELEBRATE20 </strong></p>",
+        "promotion_button_label": "Shop Now",
+        "promotion_button_link": "shopify://collections",
+        "promotion_color_txt": "#262221",
+        "promotion_color_bg": "#f3f3f3",
+        "show_locale_selector": false,
+        "show_country_selector": false
+      }
+    },
+    "breadcrumb": {
+      "type": "breadcrumb",
+      "settings": {}
+    }
+  },
+  "order": [
+    "announcement",
+    "header",
+    "breadcrumb"
+  ]
+}

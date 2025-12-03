@@ -1,0 +1,183 @@
+{{ 'component-sidebar.css' | asset_url | stylesheet_tag }}
+
+<div id="section-cart" class="site-box-container container--fullscreen ">
+  {% comment %} <div class="cart site-box box__image-text box--small-padding lap--box--small-fl-auto box--typo-big box--top-align box--column-flow box__heading" data-order="0">
+   
+    {% if cart == empty %}
+      {% if section.settings.cart_description != blank %}
+        <div class="medium-text cart-header__description">
+          <p>{{ section.settings.cart_description }}</p>
+          {%- unless settings.cart_free_shipping and cart.item_count > 0 -%}
+            {%- if settings.headings_hr -%}<hr>{%- endif -%}
+          {%- endunless -%}
+        </div>
+      {% endif %}
+    {% endif %}
+  </div> {% endcomment %}
+
+  <div class="site-box box--big lap--box--bigger box--top-align box--column-flow box__text" data-order="1">
+    <div class="site-box-content reduce-top-margin">
+      {%- if cart.item_count > 0 -%}
+        {%- render 'cart-form', type: 'page' -%}
+        {%- render 'cart-subtotal' -%}
+
+        <template>
+          <div class="main-cart-empty-content">
+            <p>{{ 'cart.empty' | t }}</p>
+            <a href="{{ routes.all_products_collection_url }}" class="button button--solid">
+              <span class="button-scroll-in">{{ 'cart.continue_browsing' | t }}</span>
+            </a>
+          </div>
+        </template>
+
+        {% comment %}
+          {%- else -%}
+          <p>{{ 'cart.empty' | t }}</p>
+          <a href="{{ routes.all_products_collection_url }}" class="button button--solid">
+            <span class="button-scroll-in">{{ 'cart.continue_browsing' | t }}</span>
+          </a>
+        {% endcomment %}
+      {%- endif -%}
+    </div>
+  </div>
+  <div id="btn_add_to_card_fixed_container" class="add-to-card-button--fixed-container">
+      <button
+        style="background: {{ section.settings.btn_bg_color }}; color: {{ section.settings.btn_text_color }}; border-color: {{ section.settings.btn_border_color }};"
+        name="add"
+        class="product__add-to-cart product--add-to-cart-button button button button--solid"
+      >
+            <span class="button-scroll-in">{{ 'cart.checkout' | t }}</span>
+       
+        {%- render 'preloader', class: 'add-to-cart__preloader' -%}
+      </button>
+    </div>
+</div>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const fixedBtnContainer = document.getElementById('btn_add_to_card_fixed_container');
+    const addToCartBtn = document.querySelector('.js-click-from-sticky-button');
+    if (!fixedBtnContainer) return;
+
+    const fixedBtn = fixedBtnContainer.querySelector('button');
+    let observer = null;
+    const blockersSelectors = ['.cart-actions button[type="submit"]'];
+
+    const checkVisibility = () => {
+      if (window.innerWidth > 1024) {
+        fixedBtnContainer.classList.remove('show');
+        return;
+      }
+
+      const blockers = blockersSelectors.map(sel => document.querySelector(sel)).filter(el => el !== null);
+
+      if (blockers.length === 0) {
+        fixedBtnContainer.classList.remove('show');
+        return;
+      }
+
+      const isAnyVisible = blockers.some(el => {
+        const rect = el.getBoundingClientRect();
+        return rect.bottom > 0 && rect.top < window.innerHeight;
+      });
+
+      if (isAnyVisible) {
+        fixedBtnContainer.classList.remove('show');
+      } else {
+        fixedBtnContainer.classList.add('show');
+      }
+    };
+
+    const initObserver = () => {
+      if (observer) observer.disconnect();
+
+      if (window.innerWidth > 1024) return;
+
+      const blockers = blockersSelectors.map(sel => document.querySelector(sel)).filter(el => el !== null);
+
+      if (blockers.length === 0) return;
+
+      observer = new IntersectionObserver(
+        () => {
+          checkVisibility();
+        },
+        { root: null, threshold: 0.1 }
+      );
+
+      blockers.forEach(el => observer.observe(el));
+
+      checkVisibility();
+    };
+
+    initObserver();
+
+    window.addEventListener('resize', initObserver);
+    window.addEventListener('scroll', checkVisibility);
+
+    if (fixedBtn && addToCartBtn) {
+      fixedBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        if (addToCartBtn.getBoundingClientRect().top < 0 || addToCartBtn.getBoundingClientRect().bottom > window.innerHeight) {
+          addToCartBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        const realClick = new MouseEvent('click', {
+          view: window,
+          bubbles: true,
+          cancelable: true
+        });
+
+        addToCartBtn.dispatchEvent(realClick);
+      });
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "t:sections.split-extra-words.settings_schema.cart.page",
+  "settings": [
+    {
+      "type": "text",
+      "id": "cart_description",
+      "label": "Cart description",
+      "default": "Your cart is empty, but here are some items you might like."
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button url"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Continue Shopping"
+    },
+    {
+      "type": "paragraph",
+      "content": "Button fixed styles"
+    },
+    {
+      "type": "color",
+      "id": "btn_bg_color",
+      "label": "Button color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "btn_border_color",
+      "label": "Button border color",
+      "default": "#262221"
+    },
+    {
+      "type": "color",
+      "id": "btn_text_color",
+      "label": "Button text color",
+      "default": "#262221"
+    }
+  ]
+}
+{% endschema %}

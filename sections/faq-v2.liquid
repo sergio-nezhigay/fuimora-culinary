@@ -1,0 +1,295 @@
+{{- 'faq-v2.out.css' | asset_url | stylesheet_tag -}}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top_mb }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mb }}px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+  .section-{{ section.id }} {
+    background: {{ section.settings.bg_color }};
+    overflow: hidden;
+  }
+  .section-{{ section.id }} p, .section-{{ section.id }} h2, .section-{{ section.id }} h3,.section-{{ section.id }} h4,.section-{{ section.id }} h5,.section-{{ section.id }} h6 {
+    color: {{ section.settings.text_color }};
+  }
+  .section-{{ section.id }} .button {
+      color: {{ section.settings.text_color_button }};
+      background: {{ section.settings.bg_color_button }};
+      border-color: {{ section.settings.border_color_button }};
+  }
+{%- endstyle -%}
+
+<section
+  class="section-{{ section.id }}{% if section.settings.style_2 == true %} faq-v2--style-2{% endif %} faq-v2 custom-container section-{{ section.id }}-padding"
+>
+  <h2 class="faq-v2__title h2-custom">{{ section.settings.title }}</h2>
+
+  <div class="faq-v2__list">
+    {% for block in section.blocks %}
+      <div class="faq-v2__item" {{ block.shopify_attributes }}>
+        <button class="faq-v2__question" aria-expanded="false">
+          <span class="faq-v2__number">#{{ forloop.index }}</span>
+          <span class="faq-v2__title-item">{{ block.settings.title }}</span>
+          <svg
+            class="faq-v2__icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path stroke="currentColor" stroke-width="2" d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="faq-v2__answer">
+          <p>{{ block.settings.description }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <button class="faq-v2__toggle button" style="display: none;">View more</button>
+</section>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const faqItems = document.querySelectorAll('.faq-v2__item');
+  const toggleButton = document.querySelector('.faq-v2__toggle');
+  const visibleCount = 8;
+
+  faqItems.forEach((item) => {
+    const question = item.querySelector('.faq-v2__question');
+    const answer = item.querySelector('.faq-v2__answer');
+
+    if (item.classList.contains('active')) {
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+      question.setAttribute('aria-expanded', 'true');
+    } else {
+      question.setAttribute('aria-expanded', 'false');
+      answer.style.maxHeight = '0px';
+    }
+
+    question.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+
+      if (isActive) {
+        // Закрытие
+        const currentHeight = answer.scrollHeight;
+        answer.style.maxHeight = currentHeight + 'px';
+        requestAnimationFrame(() => {
+          answer.style.maxHeight = '0px';
+        });
+
+        answer.addEventListener(
+          'transitionend',
+          function onClose(e) {
+            if (e.propertyName === 'max-height') {
+              item.classList.remove('active');
+              question.setAttribute('aria-expanded', 'false');
+              answer.removeEventListener('transitionend', onClose);
+            }
+          }
+        );
+      } else {
+        item.classList.add('active');
+        question.setAttribute('aria-expanded', 'true');
+        const targetHeight = answer.scrollHeight;
+        answer.style.maxHeight = targetHeight + 'px';
+
+        answer.addEventListener(
+          'transitionend',
+          function onOpen(e) {
+            if (e.propertyName === 'max-height') {
+              answer.removeEventListener('transitionend', onOpen);
+            }
+          }
+        );
+      }
+    });
+  });
+
+  if (faqItems.length > visibleCount) {
+    toggleButton.style.display = 'block';
+
+    faqItems.forEach((item, index) => {
+      if (index >= visibleCount) {
+        item.style.maxHeight = '0px';
+        item.classList.add('hidden');
+      }
+    });
+
+    toggleButton.addEventListener('click', () => {
+      const isExpanded = toggleButton.classList.toggle('expanded');
+      toggleButton.textContent = isExpanded ? 'View less' : 'View more';
+
+      faqItems.forEach((item, index) => {
+        if (index >= visibleCount) {
+          const answer = item.querySelector('.faq-v2__answer');
+
+          if (isExpanded) {
+            item.classList.remove('hidden');
+            const fullHeight = item.scrollHeight;
+            item.style.maxHeight = fullHeight + 'px';
+            item.addEventListener(
+              'transitionend',
+              function onEnd() {
+                item.style.maxHeight = '';
+                item.removeEventListener('transitionend', onEnd);
+              }
+            );
+          } else {
+            const currentHeight = item.scrollHeight;
+            item.style.maxHeight = currentHeight + 'px';
+            requestAnimationFrame(() => {
+              item.style.maxHeight = '0px';
+            });
+
+            item.addEventListener(
+              'transitionend',
+              function onEnd() {
+                item.classList.add('hidden');
+                item.style.maxHeight = '';
+                item.removeEventListener('transitionend', onEnd);
+              }
+            );
+          }
+        }
+      });
+    });
+  }
+});
+
+</script>
+
+
+
+{% schema %}
+{
+  "name": "FAQ v2",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Frequently Asked Questions"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#262221"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "url",
+      "id": "btn_url",
+      "label": "Url"
+    },
+    {
+      "type": "text",
+      "id": "btn_label",
+      "label": "Label"
+    },
+    {
+      "type": "color",
+      "id": "bg_color_button",
+      "label": "Button background color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "border_color_button",
+      "label": "Button border color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "text_color_button",
+      "label": "Button text color",
+      "default": "#262221"
+    },
+    {
+      "type": "header",
+      "content": "Paddings"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding top (desktop)",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding bottom (desktop)",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mb",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding top (mobile)",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mb",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding bottom (mobile)",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ v2"
+    }
+  ]
+}
+{% endschema %}
