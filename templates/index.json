@@ -705,6 +705,8 @@
       ],
       "settings": {
         "section_padding": 0,
+        "icon_size": 44,
+        "heading_font_size": 16,
         "custom_background": "#262221",
         "custom_text": "#ffffff",
         "seo_h_tag": "h3"
@@ -743,6 +745,8 @@
       ],
       "settings": {
         "section_padding": 50,
+        "icon_size": 64,
+        "heading_font_size": 24,
         "custom_background": "rgba(0,0,0,0)",
         "custom_text": "rgba(0,0,0,0)",
         "seo_h_tag": "h2"
