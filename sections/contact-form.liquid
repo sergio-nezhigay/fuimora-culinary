@@ -9,8 +9,25 @@
   #section-{{ section.id }} .site-box {
     min-height: auto !important;
   }
-  #section-{{ section.id }} .reduce-top-margin {
-    min-height: auto !important;
+
+  /* Desktop only: make columns equal height and center left content */
+  @media (min-width: 1025px) {
+    #section-{{ section.id }}.site-box-container {
+      display: flex;
+      align-items: stretch;
+    }
+
+    #section-{{ section.id }} .site-box.box__heading {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #section-{{ section.id }} .site-box.box__heading .reduce-top-margin {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      min-height: auto !important;
+    }
   }
   {% endunless %}
 
