@@ -288,7 +288,14 @@
         "bg_overlay": false,
         "custom_background": "#262221",
         "custom_text": "#ffffff",
-        "seo_h_tag": "h2"
+        "seo_h_tag": "h2",
+        "custom_position_content": false,
+        "position_content": "left",
+        "custom_paddings": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mb": 0,
+        "padding_bottom_mb": 0
       }
     },
     "rich_text_MBckaU": {
@@ -332,7 +339,14 @@
         "bg_overlay": false,
         "custom_background": "#262221",
         "custom_text": "#ffffff",
-        "seo_h_tag": "h2"
+        "seo_h_tag": "h2",
+        "custom_position_content": false,
+        "position_content": "left",
+        "custom_paddings": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mb": 0,
+        "padding_bottom_mb": 0
       }
     },
     "1636106673daa45393": {
@@ -684,6 +698,7 @@
         ".box--small-fl-auto {min-height: 25vh !important; padding-top: 2.5%;}"
       ],
       "settings": {
+        "section_padding": 98,
         "custom_background": "#262221",
         "custom_text": "#ffffff",
         "seo_h_tag": "h3"
@@ -721,6 +736,7 @@
         ".h4 {font-size: calc(30px / 60 * var(--base-headings-size) + 0px);}"
       ],
       "settings": {
+        "section_padding": 50,
         "custom_background": "rgba(0,0,0,0)",
         "custom_text": "rgba(0,0,0,0)",
         "seo_h_tag": "h2"

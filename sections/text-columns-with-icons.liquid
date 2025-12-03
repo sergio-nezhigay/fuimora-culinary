@@ -1,6 +1,19 @@
+
+
+
 {%- if section.blocks.size > 0 -%}
 
+
+
 	{{ 'section-text-columns-with-icons.css' | asset_url | stylesheet_tag }}
+
+  {% style %}
+    #section-{{ section.id }} .box--small-fl-auto {
+      --box-auto-top: {{ section.settings.section_padding }}px;
+      padding-top: var(--box-auto-top);
+      padding-bottom: var(--box-auto-top);
+    }
+  {% endstyle %}
 
 	{%- render 'custom-colors', id: section.id, background: section.settings.custom_background, text: section.settings.custom_text -%}
 
@@ -15,15 +28,15 @@
 					<div class="text-w-icon__icon">
 						<span>
 							{%- if block.settings.custom_icon != blank -%}
-				        <img 
-									src="{{ block.settings.custom_icon | image_url: width: 64, height: 64, crop: 'center' }}" 
-									alt="{{ block.settings.custom_icon.alt | escape }}" 
+				        <img
+									src="{{ block.settings.custom_icon | image_url: width: 64, height: 64, crop: 'center' }}"
+									alt="{{ block.settings.custom_icon.alt | escape }}"
 									width="64" height="64" style="width:64px;height:64px;" loading="lazy"
 									srcset="
 										{{ block.settings.custom_icon | image_url: width: 64, height: 64, crop: 'center' }} 64w
-										{% if block.settings.custom_icon.width >= 128 %} ,{{ block.settings.custom_icon | image_url: width: 128, height: 128, crop: 'center' }} 128w, {% endif %} 
-										{% if block.settings.custom_icon.width >= 192 %} ,{{ block.settings.custom_icon | image_url: width: 192, height: 192, crop: 'center' }} 192w, {% endif %} 
-										{% if block.settings.custom_icon.width >= 256 %} ,{{ block.settings.custom_icon | image_url: width: 256, height: 256, crop: 'center' }} 256w, {% endif %} 
+										{% if block.settings.custom_icon.width >= 128 %} ,{{ block.settings.custom_icon | image_url: width: 128, height: 128, crop: 'center' }} 128w, {% endif %}
+										{% if block.settings.custom_icon.width >= 192 %} ,{{ block.settings.custom_icon | image_url: width: 192, height: 192, crop: 'center' }} 192w, {% endif %}
+										{% if block.settings.custom_icon.width >= 256 %} ,{{ block.settings.custom_icon | image_url: width: 256, height: 256, crop: 'center' }} 256w, {% endif %}
 									"
 								/>
 					    {%- else -%}
@@ -58,6 +71,16 @@
     "max_blocks": 3,
 		"class": "mount-text-columns-with-icons",
     "settings": [
+      {
+        "type": "range",
+        "id": "section_padding",
+        "label": "Section padding",
+        "min": 0,
+        "max": 140,
+        "step": 2,
+        "unit": "px",
+        "default": 98
+      },
     	{
         "type": "header",
         "content": "t:sections.split-extra-words.settings_schema.colors.headings.custom_colors"
