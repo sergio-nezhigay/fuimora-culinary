@@ -161,28 +161,31 @@ html[dir=rtl] .css-slider-dot-navigation {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  border-radius: 0;
   width: 40px;
   height: 40px;
   transition: all 150ms linear;
   cursor: pointer;
   border-radius: 100%;
   background: var(--main-borders);
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+  border: none;
 }
 .css-slider-button:hover {
   background: var(--main-borders);
 }
 .css-slider-button svg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate3d(-50%, -50%, 0);
+  position: relative;
+  width: 16px;
+  height: 13px;
+  color: var(--main-text);
 }
 html[dir=rtl] .css-slider-button svg {
-  transform: translate3d(-50%, -50%, 0) rotate(180deg);
-}
-.css-slider-button svg * {
-  fill: var(--main-text);
+  transform: rotate(180deg);
 }
 .css-slider-button.disabled {
   opacity: 0.3;
