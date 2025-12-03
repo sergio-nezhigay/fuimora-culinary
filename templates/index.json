@@ -415,6 +415,7 @@
       "custom_css": [
         ".text-size--large {font-size: calc(16px / 16 * var(--base-body-size) + 0px);}"
       ],
+      "disabled": true,
       "settings": {
         "title": "What Top Chefs Are Saying",
         "subtitle": "Hear from professionals who have elevated their kitchens with Fiumara Apparel.",
@@ -999,33 +1000,69 @@
     "testimonials_v2": {
       "type": "testimonials-v2",
       "blocks": {
-        "testimonial_1": {
+        "1636106673daa45393-0": {
           "type": "text",
           "settings": {
-            "quote_content": "<p>This is a testimonial for the new section. It looks great and works perfectly on all devices.</p>",
-            "quote_author": "John Doe",
-            "quote_caption": "CEO, Example Corp"
+            "quote_content": "<h4>Love My Kentaur/Fiumara Jackets & Aprons</h4><p>I’ve been a chef for over 25 years, and I’ve finally found the perfect chef jackets and aprons! They offer a great tailored fit, a versatile selection of colors, and a style that’s both modern and timeless.</p><p>I recommend them to my team, and they really give us a great professional look for our guests to see.</p>",
+            "quote_author": "Laurence A.",
+            "quote_caption": ""
           }
         },
-        "testimonial_2": {
+        "1636106673daa45393-1": {
           "type": "text",
           "settings": {
-            "quote_content": "<p>Another testimonial to test the slider functionality. Swiping and navigation should work smoothly.</p>",
-            "quote_author": "Jane Smith",
-            "quote_caption": "CTO, Tech Inc"
+            "quote_content": "<p>The chef coat is high quality and looks great. They were able to move the embroidery slightly at my request for custom placement. I’m very appreciative of their communication and accommodation.</p>",
+            "quote_author": "Lisa S.",
+            "quote_caption": ""
+          }
+        },
+        "95c555f2-e81f-4479-895d-d65b0f4b142e": {
+          "type": "text",
+          "settings": {
+            "quote_content": "<h4>Chef for NFL Team</h4><p>These are hands down the best shoes I have ever purchased in years. I’ve bought new shoes every three months, throwing the old ones away, starting from scratch, and putting in different insoles. These are the only shoes I’ve ever purchased that I don’t want to take off my feet while I’m at work. 18-19-20 hour shifts are not a problem. Out of the box, they’re comfortable, but if you’re working long shifts, I do recommend a nice set of Copper Fit work insoles—you’ll thank me later.</p>",
+            "quote_author": "Angelo P.",
+            "quote_caption": ""
+          }
+        },
+        "45940e4e-8ada-4520-b198-d02589033b4a": {
+          "type": "text",
+          "settings": {
+            "quote_content": "<h4><strong>Excellent Service & Quality!</strong></h4><p>5 stars. I entered the wrong address by mistake, and customer support redirected the shipment immediately with no extra charge or hassle. Thank you!</p>",
+            "quote_author": "Matt A.",
+            "quote_caption": ""
+          }
+        },
+        "text_3B8YAd": {
+          "type": "text",
+          "settings": {
+            "quote_content": "<h4>Great Coat, Better Customer Service</h4><p>The coat itself is great. Nice, thick material without being stiff. Breathable and wrinkle-resistant.</p><p>Even better, I ordered two different styles, and one didn’t fit me as well (I have an odd body shape, much wider hips than an average man my size would have).</p><p>The return and exchange process was super easy and polite, even though I had to call back twice because of my own mistakes.</p>",
+            "quote_author": "Johnathan C.",
+            "quote_caption": ""
+          }
+        },
+        "text_kxbGmg": {
+          "type": "text",
+          "settings": {
+            "quote_content": "<h4>Sika Clog</h4><p>Absolutely outstanding. If someone had told me, I’d never have believed it, but these clogs have saved my back. Since I started wearing them, my back has improved by at least 50%, even while working in a kitchen on my feet 10-12 hours a day, 6 days a week. I’ve been in constant pain and now realize a big part of it was my shoes. At 58 years old, I’ve finally become a believer in how much of a difference the right shoes can make. A kitchen is an entirely different environment—up and down stairs, hard tile floors, slippery conditions—and these clogs addressed all those issues.</p>",
+            "quote_author": "Bennett O.",
+            "quote_caption": ""
           }
         }
       },
       "block_order": [
-        "testimonial_1",
-        "testimonial_2"
+        "1636106673daa45393-0",
+        "1636106673daa45393-1",
+        "95c555f2-e81f-4479-895d-d65b0f4b142e",
+        "45940e4e-8ada-4520-b198-d02589033b4a",
+        "text_3B8YAd",
+        "text_kxbGmg"
       ],
       "settings": {
-        "title": "New Testimonials",
-        "subtitle": "See what people are saying",
+        "title": "What Top Chefs Are Saying",
+        "subtitle": "Hear from professionals who have elevated their kitchens with Fiumara Apparel.",
         "show_avatars": true,
-        "custom_background": "rgba(0,0,0,0)",
-        "custom_text": "rgba(0,0,0,0)",
+        "custom_background": "#ffffff",
+        "custom_text": "#262221",
         "seo_h_tag": "h2"
       }
     }
