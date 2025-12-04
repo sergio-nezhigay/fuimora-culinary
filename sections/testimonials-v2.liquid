@@ -2,7 +2,7 @@
 
 {{ 'section-testimonials.css' | asset_url | stylesheet_tag }}
 
-<div id="section-{{ section.id }}" class="section-testimonials-v2">
+<div id="section-{{ section.id }}" class="section-testimonials-v2" style="--section-padding-top: {{ section.settings.padding_top }}px; --section-padding-bottom: {{ section.settings.padding_bottom }}px;">
 
   <div class=" box--big  box--typo-big box--column-flow box__heading" data-order="0">
     <div class="site-box-content">
@@ -18,7 +18,7 @@
     </div>
   </div>
 
-  <div class="site-box box--big lap--box--bigger box--typo-big box--center-align box--column-flow box--no-padding" data-order="1" style="border:none">
+  <div class="box--big lap--box--bigger box--typo-big box--center-align box--column-flow box--no-padding" data-order="1" style="border:none">
     <div class="site-box-content remove-first-border">
 
       <css-slider
@@ -112,6 +112,30 @@
         "id": "show_avatars",
         "label": "t:sections.split-extra-words.sections.testimonials.custom_avatar.label",
         "default": true
+      },
+      {
+        "type": "header",
+        "content": "Spacing"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 200,
+        "step": 10,
+        "unit": "px",
+        "label": "Top padding",
+        "default": 50
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 200,
+        "step": 10,
+        "unit": "px",
+        "label": "Bottom padding",
+        "default": 50
       },
       {
         "type": "header",
