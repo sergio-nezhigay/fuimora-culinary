@@ -45,13 +45,7 @@
         "logo_1": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/LNC-Logo_Grey_Authorized-Dealer.png"
-          }
-        },
-        "logo_2": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/images_10.jpg"
+            "logo": "shopify://shop_images/Google_2015_logo_svg.webp"
           }
         },
         "logo_3": {
@@ -69,19 +63,18 @@
         "logo_5": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/logo_1.png"
+            "logo": "shopify://shop_images/fiumaraculinary_top_logo.png"
           }
         },
         "logo_6": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/chefworks-1.svg"
+            "logo": "shopify://shop_images/edwards-logo-png-transparent.png"
           }
         }
       },
       "block_order": [
         "logo_1",
-        "logo_2",
         "logo_3",
         "logo_4",
         "logo_5",
@@ -89,9 +82,11 @@
       ],
       "settings": {
         "scroll_direction": "ltr",
-        "speed": 80,
+        "speed": 50,
         "pause_on_hover": true,
-        "custom_background": "#f7f9fd",
+        "custom_background": "#2c2c2c",
+        "logo_grayscale": 40,
+        "logo_opacity": 100,
         "padding_top": 30,
         "padding_bottom": 30
       }

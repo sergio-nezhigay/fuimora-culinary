@@ -19,10 +19,10 @@
     data-scrolling-direction="{{ section.settings.scroll_direction }}"
     data-pause-on-hover="{{ section.settings.pause_on_hover }}"
     dir="{{ section.settings.scroll_direction }}"
-    style="--section-padding-top: {{ section.settings.padding_top }}px; --section-padding-bottom: {{ section.settings.padding_bottom }}px;"
+    style="--section-padding-top: {{ section.settings.padding_top }}px; --section-padding-bottom: {{ section.settings.padding_bottom }}px; --logo-grayscale: {{ section.settings.logo_grayscale }}%; --logo-opacity: {{ section.settings.logo_opacity | divided_by: 100.0 }}; background: {{ section.settings.custom_background }};"
   >
 
-    <div class="scrolling-logos" style="background: {{ section.settings.custom_background }};">
+    <div class="scrolling-logos">
       {%- for block in section.blocks -%}
         <div class="logo-item" {{ block.shopify_attributes }}>
           <div class="logo-container">
@@ -96,6 +96,28 @@
       "id": "custom_background",
       "label": "Background Color",
       "default": "#f9f9f9"
+    },
+    {
+      "type": "range",
+      "id": "logo_grayscale",
+      "label": "Logo Grayscale Intensity",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "default": 100,
+      "unit": "%",
+      "info": "0% = full color, 100% = full grayscale. Logos show full color on hover."
+    },
+    {
+      "type": "range",
+      "id": "logo_opacity",
+      "label": "Logo Opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 70,
+      "unit": "%",
+      "info": "Opacity when not hovering. Logos show 100% opacity on hover."
     },
     {
       "type": "header",
