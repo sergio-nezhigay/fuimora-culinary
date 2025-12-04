@@ -123,8 +123,7 @@
 }
 
 .testimonials-v3__slider .css-slider-button:hover {
-  background: var(--main-text);
-  opacity: 0.2;
+  opacity: 0.4;
 }
 
 .testimonials-v3__slider .css-slider-prev {
