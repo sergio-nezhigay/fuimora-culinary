@@ -1065,6 +1065,49 @@
         "custom_text": "#262221",
         "seo_h_tag": "h2"
       }
+    },
+    "testimonials_v3_custom": {
+      "type": "testimonials-v3",
+      "blocks": {
+        "testimonial_v3_1": {
+          "type": "testimonial",
+          "settings": {
+            "quote_title": "Love My Kentaur/Fiumara Jackets & Aprons",
+            "quote_content": "<p>I've been a chef for over 25 years, and I've finally found the perfect chef jackets and aprons! They offer a great tailored fit, a versatile selection of colors, and a style that's both modern and timeless.</p>",
+            "quote_author": "Laurence A."
+          }
+        },
+        "testimonial_v3_2": {
+          "type": "testimonial",
+          "settings": {
+            "quote_title": "Great Coat, Better Customer Service",
+            "quote_content": "<p>The coat itself is great. Nice, thick material without being stiff. Breathable and wrinkle-resistant.</p><p>Even better, I ordered two different styles, and one didn't fit me as well (I have an odd body shape, much wider hips than an average man my size would have).</p><p>The return and exchange process was super easy and polite, even though I had to call back twice because of my own mistakes.</p>",
+            "quote_author": "Johnathan C."
+          }
+        },
+        "testimonial_v3_3": {
+          "type": "testimonial",
+          "settings": {
+            "quote_title": "Chef for NFL Team",
+            "quote_content": "<p>These are hands down the best shoes I have ever purchased in years. 18-19-20 hour shifts are not a problem. Out of the box, they're comfortable.</p>",
+            "quote_author": "Angelo P."
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_v3_1",
+        "testimonial_v3_2",
+        "testimonial_v3_3"
+      ],
+      "settings": {
+        "title": "What Top Chefs Are Saying",
+        "subtitle": "Hear from professionals who have elevated their kitchens with Fiumara Apparel.",
+        "custom_background": "#ffffff",
+        "custom_text": "#262221",
+        "padding_top": 80,
+        "padding_bottom": 80,
+        "seo_h_tag": "h2"
+      }
     }
   },
   "order": [
@@ -1079,6 +1122,7 @@
     "rich_text_MBckaU",
     "1636106673daa45393",
     "testimonials_v2",
+    "testimonials_v3_custom",
     "heading_QtRPz9",
     "image_with_text_Nj8R6X",
     "16371348113d6d6d6d",

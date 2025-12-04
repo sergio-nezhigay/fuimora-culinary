@@ -1,0 +1,220 @@
+{%- render 'custom-colors', id: section.id, background: section.settings.custom_background, text: section.settings.custom_text -%}
+
+{{ 'section-testimonials-v3.css' | asset_url | stylesheet_tag }}
+
+<section id="section-{{ section.id }}" class="testimonials-v3" style="--section-padding-top: {{ section.settings.padding_top }}px; --section-padding-bottom: {{ section.settings.padding_bottom }}px;">
+
+  <div class="testimonials-v3__wrapper">
+
+    {%- comment -%} Left Column: Heading & Subheading {%- endcomment -%}
+    <div class="testimonials-v3__heading">
+      <{{ section.settings.seo_h_tag }} class="testimonials-v3__title">
+        {{ section.settings.title | escape }}
+      </{{ section.settings.seo_h_tag }}>
+      {%- unless section.settings.subtitle == blank -%}
+        <p class="testimonials-v3__subtitle">{{ section.settings.subtitle | escape }}</p>
+      {%- endunless -%}
+    </div>
+
+    {%- comment -%} Right Column: Slider with Testimonial Cards {%- endcomment -%}
+    <css-slider
+      class="testimonials-v3__slider css-slider--simple-dots"
+      data-options='{
+        "selector": ".testimonials-v3__card",
+        "navigation": true,
+        "autoHeight": true,
+        "watchCSS": false,
+        "thumbnails": true,
+        "groupCells": false
+      }'
+      style="display:block"
+      id="css-slider-{{ section.id }}"
+    >
+      {%- for block in section.blocks -%}
+        <div class="testimonials-v3__card" {{ block.shopify_attributes }}>
+
+          {%- comment -%} Avatar with Initial {%- endcomment -%}
+          {%- if block.settings.quote_author != blank -%}
+            <div class="testimonials-v3__avatar" aria-hidden="true">
+              <span>{{ block.settings.quote_author | slice: 0 | upcase }}</span>
+            </div>
+          {%- endif -%}
+
+          {%- comment -%} Testimonial Title {%- endcomment -%}
+          {%- unless block.settings.quote_title == blank -%}
+            <h3 class="testimonials-v3__card-title">{{ block.settings.quote_title | escape }}</h3>
+          {%- endunless -%}
+
+          {%- comment -%} Testimonial Content {%- endcomment -%}
+          <blockquote class="testimonials-v3__content">
+            {{ block.settings.quote_content }}
+          </blockquote>
+
+          {%- comment -%} Author Name {%- endcomment -%}
+          {%- if block.settings.quote_author != blank -%}
+            <cite class="testimonials-v3__author">{{ block.settings.quote_author | escape }}</cite>
+          {%- endif -%}
+
+        </div>
+      {%- endfor -%}
+    </css-slider>
+
+  </div>
+
+</section>
+
+{% schema %}
+{
+  "name": "Testimonials V3",
+  "class": "mount-testimonials",
+  "max_blocks": 10,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Heading",
+      "default": "What Top Chefs Are Saying"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Section Subheading",
+      "default": "Hear from professionals who have elevated their kitchens with Fiumara Apparel."
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "custom_background",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "custom_text",
+      "label": "Text Color",
+      "default": "#262221"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 80
+    },
+    {
+      "type": "header",
+      "content": "SEO"
+    },
+    {
+      "type": "select",
+      "id": "seo_h_tag",
+      "label": "Heading Tag",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "span",
+          "label": "span"
+        }
+      ],
+      "default": "h2"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "text",
+          "id": "quote_title",
+          "label": "Testimonial Title",
+          "default": "Great Coat, Better Customer Service",
+          "info": "Optional heading for the testimonial"
+        },
+        {
+          "type": "richtext",
+          "id": "quote_content",
+          "label": "Testimonial Content",
+          "default": "<p>The coat itself is great. Nice, thick material without being stiff. Breathable and wrinkle-resistant.</p>"
+        },
+        {
+          "type": "text",
+          "id": "quote_author",
+          "label": "Author Name",
+          "default": "John Doe",
+          "info": "First letter will be automatically extracted for avatar"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonials V3",
+      "blocks": [
+        {
+          "type": "testimonial",
+          "settings": {
+            "quote_title": "Love My Kentaur/Fiumara Jackets & Aprons",
+            "quote_content": "<p>I've been a chef for over 25 years, and I've finally found the perfect chef jackets and aprons! They offer a great tailored fit, a versatile selection of colors, and a style that's both modern and timeless.</p>",
+            "quote_author": "Laurence A."
+          }
+        },
+        {
+          "type": "testimonial",
+          "settings": {
+            "quote_title": "Great Coat, Better Customer Service",
+            "quote_content": "<p>The coat itself is great. Nice, thick material without being stiff. Breathable and wrinkle-resistant. Even better, I ordered two different styles, and one didn't fit me as well. The return and exchange process was super easy and polite.</p>",
+            "quote_author": "Lisa S."
+          }
+        },
+        {
+          "type": "testimonial",
+          "settings": {
+            "quote_title": "Chef for NFL Team",
+            "quote_content": "<p>These are hands down the best shoes I have ever purchased in years. 18-19-20 hour shifts are not a problem. Out of the box, they're comfortable and provide excellent support.</p>",
+            "quote_author": "Johnathan C."
+          }
+        }
+      ]
+    }
+  ],
+  "disabled_on": {
+    "groups": ["custom.overlay", "header"]
+  }
+}
+{% endschema %}
