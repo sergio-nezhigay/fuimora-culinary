@@ -8,7 +8,7 @@
 
     {%- comment -%} Left Column: Heading & Subheading {%- endcomment -%}
     <div class="testimonials-v3__heading">
-      <{{ section.settings.seo_h_tag }} class="testimonials-v3__title">
+      <{{ section.settings.seo_h_tag }} class="testimonials-v3__title {{ section.settings.heading_size }}">
         {{ section.settings.title | escape }}
       </{{ section.settings.seo_h_tag }}>
       {%- unless section.settings.subtitle == blank -%}
@@ -149,6 +149,26 @@
         {
           "value": "span",
           "label": "span"
+        }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading size",
+      "options": [
+        {
+          "value": "h3",
+          "label": "Small"
+        },
+        {
+          "value": "h2",
+          "label": "Regular"
+        },
+        {
+          "value": "h1",
+          "label": "Large"
         }
       ],
       "default": "h2"

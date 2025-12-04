@@ -182,7 +182,7 @@
           "type": "heading",
           "settings": {
             "heading": "Why Fiumara Culinary Stands Out",
-            "heading_size": "h1",
+            "heading_size": "h2",
             "seo_h_tag": "h2"
           }
         },
@@ -565,7 +565,8 @@
         "custom_text": "#262221",
         "padding_top": 80,
         "padding_bottom": 80,
-        "seo_h_tag": "h2"
+        "seo_h_tag": "h2",
+        "heading_size": "h2"
       }
     },
     "heading_QtRPz9": {

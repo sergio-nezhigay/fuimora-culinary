@@ -4,7 +4,8 @@
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(dir \"C:\\projects\\fuimora-culinary\" /A:D)",
-      "Bash(dir \"C:\\projects\\fuimora-culinary\\snippets\")"
+      "Bash(dir \"C:\\projects\\fuimora-culinary\\snippets\")",
+      "Bash(grep:*)"
     ],
     "deny": [],
     "ask": []
