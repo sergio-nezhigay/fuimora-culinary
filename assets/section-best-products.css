@@ -376,7 +376,7 @@
 }
 
 /* Portrait Tablet Override */
-@media screen and (max-width: 1024px) and (orientation: portrait) {
+@media screen and (max-width: 1024px) and (min-width: 769px) and (orientation: portrait) {
   .best-products__product-card {
     width: 50%;
   }
