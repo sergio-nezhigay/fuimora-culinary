@@ -2,17 +2,17 @@
 
 {{ 'section-testimonials.css' | asset_url | stylesheet_tag }}
 
-<div id="section-{{ section.id }}" class="site-box-container container--fullscreen box--can-stick remove-sticky-border">
+<div id="section-{{ section.id }}" class="section-testimonials-v2">
 
-  <div class="site-box box--big lap--box--small-fl-auto box--typo-big box--center-align box--top-align-if-first box--column-flow box__heading" data-order="0">
-    <div class="site-box-content reduce-top-margin-if-first">
+  <div class=" box--big  box--typo-big box--column-flow box__heading" data-order="0">
+    <div class="site-box-content">
       <div>
 
         <{{ section.settings.seo_h_tag }} class="title h1">{{ section.settings.title | escape }}</{{ section.settings.seo_h_tag }}>
         {%- unless section.settings.subtitle == blank -%}
           <span class="subtitle">{{ section.settings.subtitle | escape }}</span>
         {%- endunless -%}
-        {%- if settings.headings_hr -%} <hr /> {%- endif -%}
+
 
       </div>
     </div>
