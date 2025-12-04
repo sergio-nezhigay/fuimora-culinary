@@ -1045,6 +1045,21 @@
         "button_label": "SHOP NOW",
         "button_link": "shopify://collections/all"
       }
+    },
+    "best_products_7AR9Y9": {
+      "type": "best-products",
+      "name": "Best Products",
+      "settings": {
+        "title": "Best Products",
+        "collection": "trending-chef-gear-best-sellers-at-fiumara-culinary",
+        "products_to_show": 8,
+        "custom_background": "#ffffff",
+        "custom_text": "#262221",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "seo_h_tag": "h2",
+        "heading_size": "h2"
+      }
     }
   },
   "order": [
@@ -1071,6 +1086,7 @@
     "16372498804121dda9",
     "image_with_text_K77c33",
     "contact_form_nHGEkH",
-    "final_cta_new"
+    "final_cta_new",
+    "best_products_7AR9Y9"
   ]
 }
