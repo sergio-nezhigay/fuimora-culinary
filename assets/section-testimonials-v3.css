@@ -16,9 +16,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 var(--box-big-padding);
   align-items: center;
 }
 
@@ -57,6 +55,9 @@
   padding: 40px;
   border-radius: 12px;
   border: 1px solid var(--main-borders);
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Avatar - Circular with Initial */
@@ -88,6 +89,7 @@
   line-height: 1.7;
   margin: 0 0 20px 0;
   font-style: normal;
+  flex: 1;
 }
 
 .testimonials-v3__content p {
@@ -220,6 +222,7 @@ html[dir=rtl] .testimonials-v3__slider .css-slider-next {
   .testimonials-v3__card {
     padding: 32px 24px;
     text-align: center;
+    min-height: 450px;
   }
 
   /* Avatar - Smaller & Centered */
