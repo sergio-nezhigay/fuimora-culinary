@@ -1,0 +1,306 @@
+{{- 'faq-with-image.out.css' | asset_url | stylesheet_tag -}}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top_mb }}px;
+    padding-bottom: {{ section.settings.padding_bottom_mb }}px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .section-{{ section.id }} {
+    background: {{ section.settings.bg_color }};
+  }
+
+  .section-{{ section.id }} p,
+  .section-{{ section.id }} h2,
+  .section-{{ section.id }} h3,
+  .section-{{ section.id }} h4,
+  .section-{{ section.id }} h5,
+  .section-{{ section.id }} h6 {
+    color: {{ section.settings.text_color }};
+  }
+{%- endstyle -%}
+
+<section id="section-{{ section.id }}" class="section-{{ section.id }} faq-with-image custom-container section-{{ section.id }}-padding">
+
+  <!-- Image Column (Left on Desktop, Top on Mobile) -->
+  <div class="faq-with-image__image-column">
+    {% if section.settings.image != blank %}
+      {%- liquid
+        assign image_width = section.settings.image.width
+        assign image_height = image_width | divided_by: section.settings.image.aspect_ratio
+      -%}
+      {{
+        section.settings.image
+        | image_url: width: 1400
+        | image_tag:
+          width: image_width,
+          height: image_height,
+          loading: 'lazy',
+          sizes: '(max-width: 750px) 100vw, 50vw',
+          widths: '350, 700, 1100, 1400',
+          alt: section.settings.image.alt | default: 'FAQ Image'
+      }}
+    {% endif %}
+  </div>
+
+  <!-- FAQ Column (Right on Desktop, Bottom on Mobile) -->
+  <div class="faq-with-image__content-column">
+
+    <!-- Title -->
+    {% if section.settings.title != blank %}
+      <h2 class="faq-with-image__title h2-custom">{{ section.settings.title }}</h2>
+    {% endif %}
+
+    <!-- FAQ List -->
+    <div class="faq-with-image__list">
+      {% for block in section.blocks %}
+        <div class="faq-with-image__item" {{ block.shopify_attributes }}>
+          <button class="faq-with-image__question" aria-expanded="false">
+            <span class="faq-with-image__number">#{{ forloop.index }}</span>
+            <span class="faq-with-image__title-item">{{ block.settings.title }}</span>
+            <svg
+              class="faq-with-image__icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path stroke="currentColor" stroke-width="2" d="M6 9l6 6 6-6"/>
+            </svg>
+          </button>
+          <div class="faq-with-image__answer">
+            <p>{{ block.settings.description }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const sectionId = 'section-{{ section.id }}';
+  const section = document.getElementById(sectionId);
+
+  if (!section) return;
+
+  const faqItems = section.querySelectorAll('.faq-with-image__item');
+
+  faqItems.forEach((item) => {
+    const question = item.querySelector('.faq-with-image__question');
+    const answer = item.querySelector('.faq-with-image__answer');
+
+    if (item.classList.contains('active')) {
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+      question.setAttribute('aria-expanded', 'true');
+    } else {
+      question.setAttribute('aria-expanded', 'false');
+      answer.style.maxHeight = '0px';
+    }
+
+    question.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+
+      if (isActive) {
+        // Close
+        const currentHeight = answer.scrollHeight;
+        answer.style.maxHeight = currentHeight + 'px';
+        requestAnimationFrame(() => {
+          answer.style.maxHeight = '0px';
+        });
+
+        answer.addEventListener(
+          'transitionend',
+          function onClose(e) {
+            if (e.propertyName === 'max-height') {
+              item.classList.remove('active');
+              question.setAttribute('aria-expanded', 'false');
+              answer.removeEventListener('transitionend', onClose);
+            }
+          }
+        );
+      } else {
+        // Open
+        item.classList.add('active');
+        question.setAttribute('aria-expanded', 'true');
+        const targetHeight = answer.scrollHeight;
+        answer.style.maxHeight = targetHeight + 'px';
+
+        answer.addEventListener(
+          'transitionend',
+          function onOpen(e) {
+            if (e.propertyName === 'max-height') {
+              answer.removeEventListener('transitionend', onOpen);
+            }
+          }
+        );
+      }
+    });
+  });
+});
+</script>
+
+{% schema %}
+{
+  "name": "FAQ with Image",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Frequently Asked Questions"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#262221"
+    },
+    {
+      "type": "header",
+      "content": "Paddings"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding top (desktop)",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding bottom (desktop)",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mb",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding top (mobile)",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mb",
+      "min": 0,
+      "max": 200,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding bottom (mobile)",
+      "default": 32
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq_item",
+      "name": "FAQ Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Question"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Answer"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ with Image",
+      "blocks": [
+        {
+          "type": "faq_item",
+          "settings": {
+            "title": "How quickly can I get uniforms delivered?",
+            "description": "Most standard orders ship within a few business days, and expedited delivery is available when you need uniforms fast. Every order is tracked and managed with care, so your team always has what they need—on time, every time."
+          }
+        },
+        {
+          "type": "faq_item",
+          "settings": {
+            "title": "Do you handle reorders for new staff?",
+            "description": "Yes. Once your selections are in our system, reordering is quick and seamless. Whether you're hiring a new chef or expanding your front-of-house team, we make it easy to keep your look consistent."
+          }
+        },
+        {
+          "type": "faq_item",
+          "settings": {
+            "title": "What is your policy on returns and exchanges?",
+            "description": "We want your team to be fully satisfied with their uniforms. Standard items can be easily exchanged or returned if the fit or style isn't right. For customized orders, once embroidery designs have been approved, those items cannot be returned—but our team works closely with you upfront to ensure every detail is correct before production begins."
+          }
+        },
+        {
+          "type": "faq_item",
+          "settings": {
+            "title": "Do you offer sustainable apparel options?",
+            "description": "Yes. We partner with brands that use eco-friendly fabrics and responsible sourcing. Our durable, long-lasting uniforms also reduce waste, helping you align with sustainability goals without compromising quality."
+          }
+        },
+        {
+          "type": "faq_item",
+          "settings": {
+            "title": "Do you provide dedicated account managers for business customers?",
+            "description": "Absolutely. Our business accounts come with a dedicated account manager who understands your brand and ordering needs. You'll always have a trusted point of contact for new orders, reorders, and support."
+          }
+        },
+        {
+          "type": "faq_item",
+          "settings": {
+            "title": "Why should I choose premium uniforms instead of cheaper options?",
+            "description": "Low-cost uniforms wear out quickly, fit poorly, and can weaken your brand image. Premium apparel lasts longer, performs better, and elevates the guest experience—saving you money in the long run and inspiring staff confidence."
+          }
+        },
+        {
+          "type": "faq_item",
+          "settings": {
+            "title": "Can you support multiple locations or growing restaurant groups?",
+            "description": "Yes. From single-location cafés to multi-unit resorts and hospitality groups, we provide consistent apparel programs across every site. With bulk ordering, reordering support, and account management, we grow alongside your business."
+          }
+        },
+        {
+          "type": "faq_item",
+          "settings": {
+            "title": "Which restaurants and hospitality brands already trust you for uniforms?",
+            "description": "We're proud to outfit a wide range of customers—from Michelin-starred restaurants like Jônt, to destinations like Disneyland and The Thompson Hotels, to vineyards, resorts, and caterers. Our track record proves we deliver the same precision, quality, and care no matter the size or style of your business."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

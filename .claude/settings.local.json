@@ -4,7 +4,8 @@
       "Bash(npm run push:*)",
       "Bash(cd:*)",
       "Bash(find:*)",
-      "Bash(findstr:*)"
+      "Bash(findstr:*)",
+      "Bash(python:*)"
     ],
     "deny": [],
     "ask": []
