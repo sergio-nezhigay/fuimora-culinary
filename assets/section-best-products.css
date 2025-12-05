@@ -234,7 +234,7 @@
   display: flex;
   justify-content: center;
   gap: 8px;
-  margin-top: 40px;
+  margin-top: 40px;  /* Works correctly with css-slider--simple-dots class (relative positioning) */
 }
 
 .best-products__slider .css-slider-dot {
@@ -253,6 +253,13 @@
   width: 32px;
   border-radius: 5px;
   opacity: 1;
+}
+
+/* Preserve pill background style while using simple-dots positioning */
+.best-products__slider.css-slider--simple-dots .css-slider-dot-navigation {
+  background: var(--main-borders, #e5e5e5);
+  padding: 8px 10px;
+  border-radius: 21px;
 }
 
 /* ============================================
