@@ -1,5 +1,5 @@
 /* ============================================
-   Best Products Section - Base Styles
+   Trending Products Section - Base Styles
    ============================================ */
 
 /* Section Container */
@@ -11,9 +11,9 @@
   overflow: hidden;
 }
 
-.best-products__wrapper {
+/*.best-products__wrapper {
   padding: 0 var(--box-big-padding, 40px);
-}
+}*/
 
 /* Section Heading */
 .best-products__heading {

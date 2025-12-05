@@ -1048,9 +1048,9 @@
     },
     "best_products_7AR9Y9": {
       "type": "best-products",
-      "name": "Best Products",
+      "name": "Trendings Products",
       "settings": {
-        "title": "Best Products",
+        "title": "Trending Products",
         "collection": "trending-chef-gear-best-sellers-at-fiumara-culinary",
         "products_to_show": 8,
         "custom_background": "#ffffff",
