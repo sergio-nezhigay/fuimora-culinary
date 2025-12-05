@@ -1,3 +1,18 @@
+<style>
+  /* Final CTA button icon color fix */
+  #section-{{ section.id }} .final-cta__button .icon {
+    color: #000 !important;
+  }
+
+  #section-{{ section.id }} .final-cta__button .icon svg,
+  #section-{{ section.id }} .final-cta__button .icon svg path,
+  #section-{{ section.id }} .final-cta__button .icon svg circle {
+    fill: #000 !important;
+    stroke: #000 !important;
+    color: #000 !important;
+  }
+</style>
+
 <div id="section-{{ section.id }}" class="final-cta-section" style="position: relative; overflow: hidden; min-height: {{ section.settings.height }}px; display: flex; align-items: center; justify-content: center; text-align: center;">
 
   {%- if section.settings.image != blank -%}
@@ -30,8 +45,11 @@
     {%- endif -%}
 
     {%- if section.settings.button_label != blank -%}
-      <a href="{{ section.settings.button_link }}" class="button button--solid" style="background-color: #fff; color: #000; border-color: #fff;">
-        {{ section.settings.button_label | escape }}
+      <a href="{{ section.settings.button_link }}" class="button button--solid button--with-icon final-cta__button" style="background-color: #fff; color: #000; border-color: #fff;">
+        <span>{{ section.settings.button_label | escape }}</span>
+        <span class="icon" aria-hidden="true" role="img">
+          {%- render 'theme-symbols', icon: 'arrow_icon_smallest' -%}
+        </span>
       </a>
     {%- endif -%}
 
