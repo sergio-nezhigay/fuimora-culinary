@@ -221,7 +221,7 @@
   font-size: calc(15px / 16 * var(--base-body-size, 16px) + 0px);
   font-weight: 600;
   cursor: pointer;
-  transition: all 150ms ease;
+  transition: padding 150ms linear;
   font-family: inherit;
   position: relative;
   overflow: hidden;
@@ -231,8 +231,7 @@
 }
 
 .best-products__add-to-cart:hover {
-  opacity: 0.8;
-  padding-inline-end: 50px;       /* Expand on hover for icon */
+  padding-inline-end: 50px;       /* Expand on hover for icon - no opacity change */
 }
 
 .best-products__add-to-cart:focus {
@@ -246,6 +245,17 @@
   opacity: 0;
   position: absolute;
   transition: all 150ms linear;
+  color: var(--main-text-foreground, #ffffff);  /* Match button text color */
+}
+
+.best-products__add-to-cart .icon svg {
+  color: inherit;
+}
+
+.best-products__add-to-cart .icon svg path,
+.best-products__add-to-cart .icon svg circle {
+  fill: currentColor;
+  stroke: currentColor;
 }
 
 html[dir=ltr] .best-products__add-to-cart .icon {
@@ -442,6 +452,7 @@ html[dir=rtl] .best-products__add-to-cart:hover .icon {
     width: 100%;  /* Keep full width on mobile */
   }
 
+  /* No hover effect on mobile - keep button unchanged */
   .best-products__add-to-cart:hover {
     padding-inline-end: 16px;  /* No expansion on mobile */
   }
