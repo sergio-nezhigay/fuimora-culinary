@@ -9,8 +9,8 @@
 }
 
 .faq-with-image.custom-container {
-  max-width: 1200px;
-  padding-inline: 16px;
+  max-width: 1400px;
+  padding-inline: 40px;
 }
 
 /* Desktop Layout - Two Columns */
@@ -59,14 +59,14 @@
   text-align: left;
   margin: 0;
   font-weight: 400;
-  font-size: 32px;
+  font-size: 23px;
   line-height: 130%;
   letter-spacing: 0;
 }
 
 @media screen and (min-width: 1024px) {
   .faq-with-image__title {
-    font-size: 48px;
+    font-size: 38px;
   }
 }
 
