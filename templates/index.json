@@ -456,7 +456,9 @@
         "button_wiTfFq"
       ],
       "custom_css": [
-        ".box--big {min-height: 60vh;}"
+        ".box--big {min-height: 60vh;}",
+        ".heading.h3 {font-size: 23px; font-weight: 400;}",
+        "@media screen and (min-width: 768px) {.heading.h3 {font-size: 38px; }}"
       ],
       "settings": {
         "title": "",
@@ -488,7 +490,7 @@
           "type": "heading",
           "settings": {
             "heading": "Discover Our Culinary Workwear",
-            "heading_size": "h1",
+            "heading_size": "h2",
             "seo_h_tag": "h2"
           }
         },
@@ -710,7 +712,7 @@
           "type": "heading",
           "settings": {
             "heading": "Perfect Fit Guarantee",
-            "heading_size": "h1",
+            "heading_size": "h2",
             "seo_h_tag": "h2"
           }
         }
@@ -719,10 +721,10 @@
         "heading_bJjert"
       ],
       "custom_css": [
-        ".box--small-fl-auto {min-height: 25vh !important; padding-bottom: 0;}"
+        ".box--small-fl-auto {min-height: 15vh !important; padding-bottom: 0;}"
       ],
       "settings": {
-        "section_padding": 100,
+        "section_padding": 0,
         "text_alignment": "center",
         "custom_background": "#262221",
         "custom_text": "#ffffff"
@@ -1035,7 +1037,9 @@
         "button_dxLzRT"
       ],
       "custom_css": [
-        ".site-box-container:not(.remove-background) {background: url(https://cdn.shopify.com/s/files/1/0116/8492/files/Fiumara-Culinary-ISP-2164900943-2560x1440.jpg); background-size: cover;}"
+        ".site-box-container:not(.remove-background) {background: url(https://cdn.shopify.com/s/files/1/0116/8492/files/Fiumara-Culinary-ISP-2164900943-2560x1440.jpg); background-size: cover;}",
+        ".title.h1 {font-size: 23px; font-weight: 400;}",
+        "@media screen and (min-width: 768px) {.title.h1 {font-size: 38px; }}"
       ],
       "settings": {
         "title": "Free Guide to Premium Workwear",

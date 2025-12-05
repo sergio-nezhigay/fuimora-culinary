@@ -28,7 +28,7 @@
   .best-products__title {
     line-height: 1.2;
     margin: 0;
-    font-weight: 600;
+    font-size: 38px;
   }
 }
 
@@ -42,7 +42,7 @@
   .best-products__title {
     line-height: 1.2;
     margin: 0;
-    font-weight: 600;
+    font-size: 23px;
   }
 }
 
