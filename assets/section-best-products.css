@@ -15,16 +15,35 @@
   padding: 0 var(--box-big-padding, 40px);
 }*/
 
-/* Section Heading */
-.best-products__heading {
-  text-align: center;
-  margin-bottom: 60px;
+/* Section Heading - Responsive */
+/* Desktop: Left-aligned title with padding like "A Simple Plan" section */
+@media screen and (min-width: 769px) {
+  .best-products__heading {
+    text-align: left;
+    margin-bottom: 60px;
+    padding-left: var(--box-big-padding, 40px);
+    padding-right: var(--box-big-padding, 40px);
+  }
+
+  .best-products__title {
+    line-height: 1.2;
+    margin: 0;
+    font-weight: 600;
+  }
 }
 
-.best-products__title {
-  line-height: 1.2;
-  margin: 0;
-  font-weight: 600;
+/* Mobile: Keep centered */
+@media screen and (max-width: 768px) {
+  .best-products__heading {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .best-products__title {
+    line-height: 1.2;
+    margin: 0;
+    font-weight: 600;
+  }
 }
 
 /* ============================================
@@ -94,15 +113,21 @@
   flex-direction: column;
 }
 
-/* Reviews */
+/* Reviews - Visual Star Display */
 .best-products__reviews {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   margin-bottom: 12px;
   font-size: calc(14px / 16 * var(--base-body-size, 16px) + 0px);
   color: var(--main-text);
   opacity: 0.8;
+}
+
+.best-products__stars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
 }
 
 .best-products__star {
@@ -110,20 +135,38 @@
   height: 16px;
   display: flex;
   align-items: center;
-  color: #FFD700;
   flex-shrink: 0;
+}
+
+.best-products__star--full {
+  color: #FFD700;  /* Gold for filled stars */
+}
+
+.best-products__star--half {
+  color: #FFD700;  /* Gold for half star gradient */
+}
+
+.best-products__star--empty {
+  color: #D3D3D3;  /* Light gray for empty stars */
 }
 
 .best-products__rating-text {
   line-height: 1;
+  white-space: nowrap;
 }
 
-/* Product Title */
+/* Product Title - Fixed Height to Prevent Layout Shift */
 .best-products__product-title {
   font-size: calc(18px / 16 * var(--base-body-size, 16px) + 0px);
   font-weight: 600;
   line-height: 1.3;
   margin: 0 0 12px 0;
+  min-height: 2.6em;           /* 1.3 line-height * 2 lines = 2.6em */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;       /* Limit to 2 lines max */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .best-products__product-title a {
@@ -167,27 +210,63 @@
   margin-top: auto;
 }
 
-/* Add to Cart Button */
+/* Add to Cart Button - Shop Now Style */
 .best-products__add-to-cart {
-  width: 100%;
+  width: auto;                    /* Changed from 100% */
   padding: 14px 20px;
   background: var(--main-text);
   color: var(--main-text-foreground, #ffffff);
   border: none;
+  border-radius: var(--buttons-radius, 0);
   font-size: calc(15px / 16 * var(--base-body-size, 16px) + 0px);
   font-weight: 600;
   cursor: pointer;
-  transition: opacity 200ms ease;
+  transition: all 150ms ease;
   font-family: inherit;
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .best-products__add-to-cart:hover {
   opacity: 0.8;
+  padding-inline-end: 50px;       /* Expand on hover for icon */
 }
 
 .best-products__add-to-cart:focus {
   outline: 2px solid var(--main-text);
   outline-offset: 2px;
+}
+
+/* Icon animation (similar to button--with-icon) */
+.best-products__add-to-cart .icon {
+  width: 0;
+  opacity: 0;
+  position: absolute;
+  transition: all 150ms linear;
+}
+
+html[dir=ltr] .best-products__add-to-cart .icon {
+  right: 40px;
+}
+
+html[dir=rtl] .best-products__add-to-cart .icon {
+  left: 40px;
+}
+
+.best-products__add-to-cart:hover .icon {
+  opacity: 1;
+  width: 20px;
+}
+
+html[dir=ltr] .best-products__add-to-cart:hover .icon {
+  right: 15px;
+}
+
+html[dir=rtl] .best-products__add-to-cart:hover .icon {
+  left: 15px;
 }
 
 /* ============================================
@@ -339,6 +418,7 @@
   .best-products__product-title {
     font-size: calc(15px / 16 * var(--base-body-size, 16px) + 0px);
     margin-bottom: 8px;
+    min-height: 2.6em;  /* Maintain fixed height on mobile */
   }
 
   .best-products__price {
@@ -359,6 +439,15 @@
   .best-products__add-to-cart {
     padding: 12px 16px;
     font-size: calc(14px / 16 * var(--base-body-size, 16px) + 0px);
+    width: 100%;  /* Keep full width on mobile */
+  }
+
+  .best-products__add-to-cart:hover {
+    padding-inline-end: 16px;  /* No expansion on mobile */
+  }
+
+  .best-products__add-to-cart .icon {
+    display: none;  /* Hide icon on mobile */
   }
 
   /* Hide arrow buttons on mobile */

@@ -43,17 +43,40 @@
               </div>
               <div class="best-products__content">
                 <div class="best-products__reviews">
-                  <span class="best-products__star" aria-hidden="true">
-                    <svg width="16" height="16" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M9 0L11.0206 6.21885H17.5595L12.2694 10.0623L14.2901 16.2812L9 12.4377L3.70993 16.2812L5.73056 10.0623L0.440492 6.21885H6.97937L9 0Z" fill="currentColor"/>
-                    </svg>
-                  </span>
-                  <span class="best-products__rating-text">4.5 / 5 (23 reviews)</span>
+                  <div class="best-products__stars" aria-hidden="true">
+                    {%- for i in (1..5) -%}
+                      {%- if i <= 4 -%}
+                        <span class="best-products__star best-products__star--full">
+                          <svg width="16" height="16" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 0L11.0206 6.21885H17.5595L12.2694 10.0623L14.2901 16.2812L9 12.4377L3.70993 16.2812L5.73056 10.0623L0.440492 6.21885H6.97937L9 0Z" fill="currentColor"/>
+                          </svg>
+                        </span>
+                      {%- else -%}
+                        <span class="best-products__star best-products__star--half">
+                          <svg width="16" height="16" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                              <linearGradient id="half-placeholder-{{ forloop.index }}">
+                                <stop offset="50%" stop-color="currentColor"/>
+                                <stop offset="50%" stop-color="transparent"/>
+                              </linearGradient>
+                            </defs>
+                            <path d="M9 0L11.0206 6.21885H17.5595L12.2694 10.0623L14.2901 16.2812L9 12.4377L3.70993 16.2812L5.73056 10.0623L0.440492 6.21885H6.97937L9 0Z" fill="url(#half-placeholder-{{ forloop.index }})" stroke="currentColor" stroke-width="0.5"/>
+                          </svg>
+                        </span>
+                      {%- endif -%}
+                    {%- endfor -%}
+                  </div>
+                  <span class="best-products__rating-text">(23 reviews)</span>
                 </div>
                 <h3 class="best-products__product-title">Product Title {{ forloop.index }}</h3>
                 <p class="best-products__price">From $79.95</p>
                 <p class="best-products__description">This is a sample product description that will be truncated to 2-3 lines using CSS ellipsis.</p>
-                <button class="best-products__add-to-cart">Add to cart - $79.95</button>
+                <button class="best-products__add-to-cart">
+                  <span>Add to cart - $79.95</span>
+                  <span class="icon" aria-hidden="true" role="img">
+                    {%- render 'theme-symbols', icon: 'arrow_icon_smallest' -%}
+                  </span>
+                </button>
               </div>
             </div>
           </div>
