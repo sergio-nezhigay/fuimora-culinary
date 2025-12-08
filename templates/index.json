@@ -496,7 +496,7 @@
         "custom_background": "#ffffff",
         "custom_text": "#262221",
         "padding_top": 50,
-        "padding_bottom": 50,
+        "padding_bottom": 0,
         "seo_h_tag": "h2",
         "heading_size": "h2"
       }
@@ -612,7 +612,7 @@
         ".box--small-fl-auto {min-height: 15vh !important; padding-top: 2.5%;}"
       ],
       "settings": {
-        "section_padding": 0,
+        "section_padding": 30,
         "icon_size": 44,
         "heading_font_size": 16,
         "custom_background": "#262221",
