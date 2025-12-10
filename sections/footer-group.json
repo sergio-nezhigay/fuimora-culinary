@@ -58,8 +58,8 @@
         "custom_background": "#262221",
         "custom_text": "#ffffff",
         "seo_h_tag": "h4",
-        "padding_top": 98,
-        "padding_bottom": 98
+        "section_padding_top": 30,
+        "section_padding_bottom": 30
       }
     }
   },
