@@ -84,7 +84,7 @@
         "scroll_direction": "ltr",
         "speed": 50,
         "pause_on_hover": true,
-        "custom_background": "#2c2c2c",
+        "custom_background": "#222024",
         "logo_grayscale": 40,
         "logo_opacity": 100,
         "padding_top": 30,
@@ -190,7 +190,7 @@
         "text_YfJb9c": {
           "type": "text",
           "settings": {
-            "text": "<p>At Fiumara Culinary, we know that you want to be a chef or restaurateur who stands out with prestige. In order to do that, you need workwear that is as high-quality and unique as the food you create. The problem is that it’s challenging to find uniforms that combine functionality, style, and exclusivity, which makes you feel frustrated and unsure of where to turn.<br/><br/></p><p>We believe that culinary professionals dedicated to excellence deserve apparel that reflects their success. We understand how difficult it is to find workwear that’s both functional and luxurious, which is why we’ve spent nearly 15 years providing exclusive, fashion-forward uniforms trusted by top chefs and restaurants.</p>"
+            "text": "<p>At Fiumara Culinary, we know you want to be a chef or restaurateur who is recognized for excellence and professionalism. To achieve that, you need premium culinary workwear that’s as refined, high-performing, and distinctive as the dishes you create. The challenge is that truly exceptional uniforms—those that blend durability, comfort, elevated style, and exclusivity—are hard to find. This often leaves you frustrated and unsure where to turn for apparel that matches your standards.<br/><br/>We believe culinary professionals dedicated to excellence deserve apparel that reflects their success. We understand how difficult it can be to find workwear that delivers both luxury and performance, which is why we’ve spent nearly 15 years providing exclusive, fashion-forward chef uniforms trusted by top chefs and restaurants.</p>"
           }
         },
         "custom_liquid_dLnEyg": {
@@ -297,7 +297,7 @@
         "1636106675d59d7642-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Your workwear should work as hard as you do and reflect the excellence you bring to your craft. Every day you wear uninspired, uncomfortable uniforms, you miss the chance to:</p><ul><li>Reflect your restaurant’s high standards.</li><li>Feel confident and professional in your role.</li><li>Stand out among culinary professionals.</li></ul><p>Choose workwear that sets you apart and lets your passion for excellence shine through.</p>"
+            "text": "<p>Your culinary workwear should work as hard as you do and showcase the excellence you bring to every dish. When you rely on uniforms that feel uninspired, uncomfortable, or poorly made, you miss valuable opportunities to:</p><ul><li>Reflect your restaurant’s elevated standards and brand identity.</li><li>Feel confident, polished, and professional during every shift.</li><li>Stand out and be recognized among top culinary talent.</li></ul><p>Choose chef workwear that elevates your presence, supports your performance, and lets your passion for exceptional cuisine shine through.</p>"
           }
         }
       },
@@ -342,7 +342,7 @@
         "text_RkRVUA": {
           "type": "text",
           "settings": {
-            "text": "<p>When you choose Fiumara Culinary, you:</p><ul><li>Stand out in stylish, functional uniforms.</li><li>Elevate your restaurant’s image with every detail.</li><li>Enjoy apparel that reflects your dedication to excellence.</li></ul><p>Because when you look and feel your best, you can focus on creating exceptional culinary experiences.</p>"
+            "text": "<p>When you choose Fiumara Culinary, you:</p><ul><li>Stand out with chef uniforms that are both stylish and highly functional.</li><li>Elevate your restaurant’s image through thoughtful, professional design.</li><li>Wear apparel that reflects your dedication to quality and culinary excellence.</li></ul><p>Because when you look and feel your best, you can focus on delivering extraordinary culinary experiences.</p>"
           }
         },
         "button_wiTfFq": {
@@ -519,7 +519,7 @@
         "text_tYXfTp": {
           "type": "text",
           "settings": {
-            "text": "<p>Finding high-quality, stylish uniforms shouldn’t be complicated—that’s why we’ve made it easy to elevate your workwear:</p><p><br/></p><ol><li><strong>Search:</strong> Search for your desired workwear.</li><li><strong>Purchase:</strong> Place your order online or request a bulk purchase.</li><li><strong>Stand Out:</strong> Receive apparel that elevates your image and meets your needs.</li></ol>"
+            "text": "<p>Finding high-quality, stylish chef uniforms shouldn’t be complicated — which is why we’ve made it effortless to upgrade your workwear:</p><p><br/></p><ol><li><strong>Search:</strong> Explore our curated collection to find the culinary apparel that fits your style and performance needs.</li><li><strong>Purchase:</strong> Order directly online or request a bulk purchase for your team.</li><li><strong>Stand Out:</strong> Receive premium workwear that enhances your image and supports your success.<br/></li></ol>"
           }
         },
         "button_xNemT6": {
@@ -772,57 +772,50 @@
         "faq_1": {
           "type": "faq_item",
           "settings": {
-            "title": "How quickly can I get uniforms delivered?",
-            "description": "Most standard orders ship within a few business days, and expedited delivery is available when you need uniforms fast. Every order is tracked and managed with care, so your team always has what they need—on time, every time."
+            "title": "What makes shopping with Fiumara Culinary different from other retailers?",
+            "description": "We curate top-performing chef apparel from the industry’s most trusted brands, bringing you a selection of high-quality, stylish, and durable uniforms all in one place—so you can easily find the right gear for your needs."
           }
         },
         "faq_2": {
           "type": "faq_item",
           "settings": {
-            "title": "Do you handle reorders for new staff?",
-            "description": "Yes. Once your selections are in our system, reordering is quick and seamless. Whether you're hiring a new chef or expanding your front-of-house team, we make it easy to keep your look consistent."
+            "title": "How do I choose the right size or fit across different brands?",
+            "description": "Every product page includes a brand-specific size guide to help you choose the right fit. If you're unsure, our team can also assist in recommending sizes based on the brand’s typical fit and your measurements."
           }
         },
         "faq_3": {
           "type": "faq_item",
           "settings": {
-            "title": "What is your policy on returns and exchanges?",
-            "description": "We want your team to be fully satisfied with their uniforms. Standard items can be easily exchanged or returned if the fit or style isn't right. For customized orders, once embroidery designs have been approved, those items cannot be returned—but our team works closely with you upfront to ensure every detail is correct before production begins."
+            "title": "Are the uniforms durable enough for professional kitchen environments?",
+            "description": "Yes—because we only stock brands known for chef-grade durability, breathability, and long-lasting performance. Each item is designed to withstand heat, movement, and daily use in demanding culinary settings."
           }
         },
         "faq_4": {
           "type": "faq_item",
           "settings": {
-            "title": "Do you offer sustainable apparel options?",
-            "description": "Yes. We partner with brands that use eco-friendly fabrics and responsible sourcing. Our durable, long-lasting uniforms also reduce waste, helping you align with sustainability goals without compromising quality."
+            "title": "Do you offer embroidery or customization on the brands you carry?",
+            "description": "Absolutely. We provide embroidery services for many of the products we sell, including names, logos, and custom branding. Just select embroidery options during checkout or contact us for team customization."
           }
         },
         "faq_5": {
           "type": "faq_item",
           "settings": {
-            "title": "Do you provide dedicated account managers for business customers?",
-            "description": "Absolutely. Our business accounts come with a dedicated account manager who understands your brand and ordering needs. You'll always have a trusted point of contact for new orders, reorders, and support."
+            "title": "Can I place a bulk order for my restaurant, hotel, or culinary program?",
+            "description": "Yes—we make bulk ordering simple. We can help you select products, confirm availability across multiple brands, and provide custom embroidery for your whole team."
           }
         },
         "faq_6": {
           "type": "faq_item",
           "settings": {
-            "title": "Why should I choose premium uniforms instead of cheaper options?",
-            "description": "Low-cost uniforms wear out quickly, fit poorly, and can weaken your brand image. Premium apparel lasts longer, performs better, and elevates the guest experience—saving you money in the long run and inspiring staff confidence."
+            "title": "How fast will my order ship?",
+            "description": "Most items ship quickly, depending on brand availability. You’ll receive tracking information as soon as your order is on the way, and expedited shipping options are available at checkout."
           }
         },
         "faq_7": {
           "type": "faq_item",
           "settings": {
-            "title": "Can you support multiple locations or growing restaurant groups?",
-            "description": "Yes. From single-location cafés to multi-unit resorts and hospitality groups, we provide consistent apparel programs across every site. With bulk ordering, reordering support, and account management, we grow alongside your business."
-          }
-        },
-        "faq_8": {
-          "type": "faq_item",
-          "settings": {
-            "title": "Which restaurants and hospitality brands already trust you for uniforms?",
-            "description": "We're proud to outfit a wide range of customers—from Michelin-starred restaurants like Jônt, to destinations like Disneyland and The Thompson Hotels, to vineyards, resorts, and caterers. Our track record proves we deliver the same precision, quality, and care no matter the size or style of your business."
+            "title": "What is your return or exchange policy?",
+            "description": "We offer easy returns and exchanges for unworn items within our return window. Since sizing can vary by brand, we’re happy to help you select the right replacement if a product doesn't fit as expected."
           }
         }
       },
@@ -833,8 +826,7 @@
         "faq_4",
         "faq_5",
         "faq_6",
-        "faq_7",
-        "faq_8"
+        "faq_7"
       ],
       "settings": {
         "image": "shopify://shop_images/an-image-for-faq-section-of-the-restaurants-clouses-company-Photoroom.png",
@@ -851,11 +843,11 @@
       "type": "final-cta",
       "settings": {
         "image": "shopify://shop_images/final-cta-bg-image-for-restaurants-close-company.png",
-        "height": 500,
+        "height": 450,
         "overlay_color": "#000000",
         "overlay_opacity": 50,
-        "title": "Final value prop and reason someone should purchase your product today",
-        "text": "<p>Our product does X, Y, Z (articulate main benefit your product provides & explain how you do it in a proprietary or unique way).</p>",
+        "title": "Chef uniforms should work as hard as you do—durable, stylish, and engineered for the kitchen.",
+        "text": "<p>Fiumara Culinary gives professionals the confidence, comfort and performance they need to excel.</p>",
         "text_color": "#ffffff",
         "button_label": "SHOP NOW",
         "button_link": "shopify://collections/all"
