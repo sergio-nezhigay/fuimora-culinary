@@ -1,5 +1,18 @@
 {{ 'section-footer.css' | asset_url | stylesheet_tag }}
 
+{%- style -%}
+  @media screen and (min-width: 769px) {
+    #section-{{ section.id }} .footer-top {
+      padding-top: {{ section.settings.section_padding_top }}px;
+      padding-bottom: 0;
+    }
+    #section-{{ section.id }} .footer-bottom {
+      padding-top: {{ section.settings.section_padding_bottom }}px;
+      padding-bottom: {{ section.settings.section_padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
 {%- render 'custom-colors', id: section.id, background: section.settings.custom_background, text: section.settings.custom_text -%}
 
 <div id="section-{{ section.id }}" class="site-footer site-box-container">
@@ -69,7 +82,7 @@
         </style>
       {%- endif -%}
 
-      {%- liquid 
+      {%- liquid
 
         if section.settings.show_country_selector and shop.enabled_currencies.size > 1
           assign country_selector = true
@@ -77,7 +90,7 @@
 
         if section.settings.show_locale_selector and shop.published_locales.size > 1
           assign locale_selector = true
-        endif 
+        endif
 
         if country_selector or locale_selector
           render 'localization-form', show_country_selector: country_selector, show_locale_selector: locale_selector, location: 'footer'
@@ -86,7 +99,7 @@
       -%}
 
       <div class="footer-copyright">
-        
+
         {%- if section.settings.enable_follow_on_shop -%}
           {{ shop | login_button: action: 'follow' }}
         {%- endif -%}
@@ -94,7 +107,7 @@
         {%- if section.settings.show_payment_icons -%}
           <div class="site-payment" aria-label="{{ 'general.payment_methods' | t }}">
 
-            {%- liquid 
+            {%- liquid
               unless section.settings.only_show_custom_icons
                 for type in shop.enabled_payment_types
                   echo type | payment_type_svg_tag: class: 'payment-icon'
@@ -103,7 +116,7 @@
             -%}
 
             {%- if section.settings.icon_1 -%}
-              <img 
+              <img
                 src="{{  section.settings.icon_1 | image_url: width: 38, height: 24, crop: 'center' }}"
                 srcset="{{  section.settings.icon_1 | image_url: width: 38, height: 24, crop: 'center' }} 38w, {{  section.settings.icon_1 | image_url: width: 76, height: 48, crop: 'center' }} 76w, {{  section.settings.icon_1 | image_url: width: 114, height: 72, crop: 'center' }} 114w"
                 loading="lazy" alt="{{ section.settings.icon_1.alt }}"
@@ -111,9 +124,9 @@
                 onload="this.parentNode.classList.add('lazyloaded')"
               >
             {%- endif -%}
-            
+
             {%- if section.settings.icon_2 -%}
-              <img 
+              <img
                 src="{{  section.settings.icon_2 | image_url: width: 38, height: 24, crop: 'center' }}"
                 srcset="{{  section.settings.icon_2 | image_url: width: 38, height: 24, crop: 'center' }} 38w, {{  section.settings.icon_2 | image_url: width: 76, height: 48, crop: 'center' }} 76w, {{  section.settings.icon_2 | image_url: width: 114, height: 72, crop: 'center' }} 114w"
                 loading="lazy" alt="{{ section.settings.icon_2.alt }}"
@@ -121,9 +134,9 @@
                 onload="this.parentNode.classList.add('lazyloaded')"
               >
             {%- endif -%}
-            
+
             {%- if section.settings.icon_3 -%}
-              <img 
+              <img
                 src="{{  section.settings.icon_3 | image_url: width: 38, height: 24, crop: 'center' }}"
                 srcset="{{  section.settings.icon_3 | image_url: width: 38, height: 24, crop: 'center' }} 38w, {{  section.settings.icon_3 | image_url: width: 76, height: 48, crop: 'center' }} 76w, {{  section.settings.icon_3 | image_url: width: 114, height: 72, crop: 'center' }} 114w"
                 loading="lazy" alt="{{ section.settings.icon_3.alt }}"
@@ -131,9 +144,9 @@
                 onload="this.parentNode.classList.add('lazyloaded')"
               >
             {%- endif -%}
-            
+
             {%- if section.settings.icon_4 -%}
-              <img 
+              <img
                 src="{{  section.settings.icon_4 | image_url: width: 38, height: 24, crop: 'center' }}"
                 srcset="{{  section.settings.icon_4 | image_url: width: 38, height: 24, crop: 'center' }} 38w, {{  section.settings.icon_4 | image_url: width: 76, height: 48, crop: 'center' }} 76w, {{  section.settings.icon_4 | image_url: width: 114, height: 72, crop: 'center' }} 114w"
                 loading="lazy" alt="{{ section.settings.icon_4.alt }}"
@@ -141,9 +154,9 @@
                 onload="this.parentNode.classList.add('lazyloaded')"
               >
             {%- endif -%}
-            
+
             {%- if section.settings.icon_5 -%}
-              <img 
+              <img
                 src="{{  section.settings.icon_5 | image_url: width: 38, height: 24, crop: 'center' }}"
                 srcset="{{  section.settings.icon_5 | image_url: width: 38, height: 24, crop: 'center' }} 38w, {{  section.settings.icon_5 | image_url: width: 76, height: 48, crop: 'center' }} 76w, {{  section.settings.icon_5 | image_url: width: 114, height: 72, crop: 'center' }} 114w"
                 loading="lazy" alt="{{ section.settings.icon_5.alt }}"
@@ -151,9 +164,9 @@
                 onload="this.parentNode.classList.add('lazyloaded')"
               >
             {%- endif -%}
-            
+
             {%- if section.settings.icon_6 -%}
-              <img 
+              <img
                 src="{{  section.settings.icon_6 | image_url: width: 38, height: 24, crop: 'center' }}"
                 srcset="{{  section.settings.icon_6 | image_url: width: 38, height: 24, crop: 'center' }} 38w, {{  section.settings.icon_6 | image_url: width: 76, height: 48, crop: 'center' }} 76w, {{  section.settings.icon_6 | image_url: width: 114, height: 72, crop: 'center' }} 114w"
                 loading="lazy" alt="{{ section.settings.icon_6.alt }}"
@@ -164,13 +177,13 @@
 
           </div>
         {%- endif -%}
-        
+
         <span class="site-copyright text-size--smaller">
           <span class="copyright-text">{{ 'general.copyright' | t }} &copy; {{ 'now' | date: "%Y" }} <a href="{{ routes.root_url }}">{{ shop.name | escape }}</a><span class="powered-by-shopify">. {{ powered_by_link }}</span></span>
         </span>
 
       </div>
-      
+
       {% comment %} -- BEGIN Secure Badge -- {% endcomment %}
       <div class="footer-secure-badge">
         <a href="https://www.shopify.com/security/pci-compliant?utm_medium=shop&utm_source=secure" title="This online store is secured by Shopify"
@@ -323,7 +336,31 @@
             "label": "span"
           }
         ],
-        "default": "h4"
+      "default": "h4"
+      },
+      {
+        "type": "header",
+        "content": "Desktop Padding"
+      },
+      {
+        "type": "range",
+        "id": "section_padding_top",
+        "min": 0,
+        "max": 120,
+        "step": 2,
+        "unit": "px",
+        "label": "Top Padding",
+        "default": 60
+      },
+      {
+        "type": "range",
+        "id": "section_padding_bottom",
+        "min": 0,
+        "max": 120,
+        "step": 2,
+        "unit": "px",
+        "label": "Bottom Padding",
+        "default": 60
       }
     ],
     "blocks": [
