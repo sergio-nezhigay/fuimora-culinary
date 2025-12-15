@@ -852,6 +852,130 @@
         "button_label": "SHOP NOW",
         "button_link": "shopify://collections/all"
       }
+    },
+    "heading_tKBxWr": {
+      "type": "heading",
+      "blocks": {
+        "heading_AxEcdm": {
+          "type": "heading",
+          "settings": {
+            "heading": "Benefits",
+            "heading_size": "h2",
+            "seo_h_tag": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_AxEcdm"
+      ],
+      "custom_css": [
+        ".box--small-fl-auto {min-height: 15vh !important; padding-bottom: 0;}"
+      ],
+      "name": "t:sections.heading.name",
+      "settings": {
+        "section_padding": 0,
+        "text_alignment": "center",
+        "custom_background": "rgba(0,0,0,0)",
+        "custom_text": "rgba(0,0,0,0)"
+      }
+    },
+    "text_columns_with_icons_CR3t7q": {
+      "type": "text-columns-with-icons",
+      "blocks": {
+        "text_icon_Ttnb3K": {
+          "type": "text-icon",
+          "settings": {
+            "title": "Chef-Grade Quality",
+            "body": "<p>Durable uniforms built for high-performance kitchens</p>",
+            "label": "",
+            "link": "",
+            "select_icon": "earth-globe",
+            "custom_icon": "shopify://shop_images/make-me-a-simple-icon-for-chef-grade-quality.png"
+          }
+        },
+        "text_icon_P6g8NB": {
+          "type": "text-icon",
+          "settings": {
+            "title": "Modern, Exclusive Style",
+            "body": "<p>Fashion-forward designs and brands that help you stand out.</p>",
+            "label": "",
+            "link": "",
+            "select_icon": "time-limit"
+          }
+        },
+        "text_icon_izNyUM": {
+          "type": "text-icon",
+          "settings": {
+            "title": "Performance Fabrics",
+            "body": "<p>Breathable, long-lasting materials for all-day comfort.</p>",
+            "label": "",
+            "link": "",
+            "select_icon": "store"
+          }
+        },
+        "text_icon_BulkOrder": {
+          "type": "text-icon",
+          "settings": {
+            "title": "Easy Bulk Orders & Embroidery",
+            "body": "<p>Streamlined team ordering with custom branding options.</p>",
+            "label": "",
+            "link": "",
+            "select_icon": "checkout-cart"
+          }
+        },
+        "text_icon_TrustedChef": {
+          "type": "text-icon",
+          "settings": {
+            "title": "Trusted by Top Chefs",
+            "body": "<p>Preferred apparel of leading culinary professionals.</p>",
+            "label": "",
+            "link": "",
+            "select_icon": "star"
+          }
+        },
+        "text_icon_TailoredFit": {
+          "type": "text-icon",
+          "settings": {
+            "title": "Tailored Fit for All",
+            "body": "<p>Comfortable, inclusive sizing worked into every design.</p>",
+            "label": "",
+            "link": "",
+            "select_icon": "label"
+          }
+        },
+        "text_icon_FastShip": {
+          "type": "text-icon",
+          "settings": {
+            "title": "Fast, Reliable Shipping",
+            "body": "<p>Get your gear quickly and stay service-ready.</p>",
+            "label": "",
+            "link": "",
+            "select_icon": "delivery"
+          }
+        }
+      },
+      "block_order": [
+        "text_icon_Ttnb3K",
+        "text_icon_P6g8NB",
+        "text_icon_izNyUM",
+        "text_icon_BulkOrder",
+        "text_icon_TrustedChef",
+        "text_icon_TailoredFit",
+        "text_icon_FastShip"
+      ],
+      "custom_css": [
+        "#section-template--16766725587007__text_columns_with_icons_EzDXre {--grid-borders: 0;}",
+        ".box--small-fl-auto {min-height: 15vh !important; padding-top: 2.5%;}"
+      ],
+      "name": "t:sections.text-columns-with-icons.name",
+      "settings": {
+        "section_padding": 30,
+        "icon_size": 44,
+        "heading_font_size": 16,
+        "custom_background": "rgba(0,0,0,0)",
+        "custom_text": "rgba(0,0,0,0)",
+        "seo_h_tag": "h3"
+      }
     }
   },
   "order": [
@@ -873,6 +997,8 @@
     "image_with_text_K77c33",
     "contact_form_nHGEkH",
     "faq_with_image_homepage",
-    "final_cta_new"
+    "final_cta_new",
+    "heading_tKBxWr",
+    "text_columns_with_icons_CR3t7q"
   ]
 }
