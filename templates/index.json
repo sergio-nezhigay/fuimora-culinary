@@ -889,8 +889,8 @@
             "body": "<p>Durable uniforms built for high-performance kitchens</p>",
             "label": "",
             "link": "",
-            "select_icon": "earth-globe",
-            "custom_icon": "shopify://shop_images/make-me-a-simple-icon-for-chef-grade-quality.png"
+            "select_icon": "like-hand",
+            "custom_icon": "shopify://shop_images/badge.png"
           }
         },
         "text_icon_P6g8NB": {
@@ -900,7 +900,8 @@
             "body": "<p>Fashion-forward designs and brands that help you stand out.</p>",
             "label": "",
             "link": "",
-            "select_icon": "time-limit"
+            "select_icon": "store",
+            "custom_icon": "shopify://shop_images/hand.png"
           }
         },
         "text_icon_izNyUM": {
@@ -910,7 +911,8 @@
             "body": "<p>Breathable, long-lasting materials for all-day comfort.</p>",
             "label": "",
             "link": "",
-            "select_icon": "store"
+            "select_icon": "store",
+            "custom_icon": "shopify://shop_images/membrane.png"
           }
         },
         "text_icon_BulkOrder": {
@@ -920,7 +922,8 @@
             "body": "<p>Streamlined team ordering with custom branding options.</p>",
             "label": "",
             "link": "",
-            "select_icon": "checkout-cart"
+            "select_icon": "checkout-cart",
+            "custom_icon": "shopify://shop_images/bulk-orders.png"
           }
         },
         "text_icon_TrustedChef": {
