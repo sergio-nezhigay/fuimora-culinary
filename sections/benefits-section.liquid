@@ -260,7 +260,7 @@
           <!-- Action & Tooltip -->
           {%- if block.settings.description != blank -%}
             <button class="benefit-learn-more js-tooltip-trigger" aria-expanded="false" aria-controls="tooltip-{{ block.id }}">
-              Learn More
+              {{ section.settings.button_text | escape }}
             </button>
 
             <div id="tooltip-{{ block.id }}" class="benefit-tooltip" role="tooltip">
@@ -428,6 +428,12 @@
       "unit": "px",
       "label": "Heading Font Size",
       "default": 18
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Label",
+      "default": "Learn More"
     },
     {
       "type": "select",
