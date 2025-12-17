@@ -161,6 +161,118 @@
         "text_alignment": "horizontal-left vertical-middle"
       }
     },
+    "heading_tKBxWr": {
+      "type": "heading",
+      "blocks": {
+        "heading_AxEcdm": {
+          "type": "heading",
+          "settings": {
+            "heading": "Benefits",
+            "heading_size": "h2",
+            "seo_h_tag": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_AxEcdm"
+      ],
+      "custom_css": [
+        ".box--small-fl-auto {min-height: 15vh !important; padding-bottom: 0;}"
+      ],
+      "name": "t:sections.heading.name",
+      "settings": {
+        "section_padding": 0,
+        "text_alignment": "center",
+        "custom_background": "rgba(0,0,0,0)",
+        "custom_text": "rgba(0,0,0,0)"
+      }
+    },
+    "benefits_section_n4XMan": {
+      "type": "benefits-section",
+      "blocks": {
+        "benefit_xUxLcV": {
+          "type": "benefit",
+          "settings": {
+            "title": "Chef-Grade Quality",
+            "icon_name": "security-shield",
+            "custom_icon": "shopify://shop_images/badge.png",
+            "description": "<p>Durable uniforms built for high-performance kitchens</p>"
+          }
+        },
+        "benefit_TYRzUi": {
+          "type": "benefit",
+          "settings": {
+            "title": "Modern, Exclusive Style",
+            "icon_name": "star",
+            "custom_icon": "shopify://shop_images/hand.png",
+            "description": "<p>Fashion-forward designs and brands that help you stand out.</p>"
+          }
+        },
+        "benefit_ebmBf8": {
+          "type": "benefit",
+          "settings": {
+            "title": "Performance Fabrics",
+            "icon_name": "star",
+            "custom_icon": "shopify://shop_images/membrane.png",
+            "description": "<p>Breathable, long-lasting materials for all-day comfort.</p>"
+          }
+        },
+        "benefit_7r9iMJ": {
+          "type": "benefit",
+          "settings": {
+            "title": "Easy Bulk Orders & Embroidery",
+            "icon_name": "box",
+            "custom_icon": "shopify://shop_images/bulk-orders.png",
+            "description": "<p>Streamlined team ordering with custom branding options.</p>"
+          }
+        },
+        "benefit_nXcYnw": {
+          "type": "benefit",
+          "settings": {
+            "title": "Trusted by Top Chefs",
+            "icon_name": "star",
+            "description": "<p>Preferred apparel of leading culinary professionals.</p>"
+          }
+        },
+        "benefit_annxdq": {
+          "type": "benefit",
+          "settings": {
+            "title": "Tailored Fit for All",
+            "icon_name": "star",
+            "custom_icon": "shopify://shop_images/tape-measure.png",
+            "description": "<p>Comfortable, inclusive sizing worked into every design.</p>"
+          }
+        },
+        "benefit_Pf84xf": {
+          "type": "benefit",
+          "settings": {
+            "title": "Fast, Reliable Shipping",
+            "icon_name": "shipping-truck",
+            "description": "<p>Get your gear quickly and stay service-ready.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_xUxLcV",
+        "benefit_TYRzUi",
+        "benefit_ebmBf8",
+        "benefit_7r9iMJ",
+        "benefit_nXcYnw",
+        "benefit_annxdq",
+        "benefit_Pf84xf"
+      ],
+      "name": "Benefits Grid (Popup)",
+      "settings": {
+        "bg_color": "#ffffff",
+        "text_color": "#333333",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "text_alignment": "center",
+        "heading_size": 18,
+        "seo_tag": "h3",
+        "icon_size": 48
+      }
+    },
     "16372293330d0f5bf6": {
       "type": "featured-collection",
       "settings": {
@@ -852,220 +964,14 @@
         "button_label": "SHOP NOW",
         "button_link": "shopify://collections/all"
       }
-    },
-    "heading_tKBxWr": {
-      "type": "heading",
-      "blocks": {
-        "heading_AxEcdm": {
-          "type": "heading",
-          "settings": {
-            "heading": "Benefits",
-            "heading_size": "h2",
-            "seo_h_tag": "h2"
-          }
-        }
-      },
-      "block_order": [
-        "heading_AxEcdm"
-      ],
-      "custom_css": [
-        ".box--small-fl-auto {min-height: 15vh !important; padding-bottom: 0;}"
-      ],
-      "name": "t:sections.heading.name",
-      "settings": {
-        "section_padding": 0,
-        "text_alignment": "center",
-        "custom_background": "rgba(0,0,0,0)",
-        "custom_text": "rgba(0,0,0,0)"
-      }
-    },
-    "text_columns_with_icons_CR3t7q": {
-      "type": "text-columns-with-icons",
-      "blocks": {
-        "text_icon_Ttnb3K": {
-          "type": "text-icon",
-          "settings": {
-            "title": "Chef-Grade Quality",
-            "body": "<p>Durable uniforms built for high-performance kitchens</p>",
-            "label": "",
-            "link": "",
-            "select_icon": "like-hand",
-            "custom_icon": "shopify://shop_images/badge.png"
-          }
-        },
-        "text_icon_P6g8NB": {
-          "type": "text-icon",
-          "settings": {
-            "title": "Modern, Exclusive Style",
-            "body": "<p>Fashion-forward designs and brands that help you stand out.</p>",
-            "label": "",
-            "link": "",
-            "select_icon": "store",
-            "custom_icon": "shopify://shop_images/hand.png"
-          }
-        },
-        "text_icon_izNyUM": {
-          "type": "text-icon",
-          "settings": {
-            "title": "Performance Fabrics",
-            "body": "<p>Breathable, long-lasting materials for all-day comfort.</p>",
-            "label": "",
-            "link": "",
-            "select_icon": "store",
-            "custom_icon": "shopify://shop_images/membrane.png"
-          }
-        },
-        "text_icon_BulkOrder": {
-          "type": "text-icon",
-          "settings": {
-            "title": "Easy Bulk Orders & Embroidery",
-            "body": "<p>Streamlined team ordering with custom branding options.</p>",
-            "label": "",
-            "link": "",
-            "select_icon": "checkout-cart",
-            "custom_icon": "shopify://shop_images/bulk-orders.png"
-          }
-        },
-        "text_icon_TrustedChef": {
-          "type": "text-icon",
-          "settings": {
-            "title": "Trusted by Top Chefs",
-            "body": "<p>Preferred apparel of leading culinary professionals.</p>",
-            "label": "",
-            "link": "",
-            "select_icon": "star"
-          }
-        },
-        "text_icon_TailoredFit": {
-          "type": "text-icon",
-          "settings": {
-            "title": "Tailored Fit for All",
-            "body": "<p>Comfortable, inclusive sizing worked into every design.</p>",
-            "label": "",
-            "link": "",
-            "select_icon": "label"
-          }
-        },
-        "text_icon_FastShip": {
-          "type": "text-icon",
-          "settings": {
-            "title": "Fast, Reliable Shipping",
-            "body": "<p>Get your gear quickly and stay service-ready.</p>",
-            "label": "",
-            "link": "",
-            "select_icon": "delivery"
-          }
-        }
-      },
-      "block_order": [
-        "text_icon_Ttnb3K",
-        "text_icon_P6g8NB",
-        "text_icon_izNyUM",
-        "text_icon_BulkOrder",
-        "text_icon_TrustedChef",
-        "text_icon_TailoredFit",
-        "text_icon_FastShip"
-      ],
-      "custom_css": [
-        "#section-template--16766725587007__text_columns_with_icons_EzDXre {--grid-borders: 0;}",
-        ".box--small-fl-auto {min-height: 15vh !important; padding-top: 2.5%;}"
-      ],
-      "name": "t:sections.text-columns-with-icons.name",
-      "settings": {
-        "section_padding": 30,
-        "icon_size": 44,
-        "heading_font_size": 16,
-        "custom_background": "rgba(0,0,0,0)",
-        "custom_text": "rgba(0,0,0,0)",
-        "seo_h_tag": "h3"
-      }
-    },
-    "benefits_section_cpbUKq": {
-      "type": "benefits-section",
-      "blocks": {
-        "benefit_PTMt7X": {
-          "type": "benefit",
-          "settings": {
-            "title": "Free Shipping",
-            "icon_name": "shipping-truck",
-            "description": "<p>This is the detailed description that appears in the tooltip. Explain your benefit here in more detail.</p>"
-          }
-        },
-        "benefit_fjtV3B": {
-          "type": "benefit",
-          "settings": {
-            "title": "24/7 Support",
-            "icon_name": "helpline",
-            "description": "<p>This is the detailed description that appears in the tooltip. Explain your benefit here in more detail.</p>"
-          }
-        },
-        "benefit_XFVDzW": {
-          "type": "benefit",
-          "settings": {
-            "title": "Secure Payment",
-            "icon_name": "security-shield",
-            "description": "<p>This is the detailed description that appears in the tooltip. Explain your benefit here in more detail.</p>"
-          }
-        },
-        "benefit_MXPJgP": {
-          "type": "benefit",
-          "settings": {
-            "title": "Gift Wrapping",
-            "icon_name": "giftbox",
-            "description": "<p>This is the detailed description that appears in the tooltip. Explain your benefit here in more detail.</p>"
-          }
-        },
-        "benefit_cNrPb7": {
-          "type": "benefit",
-          "settings": {
-            "title": "Fast Delivery",
-            "icon_name": "delivery-time",
-            "description": "<p>This is the detailed description that appears in the tooltip. Explain your benefit here in more detail.</p>"
-          }
-        },
-        "benefit_RWbjqy": {
-          "type": "benefit",
-          "settings": {
-            "title": "Best Quality",
-            "icon_name": "star",
-            "description": "<p>This is the detailed description that appears in the tooltip. Explain your benefit here in more detail.</p>"
-          }
-        },
-        "benefit_LiKtQ6": {
-          "type": "benefit",
-          "settings": {
-            "title": "Money Back",
-            "icon_name": "wallet",
-            "description": "<p>This is the detailed description that appears in the tooltip. Explain your benefit here in more detail.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "benefit_PTMt7X",
-        "benefit_fjtV3B",
-        "benefit_XFVDzW",
-        "benefit_MXPJgP",
-        "benefit_cNrPb7",
-        "benefit_RWbjqy",
-        "benefit_LiKtQ6"
-      ],
-      "name": "Benefits Grid (Popup)",
-      "settings": {
-        "bg_color": "#ffffff",
-        "text_color": "#333333",
-        "padding_top": 60,
-        "padding_bottom": 60,
-        "text_alignment": "center",
-        "heading_size": 18,
-        "seo_tag": "h3",
-        "icon_size": 48
-      }
     }
   },
   "order": [
     "video_background_ttW8eA",
     "scrolling_logos_bar",
     "16361066840a222f4b",
+    "heading_tKBxWr",
+    "benefits_section_n4XMan",
     "16372293330d0f5bf6",
     "heading_rUXAGC",
     "testimonials_v3_custom",
@@ -1081,9 +987,6 @@
     "image_with_text_K77c33",
     "contact_form_nHGEkH",
     "faq_with_image_homepage",
-    "final_cta_new",
-    "heading_tKBxWr",
-    "text_columns_with_icons_CR3t7q",
-    "benefits_section_cpbUKq"
+    "final_cta_new"
   ]
 }
