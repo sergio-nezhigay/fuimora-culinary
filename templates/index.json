@@ -194,8 +194,7 @@
           "type": "benefit",
           "settings": {
             "title": "Chef-Grade Quality",
-            "icon_name": "security-shield",
-            "custom_icon": "shopify://shop_images/badge.png",
+            "icon_name": "chef-grade-quality",
             "description": "<p>Durable uniforms built for high-performance kitchens</p>"
           }
         },
@@ -203,8 +202,7 @@
           "type": "benefit",
           "settings": {
             "title": "Modern, Exclusive Style",
-            "icon_name": "star",
-            "custom_icon": "shopify://shop_images/hand.png",
+            "icon_name": "modern-style",
             "description": "<p>Fashion-forward designs and brands that help you stand out.</p>"
           }
         },
@@ -212,8 +210,7 @@
           "type": "benefit",
           "settings": {
             "title": "Performance Fabrics",
-            "icon_name": "star",
-            "custom_icon": "shopify://shop_images/membrane.png",
+            "icon_name": "performance-fabrics",
             "description": "<p>Breathable, long-lasting materials for all-day comfort.</p>"
           }
         },
@@ -221,8 +218,7 @@
           "type": "benefit",
           "settings": {
             "title": "Easy Bulk Orders & Embroidery",
-            "icon_name": "box",
-            "custom_icon": "shopify://shop_images/bulk-orders.png",
+            "icon_name": "bulk-embroidery",
             "description": "<p>Streamlined team ordering with custom branding options.</p>"
           }
         },
@@ -230,7 +226,7 @@
           "type": "benefit",
           "settings": {
             "title": "Trusted by Top Chefs",
-            "icon_name": "star",
+            "icon_name": "trusted-chefs",
             "description": "<p>Preferred apparel of leading culinary professionals.</p>"
           }
         },
@@ -238,8 +234,7 @@
           "type": "benefit",
           "settings": {
             "title": "Tailored Fit for All",
-            "icon_name": "star",
-            "custom_icon": "shopify://shop_images/tape-measure.png",
+            "icon_name": "tailored-fit",
             "description": "<p>Comfortable, inclusive sizing worked into every design.</p>"
           }
         },
@@ -247,7 +242,7 @@
           "type": "benefit",
           "settings": {
             "title": "Fast, Reliable Shipping",
-            "icon_name": "shipping-truck",
+            "icon_name": "reliable-shipping",
             "description": "<p>Get your gear quickly and stay service-ready.</p>"
           }
         }
@@ -269,6 +264,7 @@
         "padding_bottom": 52,
         "text_alignment": "center",
         "heading_size": 18,
+        "button_text": "Learn More",
         "seo_tag": "h3",
         "icon_size": 48
       }
