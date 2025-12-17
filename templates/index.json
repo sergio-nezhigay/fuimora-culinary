@@ -161,6 +161,17 @@
         "text_alignment": "horizontal-left vertical-middle"
       }
     },
+    "16372293330d0f5bf6": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured this Season",
+        "subtitle": "Curated selection of current bestsellers.",
+        "collection": "best-chef-uniforms",
+        "collection_rows": 2,
+        "show_view_all": true,
+        "seo_h_tag": "h2"
+      }
+    },
     "heading_tKBxWr": {
       "type": "heading",
       "blocks": {
@@ -269,15 +280,107 @@
         "icon_size": 48
       }
     },
-    "16372293330d0f5bf6": {
-      "type": "featured-collection",
+    "heading_9Lb63a": {
+      "type": "heading",
+      "blocks": {
+        "heading_rLJBJJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Benefits",
+            "heading_size": "h2",
+            "seo_h_tag": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rLJBJJ"
+      ],
+      "custom_css": [
+        ".box--small-fl-auto {min-height: 15vh !important; padding-bottom: 0;}"
+      ],
+      "name": "t:sections.heading.name",
       "settings": {
-        "title": "Featured this Season",
-        "subtitle": "Curated selection of current bestsellers.",
-        "collection": "best-chef-uniforms",
-        "collection_rows": 2,
-        "show_view_all": true,
-        "seo_h_tag": "h2"
+        "section_padding": 0,
+        "text_alignment": "center",
+        "custom_background": "#262221",
+        "custom_text": "#ffffff"
+      }
+    },
+    "brand_essentials_EDXbbD": {
+      "type": "brand-essentials",
+      "blocks": {
+        "item_Hf46VU": {
+          "type": "item",
+          "settings": {
+            "icon": "quality",
+            "label": "Chef-Grade Quality",
+            "description": "Durable uniforms built for high-performance kitchens."
+          }
+        },
+        "item_DGDqRf": {
+          "type": "item",
+          "settings": {
+            "icon": "modern",
+            "label": "Modern, Exclusive Style",
+            "description": "Fashion-forward designs and brands that help you stand out."
+          }
+        },
+        "item_PkcjQJ": {
+          "type": "item",
+          "settings": {
+            "icon": "fabrics",
+            "label": "Performance Fabrics",
+            "description": "Breathable, long-lasting materials for all-day comfort."
+          }
+        },
+        "item_fVcXFg": {
+          "type": "item",
+          "settings": {
+            "icon": "bulk",
+            "label": "Easy Bulk Orders & Embroidery",
+            "description": "Streamlined team ordering with custom branding options."
+          }
+        },
+        "item_fPN9kj": {
+          "type": "item",
+          "settings": {
+            "icon": "trusted",
+            "label": "Trusted by Top Chefs",
+            "description": "Preferred apparel of leading culinary professionals."
+          }
+        },
+        "item_7pALc7": {
+          "type": "item",
+          "settings": {
+            "icon": "fit",
+            "label": "Tailored Fit for All",
+            "description": "Comfortable, inclusive sizing worked into every design."
+          }
+        },
+        "item_knjfB4": {
+          "type": "item",
+          "settings": {
+            "icon": "shipping",
+            "label": "Fast, Reliable Shipping",
+            "description": "Get your gear quickly and stay service-ready."
+          }
+        }
+      },
+      "block_order": [
+        "item_Hf46VU",
+        "item_DGDqRf",
+        "item_PkcjQJ",
+        "item_fVcXFg",
+        "item_fPN9kj",
+        "item_7pALc7",
+        "item_knjfB4"
+      ],
+      "name": "Brand Essentials",
+      "settings": {
+        "title": "",
+        "background_color": "#262221",
+        "padding_top": 20,
+        "padding_bottom": 64
       }
     },
     "heading_rUXAGC": {
@@ -966,9 +1069,11 @@
     "video_background_ttW8eA",
     "scrolling_logos_bar",
     "16361066840a222f4b",
+    "16372293330d0f5bf6",
     "heading_tKBxWr",
     "benefits_section_n4XMan",
-    "16372293330d0f5bf6",
+    "heading_9Lb63a",
+    "brand_essentials_EDXbbD",
     "heading_rUXAGC",
     "testimonials_v3_custom",
     "1636106675d59d7642",
