@@ -979,6 +979,87 @@
         "custom_text": "rgba(0,0,0,0)",
         "seo_h_tag": "h3"
       }
+    },
+    "benefits_section_cpbUKq": {
+      "type": "benefits-section",
+      "blocks": {
+        "benefit_PTMt7X": {
+          "type": "benefit",
+          "settings": {
+            "title": "Free Shipping",
+            "icon_name": "shipping-truck",
+            "description": "<p>This is the detailed description that appears in the tooltip. Explain your benefit here in more detail.</p>"
+          }
+        },
+        "benefit_fjtV3B": {
+          "type": "benefit",
+          "settings": {
+            "title": "24/7 Support",
+            "icon_name": "helpline",
+            "description": "<p>This is the detailed description that appears in the tooltip. Explain your benefit here in more detail.</p>"
+          }
+        },
+        "benefit_XFVDzW": {
+          "type": "benefit",
+          "settings": {
+            "title": "Secure Payment",
+            "icon_name": "security-shield",
+            "description": "<p>This is the detailed description that appears in the tooltip. Explain your benefit here in more detail.</p>"
+          }
+        },
+        "benefit_MXPJgP": {
+          "type": "benefit",
+          "settings": {
+            "title": "Gift Wrapping",
+            "icon_name": "giftbox",
+            "description": "<p>This is the detailed description that appears in the tooltip. Explain your benefit here in more detail.</p>"
+          }
+        },
+        "benefit_cNrPb7": {
+          "type": "benefit",
+          "settings": {
+            "title": "Fast Delivery",
+            "icon_name": "delivery-time",
+            "description": "<p>This is the detailed description that appears in the tooltip. Explain your benefit here in more detail.</p>"
+          }
+        },
+        "benefit_RWbjqy": {
+          "type": "benefit",
+          "settings": {
+            "title": "Best Quality",
+            "icon_name": "star",
+            "description": "<p>This is the detailed description that appears in the tooltip. Explain your benefit here in more detail.</p>"
+          }
+        },
+        "benefit_LiKtQ6": {
+          "type": "benefit",
+          "settings": {
+            "title": "Money Back",
+            "icon_name": "wallet",
+            "description": "<p>This is the detailed description that appears in the tooltip. Explain your benefit here in more detail.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_PTMt7X",
+        "benefit_fjtV3B",
+        "benefit_XFVDzW",
+        "benefit_MXPJgP",
+        "benefit_cNrPb7",
+        "benefit_RWbjqy",
+        "benefit_LiKtQ6"
+      ],
+      "name": "Benefits Grid (Popup)",
+      "settings": {
+        "bg_color": "#ffffff",
+        "text_color": "#333333",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "text_alignment": "center",
+        "heading_size": 18,
+        "seo_tag": "h3",
+        "icon_size": 48
+      }
     }
   },
   "order": [
@@ -1002,6 +1083,7 @@
     "faq_with_image_homepage",
     "final_cta_new",
     "heading_tKBxWr",
-    "text_columns_with_icons_CR3t7q"
+    "text_columns_with_icons_CR3t7q",
+    "benefits_section_cpbUKq"
   ]
 }
