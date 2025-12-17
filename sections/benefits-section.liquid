@@ -135,60 +135,75 @@
 
   /* Tooltip Styles */
   .benefit-tooltip {
-    position: absolute;
+    position: fixed;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%) translateY(10px);
-    width: 300px; /* Fixed width for better readability */
+    transform: translate(-50%, -50%) scale(0.95);
+    width: 400px;
     max-width: 90vw;
     background-color: #ffffff;
     color: #333333;
-    padding: 24px;
-    border-radius: 8px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
     z-index: 100;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
-    pointer-events: none; /* Prevent clicks when hidden */
-    text-align: left; /* Always readable left aligned */
+    pointer-events: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .benefit-tooltip.is-open {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
   }
 
-  /* Positioning Modifier Classes */
-  .benefit-tooltip.position-bottom {
-    top: 100%;
-    bottom: auto;
-    transform: translateX(-50%) translateY(10px);
-  }
-  .benefit-tooltip.position-bottom.is-open {
-    transform: translateX(-50%) translateY(0);
-  }
-
-  .benefit-tooltip.position-top {
-    bottom: 100%;
-    top: auto;
-    transform: translateX(-50%) translateY(-10px);
-    margin-bottom: 10px; /* Space from trigger */
-  }
-  .benefit-tooltip.position-top.is-open {
-    transform: translateX(-50%) translateY(0);
-  }
-
-  .tooltip-content {
-    position: relative;
-    font-size: 0.95rem;
+  .tooltip-content,
+   .tooltip-content p{
+    font-size: 16px;
     line-height: 1.6;
+    margin-bottom: 0;
+    color: rgb(38, 34, 33);
   }
 
   .tooltip-close {
     position: absolute;
     top: -12px;
     right: -12px;
+    width: 24px;
+    height: 24px;
+    background: #f5f5f5;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    color: #666;
+    transition: all 0.2s ease;
+  }
+  .tooltip-close:hover {
+    background: #e0e0e0;
+    color: #000;
+    transform: rotate(90deg);
+  }
+
+  .tooltip-content {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .tooltip-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
     width: 24px;
     height: 24px;
     background: #f0f0f0;
@@ -292,7 +307,7 @@
 
     function closeAllTooltips() {
       section.querySelectorAll('.benefit-tooltip').forEach(tooltip => {
-        tooltip.classList.remove('is-open', 'position-top', 'position-bottom');
+        tooltip.classList.remove('is-open');
       });
       triggers.forEach(trigger => trigger.setAttribute('aria-expanded', 'false'));
       if(backdrop) backdrop.classList.remove('is-active');
@@ -305,19 +320,6 @@
 
       // Close others first
       closeAllTooltips();
-
-      // Smart Position Calculation
-      const triggerRect = trigger.getBoundingClientRect();
-      const tooltipHeight = 200; // Estimated or calculate dynamically if possible (hidden elements are hard to measure)
-      const spaceBelow = window.innerHeight - triggerRect.bottom;
-      const spaceAbove = triggerRect.top;
-
-      // Default to bottom, switch to top if not enough space below but enough above
-      if (spaceBelow < 250 && spaceAbove > 250) {
-        tooltip.classList.add('position-top');
-      } else {
-        tooltip.classList.add('position-bottom');
-      }
 
       tooltip.classList.add('is-open');
       trigger.setAttribute('aria-expanded', 'true');
