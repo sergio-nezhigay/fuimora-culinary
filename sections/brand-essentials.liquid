@@ -7,7 +7,7 @@
 
 {%- style -%}
   #shopify-section-{{ section.id }} {
-    background-color: {{ section.settings.background_color | default: '#262221' }};
+    background-color: {{ section.settings.background_color | default: '#0a0a0a' }};
     padding-top: {{ section.settings.padding_top }}px;
     padding-bottom: {{ section.settings.padding_bottom }}px;
     overflow: hidden;
@@ -95,20 +95,20 @@
   }
 
   .brand-essentials-card-front {
-    background: rgba(255, 255, 255, 0.05);
+    background: #111111;
     border: 1px solid rgba(255, 255, 255, 0.05);
     padding: 24px 16px;
     transition: all 0.3s ease;
   }
 
   .brand-essentials-card-front:hover {
-    background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(245, 158, 11, 0.3);
+    background: #161616;
+    border-color: #be1e2d;
   }
 
   .brand-essentials-card-icon-wrapper {
     margin-bottom: 30px;
-    color: #f59e0b;
+    color: #be1e2d;
     transition: transform 0.5s ease;
   }
 
@@ -127,13 +127,13 @@
     text-transform: uppercase;
     letter-spacing: 0.15em;
     line-height: 1.4;
-    color: rgba(255, 255, 255, 0.8);
+    color: #ffffff;
     padding: 0 8px;
     transition: color 0.3s ease;
   }
 
   .brand-essentials-card:hover .brand-essentials-card-label {
-    color: #f59e0b;
+    color: #be1e2d;
   }
 
   .brand-essentials-card-hint {
@@ -153,8 +153,8 @@
   }
 
   .brand-essentials-card-back {
-    background: #f59e0b;
-    border: 1px solid #d97706;
+    background: #be1e2d;
+    border: 1px solid #991824;
     transform: rotateY(180deg);
     padding: 40px;
     overflow: hidden;
@@ -263,7 +263,7 @@
       "type": "color",
       "id": "background_color",
       "label": "Background Color",
-      "default": "#262221"
+      "default": "#0a0a0a"
     },
     {
       "type": "range",
