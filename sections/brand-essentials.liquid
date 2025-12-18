@@ -34,6 +34,22 @@
     margin: 0;
   }
 
+  .brand-essentials-instruction {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 16px;
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    .brand-essentials-instruction {
+      display: none;
+    }
+  }
+
   .brand-essentials-grid {
     display: grid;
     gap: 32px;
@@ -214,9 +230,14 @@
 
 <section id="brand-essentials-{{ section.id }}" class="brand-essentials">
   <div class="brand-essentials-container">
-    {%- if section.settings.title != blank -%}
+    {%- if section.settings.title != blank or section.settings.instruction_text != blank -%}
       <div class="brand-essentials-title">
-        <h2>{{ section.settings.title | escape }}</h2>
+        {%- if section.settings.title != blank -%}
+          <h2>{{ section.settings.title | escape }}</h2>
+        {%- endif -%}
+        {%- if section.settings.instruction_text != blank -%}
+          <p class="brand-essentials-instruction">{{ section.settings.instruction_text | escape }}</p>
+        {%- endif -%}
       </div>
     {%- endif -%}
 
@@ -257,6 +278,12 @@
       "id": "title",
       "label": "Title",
       "default": "Brand Essentials"
+    },
+    {
+      "type": "text",
+      "id": "instruction_text",
+      "label": "Instruction Text (Mobile only)",
+      "default": "Select a card to explore specifications"
     },
     {
       "type": "color",
