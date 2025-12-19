@@ -2306,7 +2306,7 @@ screen and (max-width: 1024px) and (orientation: portrait) {
 }
 
 .box__announcement .content>*:not(:last-child) {
-  margin-bottom: var(--text-spacing);
+  margin-bottom: 60px;
 }
 
 .box__announcement .content p {

@@ -15,7 +15,7 @@
         "custom_liquid_R3baHU": {
           "type": "custom_liquid",
           "settings": {
-            "custom_code": "<div class=\"content\">\n<img class=\"hero-video-icon\" src=\"https://cdn.shopify.com/s/files/1/0116/8492/files/Fiumara-Apparel-Icon-Since-2010-White.png\" alt=\"Fiumara Apparel Icon\">\n<h1 class=\"title h1\">Exclusive Workwear for Culinary Professionals</h1>\n<h3>Stand out in high-quality, fashion-forward uniforms trusted by top chefs.</h3>\n<a class=\"button button--solid button--with-icon\" href=\"/collections/new-chef-uniforms\" title=\"Shop Now\"><span>Shop Now</span><span class=\"icon\" aria-hidden=\"true\" role=\"img\"><svg xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"xMidYMid\" style=\"width:21px; height: 10px;\" viewBox=\"0 0 21 10\"><path style=\"fill: #fff\" d=\"M21.000,5.000 L15.000,10.000 L15.000,6.000 L-0.000,6.000 L-0.000,4.000 L15.000,4.000 L15.000,0.000 L21.000,5.000 Z\"></path></svg></span></a>\n</div>"
+            "custom_code": "<div class=\"content\">\n<img class=\"hero-video-icon\" src=\"https://cdn.shopify.com/s/files/1/0116/8492/files/Fiumara-Apparel-Icon-Since-2010-White.png\" alt=\"Fiumara Apparel Icon\">\n<h3>Stand out in high-quality, fashion-forward uniforms trusted by top chefs.</h3>\n<h1 class=\"title h1\">Exclusive Workwear for Culinary Professionals</h1>\n<a class=\"button button--solid button--with-icon\" href=\"/collections/new-chef-uniforms\" title=\"Shop Now\"><span>Shop Now</span><span class=\"icon\" aria-hidden=\"true\" role=\"img\"><svg xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"xMidYMid\" style=\"width:21px; height: 10px;\" viewBox=\"0 0 21 10\"><path style=\"fill: #fff\" d=\"M21.000,5.000 L15.000,10.000 L15.000,6.000 L-0.000,6.000 L-0.000,4.000 L15.000,4.000 L15.000,0.000 L21.000,5.000 Z\"></path></svg></span></a>\n</div>"
           }
         }
       },
@@ -26,7 +26,7 @@
         ".site-box .site-box-background.with-image:after {opacity: 0.2 !important;}",
         ".hero-video-icon {width: 100%; max-width: 150px;}",
         "h1 {font-size: calc(30px / 60 * var(--base-headings-size) + 0px);}",
-        "h3 {font-family: \"Libre Franklin\", sans-serif; font-size: calc(16px / 16 * var(--base-body-size) + 0px); margin-bottom: 60px;}",
+        "h3 {font-family: \"Libre Franklin\", sans-serif; font-size: calc(16px / 16 * var(--base-body-size) + 0px); margin-bottom: 30px;}",
         ".button.button--solid {background: #bb2826; border: 2px solid #fff; color: #fff;}",
         "@media screen and (max-width: 728px) {.box__video-background {height: 75vh; } .hero-video-icon {max-width: 100px; } h3 {margin-bottom: 30px; }}"
       ],
@@ -89,6 +89,17 @@
         "logo_opacity": 100,
         "padding_top": 30,
         "padding_bottom": 30
+      }
+    },
+    "16372293330d0f5bf6": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured this Season",
+        "subtitle": "Curated selection of current bestsellers.",
+        "collection": "best-chef-uniforms",
+        "collection_rows": 2,
+        "show_view_all": true,
+        "seo_h_tag": "h2"
       }
     },
     "16361066840a222f4b": {
@@ -159,17 +170,6 @@
       "settings": {
         "image_height": "half",
         "text_alignment": "horizontal-left vertical-middle"
-      }
-    },
-    "16372293330d0f5bf6": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured this Season",
-        "subtitle": "Curated selection of current bestsellers.",
-        "collection": "best-chef-uniforms",
-        "collection_rows": 2,
-        "show_view_all": true,
-        "seo_h_tag": "h2"
       }
     },
     "heading_tKBxWr": {
@@ -378,6 +378,7 @@
       "name": "Brand Essentials",
       "settings": {
         "title": "",
+        "instruction_text": "Select a card to explore specifications",
         "background_color": "#262221",
         "padding_top": 20,
         "padding_bottom": 64
@@ -417,6 +418,7 @@
         "text_YfJb9c",
         "custom_liquid_dLnEyg"
       ],
+      "disabled": true,
       "settings": {
         "section_padding": 30,
         "text_alignment": "left",
@@ -703,7 +705,7 @@
       "settings": {
         "title": "Trending Products",
         "collection": "trending-chef-gear-best-sellers-at-fiumara-culinary",
-        "products_to_show": 8,
+        "products_to_show": 12,
         "custom_background": "#ffffff",
         "custom_text": "#262221",
         "padding_top": 50,
@@ -737,7 +739,7 @@
           "type": "button",
           "settings": {
             "button_label": "Shop Now",
-            "button_link": "shopify://collections"
+            "button_link": "https://fiumaraculinary.com/collections/best-chef-uniforms"
           }
         }
       },
@@ -1061,15 +1063,15 @@
         "text": "<p>Fiumara Culinary gives professionals the confidence, comfort and performance they need to excel.</p>",
         "text_color": "#ffffff",
         "button_label": "SHOP NOW",
-        "button_link": "shopify://collections/all"
+        "button_link": "https://fiumaraculinary.com/collections/best-chef-uniforms"
       }
     }
   },
   "order": [
     "video_background_ttW8eA",
     "scrolling_logos_bar",
-    "16361066840a222f4b",
     "16372293330d0f5bf6",
+    "16361066840a222f4b",
     "heading_tKBxWr",
     "benefits_section_n4XMan",
     "heading_9Lb63a",
