@@ -15,7 +15,7 @@
         "custom_liquid_R3baHU": {
           "type": "custom_liquid",
           "settings": {
-            "custom_code": "<div class=\"content\">\n<img class=\"hero-video-icon\" src=\"https://cdn.shopify.com/s/files/1/0116/8492/files/Fiumara-Apparel-Icon-Since-2010-White.png\" alt=\"Fiumara Apparel Icon\">\n<h3>Stand out in high-quality, fashion-forward uniforms trusted by top chefs.</h3>\n<h1 class=\"title h1\">Exclusive Workwear for Culinary Professionals</h1>\n<a class=\"button button--solid button--with-icon\" href=\"/collections/new-chef-uniforms\" title=\"Shop Now\"><span>Shop Now</span><span class=\"icon\" aria-hidden=\"true\" role=\"img\"><svg xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"xMidYMid\" style=\"width:21px; height: 10px;\" viewBox=\"0 0 21 10\"><path style=\"fill: #fff\" d=\"M21.000,5.000 L15.000,10.000 L15.000,6.000 L-0.000,6.000 L-0.000,4.000 L15.000,4.000 L15.000,0.000 L21.000,5.000 Z\"></path></svg></span></a>\n</div>"
+            "custom_code": "<div class=\"content\">\n<img class=\"hero-video-icon\" src=\"https://cdn.shopify.com/s/files/1/0116/8492/files/Fiumara-Apparel-Icon-Since-2010-White.png\" alt=\"Fiumara Apparel Icon\">\n<h1>Stand out in high-quality, fashion-forward uniforms trusted by top chefs.</h1>\n<h3 class=\"title h1\">Exclusive Workwear for Culinary Professionals</h3>\n<a class=\"button button--solid button--with-icon\" href=\"/collections/new-chef-uniforms\" title=\"Shop Now\"><span>Shop Now</span><span class=\"icon\" aria-hidden=\"true\" role=\"img\"><svg xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"xMidYMid\" style=\"width:21px; height: 10px;\" viewBox=\"0 0 21 10\"><path style=\"fill: #fff\" d=\"M21.000,5.000 L15.000,10.000 L15.000,6.000 L-0.000,6.000 L-0.000,4.000 L15.000,4.000 L15.000,0.000 L21.000,5.000 Z\"></path></svg></span></a>\n</div>"
           }
         }
       },
@@ -186,6 +186,7 @@
         "logo_5",
         "logo_6"
       ],
+      "disabled": true,
       "settings": {
         "scroll_direction": "ltr",
         "speed": 50,
@@ -309,6 +310,7 @@
       "blocks": {
         "benefit_xUxLcV": {
           "type": "benefit",
+          "disabled": true,
           "settings": {
             "title": "Chef-Grade Quality",
             "icon_name": "chef-grade-quality",
@@ -317,6 +319,7 @@
         },
         "benefit_TYRzUi": {
           "type": "benefit",
+          "disabled": true,
           "settings": {
             "title": "Modern, Exclusive Style",
             "icon_name": "modern-style",
@@ -401,6 +404,7 @@
       "block_order": [
         "heading_rLJBJJ"
       ],
+      "disabled": true,
       "custom_css": [
         ".box--small-fl-auto {min-height: 15vh !important; padding-bottom: 0;}"
       ],
@@ -481,6 +485,7 @@
         "item_7pALc7",
         "item_knjfB4"
       ],
+      "disabled": true,
       "name": "Brand Essentials",
       "settings": {
         "title": "",
@@ -599,6 +604,7 @@
         "custom_text": "#262221",
         "padding_top": 30,
         "padding_bottom": 30,
+        "autoplay_interval": 5,
         "seo_h_tag": "h2",
         "heading_size": "h2"
       }
@@ -1172,7 +1178,6 @@
         "button_link": "https://fiumaraculinary.com/collections/best-chef-uniforms"
       }
     }
-
   },
   "order": [
     "video_background_ttW8eA",
