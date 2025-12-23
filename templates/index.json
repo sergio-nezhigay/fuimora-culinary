@@ -39,6 +39,112 @@
         "custom_overlay": "#262221"
       }
     },
+    "icons_marquee_home": {
+      "type": "icons",
+      "blocks": {
+        "image_D3d7gm": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_9529.png"
+          }
+        },
+        "image_JRjk8a": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_9523.jpg"
+          }
+        },
+        "image_NVgGmY": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_9548.png"
+          }
+        },
+        "image_ymmNkP": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_9551_1.jpg"
+          }
+        },
+        "image_mapATV": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_9549.jpg"
+          }
+        },
+        "image_Tfn7qJ": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_9550.jpg"
+          }
+        },
+        "image_FJCPMG": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_9553.jpg"
+          }
+        },
+        "image_9A8gL4": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_9554.png"
+          }
+        },
+        "image_cqAYEb": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_9555.jpg"
+          }
+        },
+        "image_mXEimB": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_9556.jpg"
+          }
+        },
+        "image_Cf6JRk": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_9557.jpg"
+          }
+        },
+        "image_GR9Cbh": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_9558.jpg"
+          }
+        },
+        "image_TfgeHj": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify://shop_images/Remove_background_project_1.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_D3d7gm",
+        "image_JRjk8a",
+        "image_NVgGmY",
+        "image_ymmNkP",
+        "image_mapATV",
+        "image_Tfn7qJ",
+        "image_FJCPMG",
+        "image_9A8gL4",
+        "image_cqAYEb",
+        "image_mXEimB",
+        "image_Cf6JRk",
+        "image_GR9Cbh",
+        "image_TfgeHj"
+      ],
+      "name": "Icons",
+      "settings": {
+        "bg_color": "#ffffff",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_top_mb": 0,
+        "padding_bottom_mb": 0
+      }
+    },
     "scrolling_logos_bar": {
       "type": "scrolling-logos",
       "blocks": {
@@ -1066,9 +1172,11 @@
         "button_link": "https://fiumaraculinary.com/collections/best-chef-uniforms"
       }
     }
+
   },
   "order": [
     "video_background_ttW8eA",
+    "icons_marquee_home",
     "scrolling_logos_bar",
     "16372293330d0f5bf6",
     "16361066840a222f4b",
