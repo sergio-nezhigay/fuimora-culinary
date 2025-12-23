@@ -25,7 +25,7 @@
     }
   {% endif %}
 
-  
+
 {% endstyle %}
 
 
@@ -34,7 +34,7 @@
 
 <div
   id="section-{{ section.id }}"
-  class="section-{{ section.id }}-padding site-box-container container--fullscreen box--can-stick"
+  class="section-{{ section.id }}-padding site-box-container container--fullscreen {% if section.settings.enable_parallax %} box--can-stick {% endif %}"
   data-image-position="{{ section.settings.desktop_image_positioning }}"
 >
   <div
@@ -167,6 +167,12 @@
       "id": "bg_overlay",
       "label": "t:sections.split-extra-words.sections.rich-text.overlay",
       "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_parallax",
+      "label": "Enable Parallax Effect",
+      "default": true
     },
     {
       "type": "header",
