@@ -139,10 +139,10 @@
       "name": "Icons",
       "settings": {
         "bg_color": "#ffffff",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "padding_top_mb": 0,
-        "padding_bottom_mb": 0
+        "padding_top": 16,
+        "padding_bottom": 16,
+        "padding_top_mb": 10,
+        "padding_bottom_mb": 10
       }
     },
     "scrolling_logos_bar": {
@@ -634,9 +634,8 @@
         ".box--big {min-height: 60vh;}",
         ".heading.h3 {font-size: 23px; font-weight: 400;}",
         "@media screen and (min-width: 768px) {.heading.h3 {font-size: 38px; }}",
-        ".site-box[data-order='0'] {position: absolute !important; top: 0; right: 0; width: 50% !important; height: 100% !important;}",
-        ".site-box[data-order='1'] {margin-right: 50% !important;}",
-        "@media screen and (max-width: 768px) {.site-box[data-order='0'] {position: relative !important; width: 100% !important; height: 20vh !important; left: auto !important; right: auto !important;} .site-box[data-order='1'] {margin-right: 0 !important; margin-left: 0 !important;}}"
+        ".site-box[data-order=\"0\"] {position: absolute !important; top: 0; right: 0; width: 50% !important; height: 100% !important;}",
+        ".site-box[data-order=\"1\"] {margin-right: 50% !important;}"
       ],
       "settings": {
         "title": "",
@@ -691,9 +690,8 @@
         ".box--big {min-height: 60vh;}",
         ".heading.h3 {font-size: 23px; font-weight: 400;}",
         "@media screen and (min-width: 768px) {.heading.h3 {font-size: 38px; }}",
-        ".site-box[data-order='0'] {position: absolute !important; top: 0; left: 0; width: 50% !important; height: 100% !important;}",
-        ".site-box[data-order='1'] {margin-left: 50% !important;}",
-        "@media screen and (max-width: 768px) {.site-box[data-order='0'] {position: relative !important; width: 100% !important; height: 20vh !important; left: auto !important; right: auto !important;} .site-box[data-order='1'] {margin-right: 0 !important; margin-left: 0 !important;}}"
+        ".site-box[data-order=\"0\"] {position: absolute !important; top: 0; left: 0; width: 50% !important; height: 100% !important;}",
+        ".site-box[data-order=\"1\"] {margin-left: 50% !important;}"
       ],
       "settings": {
         "title": "",
@@ -702,6 +700,7 @@
         "bg_img": "shopify://shop_images/Fiumara-Culinary-ISP-1359533331-1442x1532.jpg",
         "desktop_image_positioning": "image-on-left",
         "bg_overlay": false,
+        "enable_parallax": true,
         "custom_background": "#262221",
         "custom_text": "#ffffff",
         "seo_h_tag": "h2",
