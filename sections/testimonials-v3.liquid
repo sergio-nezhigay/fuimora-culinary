@@ -25,7 +25,8 @@
         "autoHeight": false,
         "watchCSS": false,
         "thumbnails": true,
-        "groupCells": false
+        "groupCells": false,
+        "autoplay": {{ section.settings.autoplay_interval | times: 1000 }}
       }'
       style="display:block"
       id="css-slider-{{ section.id }}"
@@ -120,6 +121,17 @@
       "unit": "px",
       "label": "Bottom Padding",
       "default": 80
+    },
+    {
+      "type": "range",
+      "id": "autoplay_interval",
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "unit": "sec",
+      "label": "Change slides every",
+      "default": 5,
+      "info": "Set to 0 to disable auto-rotation"
     },
     {
       "type": "header",
