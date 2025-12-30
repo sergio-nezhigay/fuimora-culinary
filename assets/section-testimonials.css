@@ -1,6 +1,6 @@
 .box__testimonial {
-  padding-top: 0%;
-  padding-bottom: 0%;
+  padding-top: 10%;
+  padding-bottom: 10%;
   min-height: 0 !important;
 }
 html[dir=rtl] .box__testimonial {
@@ -63,33 +63,3 @@ html[dir=ltr] .box__testimonial {
     display: none;
   }
 }
-
-/* Override 100vh min-height for testimonials section */
-.mount-testimonials .box--bigger,
-.mount-testimonials .lap--box--bigger {
-  min-height: auto !important;
-}
-
-.mount-testimonials .box--big {
-  min-height: auto !important;
-}
-
-/* Also override the heading box specifically */
-.mount-testimonials .box__heading.box--big {
-  min-height: auto !important;
-}
-
-.section-testimonials-v2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: var(--section-padding-top, 50px);
-    padding-bottom: var(--section-padding-bottom, 50px);
-}
-
-.section-testimonials-v2 .box__testimonial::before,
-.section-testimonials-v2 .box__testimonial::after {
-    background-color: transparent !important;
-}
-
-

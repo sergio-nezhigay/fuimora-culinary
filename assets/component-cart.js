@@ -82,6 +82,8 @@ if ( typeof CartForm !== 'function' ) {
 					cartItems.innerHTML = cartFormInnerHTML;
 					cartItems.ajaxifyCartItems();
 
+					window.location.reload();
+					
 					document.querySelectorAll('[data-header-cart-count]').forEach(elm=>{
 						elm.textContent = cartItems.querySelector('[data-cart-count]').textContent;
 					});
@@ -95,6 +97,8 @@ if ( typeof CartForm !== 'function' ) {
 
 					document.getElementById('AjaxCartSubtotal').innerHTML = cartSubtotalInnerHTML;
 							
+					
+					
 					const event = new Event('cart-updated');
 					this.dispatchEvent(event);
 

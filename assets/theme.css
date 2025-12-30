@@ -222,9 +222,9 @@ summary::-webkit-details-marker {
   outline: none !important;
 }
 
-/*! Variables declarations
-  If you wish to change margins, paddings, heights, this is the place to do so
-  Almost all dimensions & spacing is based on these variables
+/*! Variables declarations 
+  If you wish to change margins, paddings, heights, this is the place to do so 
+  Almost all dimensions & spacing is based on these variables 
 !*/
 :root {
   --window-height: 100vh;
@@ -1509,7 +1509,7 @@ screen and (max-width: 1024px) and (orientation: portrait) {
 
 .box--small {
   width: 25%;
-  height: 40vh;
+  height: 50vh;
   min-height: 0;
 }
 
@@ -1870,7 +1870,7 @@ screen and (max-width: 1024px) and (orientation: portrait) {
 /*
  *  1.5. Site box
 
-  -- This is the base structure of Split. Absolutely every item (module) is based on this
+  -- This is the base structure of Split. Absolutely every item (module) is based on this 
       specific structure (.site-box), with a lot of variations and available classes
 
 */
@@ -2306,7 +2306,7 @@ screen and (max-width: 1024px) and (orientation: portrait) {
 }
 
 .box__announcement .content>*:not(:last-child) {
-  margin-bottom: 60px;
+  margin-bottom: var(--text-spacing);
 }
 
 .box__announcement .content p {

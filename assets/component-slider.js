@@ -12,13 +12,13 @@ if ( typeof CSSSlider !== 'function' ) {
       // create option object, from defaults
       this.o = {
         ...{
-          selector: '.css-slide',
-          snapping: true,
+          selector: '.css-slide', 
+          snapping: true, 
           groupCells: false,
-          autoHeight: false,
+          autoHeight: false, 
           navigation: true,
-          navigationDOM: `<span class="css-slider-button css-slider-prev" style="display:none"><svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="16" y="7" width="14" height="2" transform="rotate(-180 16 7)" fill="currentColor"/><path d="M5.636 12L0.364 6L1.727 4.5L7 10.5L5.636 12Z" fill="currentColor"/><path d="M7 1.5L1.727 7.5L0.364 6L5.637 0L7 1.5Z" fill="currentColor"/></svg></span>
-            <span class="css-slider-button css-slider-next" style="display:none"><svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="5" width="14" height="2" fill="currentColor"/><path d="M10.364 0L15.636 6L14.273 7.5L9 1.5L10.364 0Z" fill="currentColor"/><path d="M9 10.5L14.273 4.5L15.636 6L10.364 12L9 10.5Z" fill="currentColor"/></svg></span>`,
+          navigationDOM: `<span class="css-slider-button css-slider-prev" style="display:none">←</span>
+            <span class="css-slider-button css-slider-next" style="display:none">→</span>`,
           thumbnails: true,
           thumbnailsDOM: `<div class="css-slider-dot-navigation" style="display:none"></div>`,
           indexNav: false,
@@ -41,7 +41,7 @@ if ( typeof CSSSlider !== 'function' ) {
           const afterContent = window.getComputedStyle(this,':after').content;
           if ( afterContent.includes('css-slide') && !this.sliderEnabled ) {
             this.initSlider();
-          } else if ( !afterContent.includes('css-slide') && this.sliderEnabled )  {
+          } else if ( !afterContent.includes('css-slide') && this.sliderEnabled )  { 
             this.destroySlider();
           }
         }, 100);
@@ -49,7 +49,7 @@ if ( typeof CSSSlider !== 'function' ) {
         this.RESIZE_WATCHER();
       }
 
-
+    
     }
 
     destroySlider(){
@@ -116,7 +116,7 @@ if ( typeof CSSSlider !== 'function' ) {
           e.preventDefault();
         })
       }
-
+      
       this.viewport = this.querySelector('.css-slider-viewport');
       if ( this.o.autoHeight ) {
         this.viewport.classList.add('auto-height');
@@ -149,12 +149,12 @@ if ( typeof CSSSlider !== 'function' ) {
         }
 
         if ( this.o.thumbnails ) {
-          this.thumbnailsEl = container.querySelector('.css-slider-dot-navigation');
+          this.thumbnailsEl = container.querySelector('.css-slider-dot-navigation'); 
         }
 
         if ( this.o.indexNav ) {
           this.indexEl = container.querySelector('.css-slider-current');
-          this.lengthEl = container.querySelector('.css-slider-total');
+          this.lengthEl = container.querySelector('.css-slider-total'); 
         }
 
         this.append(container);
@@ -164,7 +164,7 @@ if ( typeof CSSSlider !== 'function' ) {
       if ( this.length > 1 ) {
 
         // add observer
-
+        
         if ( this.o.observer ) {
 
           this.OBSERVER = new IntersectionObserver(entries=>{
@@ -179,7 +179,7 @@ if ( typeof CSSSlider !== 'function' ) {
             }
           }, {
             threshold: [0, .5]
-          });
+          }); 
 
         } else {
 
@@ -213,7 +213,7 @@ if ( typeof CSSSlider !== 'function' ) {
           this.windowWidth = window.innerWidth;
         }, 100);
         window.addEventListener('resize', this.RESIZE_EVENT);
-        this.resetSlider(true);
+        this.resetSlider(true);    
 
         // dispatching scroll event, mostly for extra animations
         if ( this.o.listenScroll ) {
@@ -276,7 +276,7 @@ if ( typeof CSSSlider !== 'function' ) {
 
         if ( ! this._touchScreen ) {
           this.element.ondragstart = e => {
-            e.preventDefault();
+            e.preventDefault();      
           }
         }
 
@@ -311,13 +311,13 @@ if ( typeof CSSSlider !== 'function' ) {
       } else if ( parseInt(direction) >= 0 ) {
         this.index = parseInt(direction);
       }
-
+      
 
       this._sliderBlockScroll = true;
       setTimeout(()=>{
         this._sliderBlockScroll = false;
-      }, 500);
-
+      }, 500);  
+      
       this.checkSlide();
       this.element.scrollTo({
         top: 0,
@@ -328,8 +328,8 @@ if ( typeof CSSSlider !== 'function' ) {
 
     }
 
-    checkSlide(){
-
+    checkSlide(){  
+      
       // checks slide after index change and updates navigation / viewport
 
       if ( this.o.navigation ) {
@@ -351,11 +351,11 @@ if ( typeof CSSSlider !== 'function' ) {
       if ( this.o.indexNav ) {
         this.indexEl.textContent = this.index+1;
       }
-
+      
       if ( this.o.autoHeight ) {
         this.viewport.style.height = this.indexedItems[this.index].offsetHeight + 'px';
-      }
-
+      } 
+      
       this.indexedItems.forEach((elm,i)=>{
         if ( i == this.index ) {
           elm.classList.add('css-slide-active');
@@ -414,7 +414,7 @@ if ( typeof CSSSlider !== 'function' ) {
         if ( slidesWidth > totalWidth && this.slidesPerPage == 0 ) {
           this.slidesPerPage = i;
         }
-      });
+      }); 
 
       if ( this.slidesPerPage == 0 ) {
         this.slidesPerPage = this.items.length;
@@ -429,7 +429,7 @@ if ( typeof CSSSlider !== 'function' ) {
       }
 
       // set each slide for observer
-
+      
       this.items.forEach((elm, i) => {
         if ( i % this.slidesPerPage == 0  ) {
           elm.classList.add('css-slide--snap');
@@ -518,5 +518,5 @@ if ( typeof CSSSlider !== 'function' ) {
       e.target.querySelectorAll('css-slider').forEach(slider=>{if(slider.enabled)slider.resetSlider()});
     }
   });
-
+  
 }

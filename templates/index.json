@@ -15,7 +15,7 @@
         "custom_liquid_R3baHU": {
           "type": "custom_liquid",
           "settings": {
-            "custom_code": "<div class=\"content\">\n<img class=\"hero-video-icon\" src=\"https://cdn.shopify.com/s/files/1/0116/8492/files/Fiumara-Apparel-Icon-Since-2010-White.png\" alt=\"Fiumara Apparel Icon\">\n<h1>Stand out in high-quality, fashion-forward uniforms trusted by top chefs.</h1>\n<h3 class=\"title h1\">Exclusive Workwear for Culinary Professionals</h3>\n<a class=\"button button--solid button--with-icon\" href=\"/collections/new-chef-uniforms\" title=\"Shop Now\"><span>Shop Now</span><span class=\"icon\" aria-hidden=\"true\" role=\"img\"><svg xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"xMidYMid\" style=\"width:21px; height: 10px;\" viewBox=\"0 0 21 10\"><path style=\"fill: #fff\" d=\"M21.000,5.000 L15.000,10.000 L15.000,6.000 L-0.000,6.000 L-0.000,4.000 L15.000,4.000 L15.000,0.000 L21.000,5.000 Z\"></path></svg></span></a>\n</div>"
+            "custom_code": "<div class=\"content\">\n<img class=\"hero-video-icon\" src=\"https://cdn.shopify.com/s/files/1/0116/8492/files/Fiumara-Apparel-Icon-Since-2010-White.png\" alt=\"Fiumara Apparel Icon\">\n<h1 class=\"title h1\">Exclusive Workwear for Culinary Professionals</h1>\n<h3>Stand out in high-quality, fashion-forward uniforms trusted by top chefs.</h3>\n<a class=\"button button--solid button--with-icon\" href=\"/collections/new-chef-uniforms\" title=\"Shop Now\"><span>Shop Now</span><span class=\"icon\" aria-hidden=\"true\" role=\"img\"><svg xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"xMidYMid\" style=\"width:21px; height: 10px;\" viewBox=\"0 0 21 10\"><path style=\"fill: #fff\" d=\"M21.000,5.000 L15.000,10.000 L15.000,6.000 L-0.000,6.000 L-0.000,4.000 L15.000,4.000 L15.000,0.000 L21.000,5.000 Z\"></path></svg></span></a>\n</div>"
           }
         }
       },
@@ -26,7 +26,7 @@
         ".site-box .site-box-background.with-image:after {opacity: 0.2 !important;}",
         ".hero-video-icon {width: 100%; max-width: 150px;}",
         "h1 {font-size: calc(30px / 60 * var(--base-headings-size) + 0px);}",
-        "h3 {font-family: \"Libre Franklin\", sans-serif; font-size: calc(16px / 16 * var(--base-body-size) + 0px); margin-bottom: 30px;}",
+        "h3 {font-family: \"Libre Franklin\", sans-serif; font-size: calc(16px / 16 * var(--base-body-size) + 0px); margin-bottom: 60px;}",
         ".button.button--solid {background: #bb2826; border: 2px solid #fff; color: #fff;}",
         "@media screen and (max-width: 728px) {.box__video-background {height: 75vh; } .hero-video-icon {max-width: 100px; } h3 {margin-bottom: 30px; }}"
       ],
@@ -39,175 +39,54 @@
         "custom_overlay": "#262221"
       }
     },
-    "icons_marquee_home": {
-      "type": "icons",
+    "1636443645b6d4e74b": {
+      "type": "video-background",
       "blocks": {
-        "image_D3d7gm": {
-          "type": "Image",
+        "custom_liquid_JWhrdz": {
+          "type": "custom_liquid",
           "settings": {
-            "image": "shopify://shop_images/IMG_9529.png"
-          }
-        },
-        "image_JRjk8a": {
-          "type": "Image",
-          "settings": {
-            "image": "shopify://shop_images/IMG_9523.jpg"
-          }
-        },
-        "image_NVgGmY": {
-          "type": "Image",
-          "settings": {
-            "image": "shopify://shop_images/IMG_9548.png"
-          }
-        },
-        "image_ymmNkP": {
-          "type": "Image",
-          "settings": {
-            "image": "shopify://shop_images/IMG_9551_1.jpg"
-          }
-        },
-        "image_mapATV": {
-          "type": "Image",
-          "settings": {
-            "image": "shopify://shop_images/IMG_9549.jpg"
-          }
-        },
-        "image_Tfn7qJ": {
-          "type": "Image",
-          "settings": {
-            "image": "shopify://shop_images/IMG_9550.jpg"
-          }
-        },
-        "image_FJCPMG": {
-          "type": "Image",
-          "settings": {
-            "image": "shopify://shop_images/IMG_9553.jpg"
-          }
-        },
-        "image_9A8gL4": {
-          "type": "Image",
-          "settings": {
-            "image": "shopify://shop_images/IMG_9554.png"
-          }
-        },
-        "image_cqAYEb": {
-          "type": "Image",
-          "settings": {
-            "image": "shopify://shop_images/IMG_9555.jpg"
-          }
-        },
-        "image_mXEimB": {
-          "type": "Image",
-          "settings": {
-            "image": "shopify://shop_images/IMG_9556.jpg"
-          }
-        },
-        "image_Cf6JRk": {
-          "type": "Image",
-          "settings": {
-            "image": "shopify://shop_images/IMG_9557.jpg"
-          }
-        },
-        "image_GR9Cbh": {
-          "type": "Image",
-          "settings": {
-            "image": "shopify://shop_images/IMG_9558.jpg"
-          }
-        },
-        "image_TfgeHj": {
-          "type": "Image",
-          "settings": {
-            "image": "shopify://shop_images/Remove_background_project_1.png"
+            "custom_code": "<img class=\"hero-video-icon\" src=\"https://cdn.shopify.com/s/files/1/0116/8492/files/Fiumara-Apparel-Icon-Since-2010-White.png\" alt=\"Fiumara Apparel Icon\">"
           }
         }
       },
       "block_order": [
-        "image_D3d7gm",
-        "image_JRjk8a",
-        "image_NVgGmY",
-        "image_ymmNkP",
-        "image_mapATV",
-        "image_Tfn7qJ",
-        "image_FJCPMG",
-        "image_9A8gL4",
-        "image_cqAYEb",
-        "image_mXEimB",
-        "image_Cf6JRk",
-        "image_GR9Cbh",
-        "image_TfgeHj"
+        "custom_liquid_JWhrdz"
       ],
-      "name": "Icons",
+      "disabled": true,
+      "custom_css": [],
       "settings": {
-        "bg_color": "#ffffff",
-        "icon_height": 68,
-        "padding_top": 16,
-        "padding_bottom": 16,
-        "padding_top_mb": 10,
-        "padding_bottom_mb": 10
+        "video_object": "shopify://files/videos/FCVE_v3.mp4",
+        "video_height": "56.25%",
+        "text_alignment": "horizontal-center vertical-middle",
+        "custom_text": "#ffffff",
+        "custom_overlay": "rgba(0,0,0,0)"
       }
     },
-    "scrolling_logos_bar": {
-      "type": "scrolling-logos",
+    "heading_bNBpna": {
+      "type": "heading",
       "blocks": {
-        "logo_1": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/Google_2015_logo_svg.webp"
-          }
+        "line_CwUzEg": {
+          "type": "line",
+          "settings": {}
         },
-        "logo_3": {
-          "type": "logo",
+        "heading_JJCmmh": {
+          "type": "heading",
           "settings": {
-            "logo": "shopify://shop_images/depositphotos_737648756-stock-illustration-centaur-company-vector-flat-logo.webp"
-          }
-        },
-        "logo_4": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/logo-1650967832.png"
-          }
-        },
-        "logo_5": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/Pepsi_2023_svg.png"
-          }
-        },
-        "logo_6": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/Coca-Cola_logo_svg.png"
+            "heading": "Signature Collections",
+            "heading_size": "h1",
+            "seo_h_tag": "h2"
           }
         }
       },
       "block_order": [
-        "logo_1",
-        "logo_3",
-        "logo_4",
-        "logo_5",
-        "logo_6"
+        "line_CwUzEg",
+        "heading_JJCmmh"
       ],
       "disabled": true,
       "settings": {
-        "scroll_direction": "ltr",
-        "speed": 50,
-        "pause_on_hover": true,
-        "custom_background": "#222024",
-        "logo_grayscale": 40,
-        "logo_opacity": 100,
-        "padding_top": 30,
-        "padding_bottom": 30
-      }
-    },
-    "16372293330d0f5bf6": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured this Season",
-        "subtitle": "Curated selection of current bestsellers.",
-        "collection": "best-chef-uniforms",
-        "collection_rows": 2,
-        "show_view_all": true,
-        "seo_h_tag": "h2"
+        "text_alignment": "left",
+        "custom_background": "rgba(0,0,0,0)",
+        "custom_text": "rgba(0,0,0,0)"
       }
     },
     "16361066840a222f4b": {
@@ -280,220 +159,15 @@
         "text_alignment": "horizontal-left vertical-middle"
       }
     },
-    "heading_tKBxWr": {
-      "type": "heading",
-      "blocks": {
-        "heading_AxEcdm": {
-          "type": "heading",
-          "settings": {
-            "heading": "Benefits",
-            "heading_size": "h2",
-            "seo_h_tag": "h2"
-          }
-        }
-      },
-      "block_order": [
-        "heading_AxEcdm"
-      ],
-      "custom_css": [
-        ".box--small-fl-auto {min-height: 15vh !important; padding-bottom: 0;}"
-      ],
-      "name": "t:sections.heading.name",
+    "16372293330d0f5bf6": {
+      "type": "featured-collection",
       "settings": {
-        "section_padding": 0,
-        "text_alignment": "center",
-        "custom_background": "rgba(0,0,0,0)",
-        "custom_text": "rgba(0,0,0,0)"
-      }
-    },
-    "benefits_section_n4XMan": {
-      "type": "benefits-section",
-      "blocks": {
-        "benefit_xUxLcV": {
-          "type": "benefit",
-          "disabled": true,
-          "settings": {
-            "title": "Chef-Grade Quality",
-            "icon_name": "chef-grade-quality",
-            "description": "<p>Durable uniforms built for high-performance kitchens</p>"
-          }
-        },
-        "benefit_TYRzUi": {
-          "type": "benefit",
-          "disabled": true,
-          "settings": {
-            "title": "Modern, Exclusive Style",
-            "icon_name": "modern-style",
-            "description": "<p>Fashion-forward designs and brands that help you stand out.</p>"
-          }
-        },
-        "benefit_ebmBf8": {
-          "type": "benefit",
-          "settings": {
-            "title": "Performance Fabrics",
-            "icon_name": "performance-fabrics",
-            "description": "<p>Breathable, long-lasting materials for all-day comfort.</p>"
-          }
-        },
-        "benefit_7r9iMJ": {
-          "type": "benefit",
-          "settings": {
-            "title": "Easy Bulk Orders & Embroidery",
-            "icon_name": "bulk-embroidery",
-            "description": "<p>Streamlined team ordering with custom branding options.</p>"
-          }
-        },
-        "benefit_nXcYnw": {
-          "type": "benefit",
-          "settings": {
-            "title": "Trusted by Top Chefs",
-            "icon_name": "trusted-chefs",
-            "description": "<p>Preferred apparel of leading culinary professionals.</p>"
-          }
-        },
-        "benefit_annxdq": {
-          "type": "benefit",
-          "settings": {
-            "title": "Tailored Fit for All",
-            "icon_name": "tailored-fit",
-            "description": "<p>Comfortable, inclusive sizing worked into every design.</p>"
-          }
-        },
-        "benefit_Pf84xf": {
-          "type": "benefit",
-          "settings": {
-            "title": "Fast, Reliable Shipping",
-            "icon_name": "reliable-shipping",
-            "description": "<p>Get your gear quickly and stay service-ready.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "benefit_xUxLcV",
-        "benefit_TYRzUi",
-        "benefit_ebmBf8",
-        "benefit_7r9iMJ",
-        "benefit_nXcYnw",
-        "benefit_annxdq",
-        "benefit_Pf84xf"
-      ],
-      "name": "Benefits Grid (Popup)",
-      "settings": {
-        "bg_color": "#ffffff",
-        "text_color": "#333333",
-        "padding_top": 0,
-        "padding_bottom": 52,
-        "text_alignment": "center",
-        "heading_size": 18,
-        "button_text": "Learn More",
-        "seo_tag": "h3",
-        "icon_size": 48
-      }
-    },
-    "heading_9Lb63a": {
-      "type": "heading",
-      "blocks": {
-        "heading_rLJBJJ": {
-          "type": "heading",
-          "settings": {
-            "heading": "Benefits",
-            "heading_size": "h2",
-            "seo_h_tag": "h2"
-          }
-        }
-      },
-      "block_order": [
-        "heading_rLJBJJ"
-      ],
-      "disabled": true,
-      "custom_css": [
-        ".box--small-fl-auto {min-height: 15vh !important; padding-bottom: 0;}"
-      ],
-      "name": "t:sections.heading.name",
-      "settings": {
-        "section_padding": 0,
-        "text_alignment": "center",
-        "custom_background": "#262221",
-        "custom_text": "#ffffff"
-      }
-    },
-    "brand_essentials_EDXbbD": {
-      "type": "brand-essentials",
-      "blocks": {
-        "item_Hf46VU": {
-          "type": "item",
-          "settings": {
-            "icon": "quality",
-            "label": "Chef-Grade Quality",
-            "description": "Durable uniforms built for high-performance kitchens."
-          }
-        },
-        "item_DGDqRf": {
-          "type": "item",
-          "settings": {
-            "icon": "modern",
-            "label": "Modern, Exclusive Style",
-            "description": "Fashion-forward designs and brands that help you stand out."
-          }
-        },
-        "item_PkcjQJ": {
-          "type": "item",
-          "settings": {
-            "icon": "fabrics",
-            "label": "Performance Fabrics",
-            "description": "Breathable, long-lasting materials for all-day comfort."
-          }
-        },
-        "item_fVcXFg": {
-          "type": "item",
-          "settings": {
-            "icon": "bulk",
-            "label": "Easy Bulk Orders & Embroidery",
-            "description": "Streamlined team ordering with custom branding options."
-          }
-        },
-        "item_fPN9kj": {
-          "type": "item",
-          "settings": {
-            "icon": "trusted",
-            "label": "Trusted by Top Chefs",
-            "description": "Preferred apparel of leading culinary professionals."
-          }
-        },
-        "item_7pALc7": {
-          "type": "item",
-          "settings": {
-            "icon": "fit",
-            "label": "Tailored Fit for All",
-            "description": "Comfortable, inclusive sizing worked into every design."
-          }
-        },
-        "item_knjfB4": {
-          "type": "item",
-          "settings": {
-            "icon": "shipping",
-            "label": "Fast, Reliable Shipping",
-            "description": "Get your gear quickly and stay service-ready."
-          }
-        }
-      },
-      "block_order": [
-        "item_Hf46VU",
-        "item_DGDqRf",
-        "item_PkcjQJ",
-        "item_fVcXFg",
-        "item_fPN9kj",
-        "item_7pALc7",
-        "item_knjfB4"
-      ],
-      "disabled": true,
-      "name": "Brand Essentials",
-      "settings": {
-        "title": "",
-        "instruction_text": "Select a card to explore specifications",
-        "background_color": "#262221",
-        "padding_top": 20,
-        "padding_bottom": 64
+        "title": "Featured this Season",
+        "subtitle": "Curated selection of current bestsellers.",
+        "collection": "best-chef-uniforms",
+        "collection_rows": 2,
+        "show_view_all": true,
+        "seo_h_tag": "h2"
       }
     },
     "heading_rUXAGC": {
@@ -507,14 +181,14 @@
           "type": "heading",
           "settings": {
             "heading": "Why Fiumara Culinary Stands Out",
-            "heading_size": "h2",
+            "heading_size": "h1",
             "seo_h_tag": "h2"
           }
         },
         "text_YfJb9c": {
           "type": "text",
           "settings": {
-            "text": "<p>At Fiumara Culinary, we know you want to be a chef or restaurateur who is recognized for excellence and professionalism. To achieve that, you need premium culinary workwear that’s as refined, high-performing, and distinctive as the dishes you create. The challenge is that truly exceptional uniforms—those that blend durability, comfort, elevated style, and exclusivity—are hard to find. This often leaves you frustrated and unsure where to turn for apparel that matches your standards.<br/><br/>We believe culinary professionals dedicated to excellence deserve apparel that reflects their success. We understand how difficult it can be to find workwear that delivers both luxury and performance, which is why we’ve spent nearly 15 years providing exclusive, fashion-forward chef uniforms trusted by top chefs and restaurants.</p>"
+            "text": "<p>At Fiumara Culinary, we know that you want to be a chef or restaurateur who stands out with prestige. In order to do that, you need workwear that is as high-quality and unique as the food you create. The problem is that it’s challenging to find uniforms that combine functionality, style, and exclusivity, which makes you feel frustrated and unsure of where to turn.<br/><br/></p><p>We believe that culinary professionals dedicated to excellence deserve apparel that reflects their success. We understand how difficult it is to find workwear that’s both functional and luxurious, which is why we’ve spent nearly 15 years providing exclusive, fashion-forward uniforms trusted by top chefs and restaurants.</p>"
           }
         },
         "custom_liquid_dLnEyg": {
@@ -530,84 +204,55 @@
         "text_YfJb9c",
         "custom_liquid_dLnEyg"
       ],
-      "disabled": true,
       "settings": {
-        "section_padding": 30,
         "text_alignment": "left",
         "custom_background": "#eceeed",
         "custom_text": "rgba(0,0,0,0)"
       }
     },
-    "testimonials_v3_custom": {
-      "type": "testimonials-v3",
+    "1637571021f6bdff72": {
+      "type": "heading",
       "blocks": {
-        "block_1": {
-          "type": "testimonial",
+        "line_j8cKhp": {
+          "type": "line",
+          "settings": {}
+        },
+        "1637571020263843ae-0": {
+          "type": "heading",
           "settings": {
-            "quote_title": "Love My Kentaur/Fiumara Jackets & Aprons",
-            "quote_content": "<p>I’ve been a chef for over 25 years, and I’ve finally found the perfect chef jackets and aprons! They offer a great tailored fit, a versatile selection of colors, and a style that’s both modern and timeless.</p><p>I recommend them to my team, and they really give us a great professional look for our guests to see.</p>",
-            "quote_author": "Laurence A."
+            "heading": "Exclusive Workwear for Culinary Professionals",
+            "heading_size": "h1",
+            "seo_h_tag": "h1"
           }
         },
-        "block_2": {
-          "type": "testimonial",
+        "1637571020263843ae-1": {
+          "type": "text",
           "settings": {
-            "quote_title": "",
-            "quote_content": "<p>The chef coat is high quality and looks great. They were able to move the embroidery slightly at my request for custom placement. I’m very appreciative of their communication and accommodation.</p>",
-            "quote_author": "Lisa S."
+            "text": "<h3>Stand out in high-quality, fashion-forward uniforms trusted by top chefs.</h3>"
           }
         },
-        "block_3": {
-          "type": "testimonial",
+        "1637571020263843ae-2": {
+          "type": "button",
           "settings": {
-            "quote_title": "Chef for NFL Team",
-            "quote_content": "<p>These are hands down the best shoes I have ever purchased in years. I’ve bought new shoes every three months, throwing the old ones away, starting from scratch, and putting in different insoles. These are the only shoes I’ve ever purchased that I don’t want to take off my feet while I’m at work. 18-19-20 hour shifts are not a problem. Out of the box, they’re comfortable, but if you’re working long shifts, I do recommend a nice set of Copper Fit work insoles—you’ll thank me later.</p>",
-            "quote_author": "Angelo P."
-          }
-        },
-        "block_4": {
-          "type": "testimonial",
-          "settings": {
-            "quote_title": "Excellent Service & Quality!",
-            "quote_content": "<p>5 stars. I entered the wrong address by mistake, and customer support redirected the shipment immediately with no extra charge or hassle. Thank you!</p>",
-            "quote_author": "Matt A."
-          }
-        },
-        "block_5": {
-          "type": "testimonial",
-          "settings": {
-            "quote_title": "Great Coat, Better Customer Service",
-            "quote_content": "<p>The coat itself is great. Nice, thick material without being stiff. Breathable and wrinkle-resistant.</p><p>Even better, I ordered two different styles, and one didn’t fit me as well (I have an odd body shape, much wider hips than an average man my size would have).</p><p>The return and exchange process was super easy and polite, even though I had to call back twice because of my own mistakes.</p>",
-            "quote_author": "Johnathan C."
-          }
-        },
-        "block_6": {
-          "type": "testimonial",
-          "settings": {
-            "quote_title": "Sika Clog",
-            "quote_content": "<p>Absolutely outstanding. If someone had told me, I’d never have believed it, but these clogs have saved my back. Since I started wearing them, my back has improved by at least 50%, even while working in a kitchen on my feet 10-12 hours a day, 6 days a week. I’ve been in constant pain and now realize a big part of it was my shoes. At 58 years old, I’ve finally become a believer in how much of a difference the right shoes can make. A kitchen is an entirely different environment—up and down stairs, hard tile floors, slippery conditions—and these clogs addressed all those issues.</p>",
-            "quote_author": "Bennett O."
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections"
           }
         }
       },
       "block_order": [
-        "block_1",
-        "block_2",
-        "block_3",
-        "block_4",
-        "block_5",
-        "block_6"
+        "line_j8cKhp",
+        "1637571020263843ae-0",
+        "1637571020263843ae-1",
+        "1637571020263843ae-2"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "h3 {font-family: \"Libre Franklin\", sans-serif; font-size: 28px;}"
       ],
       "settings": {
-        "title": "What Top Chefs Are Saying",
-        "subtitle": "Hear from professionals who have elevated their kitchens with Fiumara Apparel.",
-        "custom_background": "#ffffff",
-        "custom_text": "#262221",
-        "padding_top": 30,
-        "padding_bottom": 30,
-        "autoplay_interval": 5,
-        "seo_h_tag": "h2",
-        "heading_size": "h2"
+        "text_alignment": "left",
+        "custom_background": "#262221",
+        "custom_text": "#ffffff"
       }
     },
     "1636106675d59d7642": {
@@ -623,7 +268,7 @@
         "1636106675d59d7642-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Your culinary workwear should work as hard as you do and showcase the excellence you bring to every dish. When you rely on uniforms that feel uninspired, uncomfortable, or poorly made, you miss valuable opportunities to:</p><ul><li>Reflect your restaurant’s elevated standards and brand identity.</li><li>Feel confident, polished, and professional during every shift.</li><li>Stand out and be recognized among top culinary talent.</li></ul><p>Choose chef workwear that elevates your presence, supports your performance, and lets your passion for exceptional cuisine shine through.</p>"
+            "text": "<p>Your workwear should work as hard as you do and reflect the excellence you bring to your craft. Every day you wear uninspired, uncomfortable uniforms, you miss the chance to:</p><ul><li>Reflect your restaurant’s high standards.</li><li>Feel confident and professional in your role.</li><li>Stand out among culinary professionals.</li></ul><p>Choose workwear that sets you apart and lets your passion for excellence shine through.</p>"
           }
         }
       },
@@ -632,12 +277,7 @@
         "1636106675d59d7642-1"
       ],
       "custom_css": [
-        ".box--big {min-height: 60vh;}",
-        ".heading.h3 {font-size: 23px; font-weight: 400;}",
-        "@media screen and (min-width: 768px) {.heading.h3 {font-size: 38px; }}",
-        "@media screen and (min-width: 768px) {.site-box[data-order=\"0\"] {position: absolute !important; top: 0; right: 0; width: 50% !important; height: 100% !important; }}",
-        "@media screen and (max-width: 767px) {.site-box[data-order=\"0\"] {min-height: 400px !important; }}",
-        "@media screen and (min-width: 768px) {.site-box[data-order=\"1\"] {margin-right: 50% !important; }}"
+        ".box--big {min-height: 60vh;}"
       ],
       "settings": {
         "title": "",
@@ -646,17 +286,9 @@
         "bg_img": "shopify://shop_images/Fiumara-Culinary-ISP-174803214-1442x1532.jpg",
         "desktop_image_positioning": "image-on-right",
         "bg_overlay": false,
-        "enable_parallax": false,
         "custom_background": "#262221",
         "custom_text": "#ffffff",
-        "seo_h_tag": "h2",
-        "custom_position_content": false,
-        "position_content": "left",
-        "custom_paddings": false,
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "padding_top_mb": 0,
-        "padding_bottom_mb": 0
+        "seo_h_tag": "h2"
       }
     },
     "rich_text_MBckaU": {
@@ -672,7 +304,7 @@
         "text_RkRVUA": {
           "type": "text",
           "settings": {
-            "text": "<p>When you choose Fiumara Culinary, you:</p><ul><li>Stand out with chef uniforms that are both stylish and highly functional.</li><li>Elevate your restaurant’s image through thoughtful, professional design.</li><li>Wear apparel that reflects your dedication to quality and culinary excellence.</li></ul><p>Because when you look and feel your best, you can focus on delivering extraordinary culinary experiences.</p>"
+            "text": "<p>When you choose Fiumara Culinary, you:</p><ul><li>Stand out in stylish, functional uniforms.</li><li>Elevate your restaurant’s image with every detail.</li><li>Enjoy apparel that reflects your dedication to excellence.</li></ul><p>Because when you look and feel your best, you can focus on creating exceptional culinary experiences.</p>"
           }
         },
         "button_wiTfFq": {
@@ -689,12 +321,7 @@
         "button_wiTfFq"
       ],
       "custom_css": [
-        ".box--big {min-height: 60vh;}",
-        ".heading.h3 {font-size: 23px; font-weight: 400;}",
-        "@media screen and (min-width: 768px) {.heading.h3 {font-size: 38px; }}",
-        "@media screen and (min-width: 768px) {.site-box[data-order=\"0\"] {position: absolute !important; top: 0; left: 0; width: 50% !important; height: 100% !important; }}",
-        "@media screen and (max-width: 767px) {.site-box[data-order=\"0\"] {min-height: 400px !important; }}",
-        "@media screen and (min-width: 768px) {.site-box[data-order=\"1\"] {margin-left: 50% !important; }}"
+        ".box--big {min-height: 60vh;}"
       ],
       "settings": {
         "title": "",
@@ -703,17 +330,82 @@
         "bg_img": "shopify://shop_images/Fiumara-Culinary-ISP-1359533331-1442x1532.jpg",
         "desktop_image_positioning": "image-on-left",
         "bg_overlay": false,
-        "enable_parallax": true,
         "custom_background": "#262221",
         "custom_text": "#ffffff",
-        "seo_h_tag": "h2",
-        "custom_position_content": false,
-        "position_content": "left",
-        "custom_paddings": false,
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "padding_top_mb": 0,
-        "padding_bottom_mb": 0
+        "seo_h_tag": "h2"
+      }
+    },
+    "1636106673daa45393": {
+      "type": "testimonials",
+      "blocks": {
+        "1636106673daa45393-0": {
+          "type": "text",
+          "settings": {
+            "quote_content": "<h4>Love My Kentaur/Fiumara Jackets & Aprons</h4><p>I’ve been a chef for over 25 years, and I’ve finally found the perfect chef jackets and aprons! They offer a great tailored fit, a versatile selection of colors, and a style that’s both modern and timeless.</p><p>I recommend them to my team, and they really give us a great professional look for our guests to see.</p>",
+            "quote_author": "Laurence A.",
+            "quote_caption": ""
+          }
+        },
+        "1636106673daa45393-1": {
+          "type": "text",
+          "settings": {
+            "quote_content": "<p>The chef coat is high quality and looks great. They were able to move the embroidery slightly at my request for custom placement. I’m very appreciative of their communication and accommodation.</p>",
+            "quote_author": "Lisa S.",
+            "quote_caption": ""
+          }
+        },
+        "95c555f2-e81f-4479-895d-d65b0f4b142e": {
+          "type": "text",
+          "settings": {
+            "quote_content": "<h4>Chef for NFL Team</h4><p>These are hands down the best shoes I have ever purchased in years. I’ve bought new shoes every three months, throwing the old ones away, starting from scratch, and putting in different insoles. These are the only shoes I’ve ever purchased that I don’t want to take off my feet while I’m at work. 18-19-20 hour shifts are not a problem. Out of the box, they’re comfortable, but if you’re working long shifts, I do recommend a nice set of Copper Fit work insoles—you’ll thank me later.</p>",
+            "quote_author": "Angelo P.",
+            "quote_caption": ""
+          }
+        },
+        "45940e4e-8ada-4520-b198-d02589033b4a": {
+          "type": "text",
+          "settings": {
+            "quote_content": "<h4><strong>Excellent Service & Quality!</strong></h4><p>5 stars. I entered the wrong address by mistake, and customer support redirected the shipment immediately with no extra charge or hassle. Thank you!</p>",
+            "quote_author": "Matt A.",
+            "quote_caption": ""
+          }
+        },
+        "text_3B8YAd": {
+          "type": "text",
+          "settings": {
+            "quote_content": "<h4>Great Coat, Better Customer Service</h4><p>The coat itself is great. Nice, thick material without being stiff. Breathable and wrinkle-resistant.</p><p>Even better, I ordered two different styles, and one didn’t fit me as well (I have an odd body shape, much wider hips than an average man my size would have).</p><p>The return and exchange process was super easy and polite, even though I had to call back twice because of my own mistakes.</p>",
+            "quote_author": "Johnathan C.",
+            "quote_caption": ""
+          }
+        },
+        "text_kxbGmg": {
+          "type": "text",
+          "settings": {
+            "quote_content": "<h4>Sika Clog</h4><p>Absolutely outstanding. If someone had told me, I’d never have believed it, but these clogs have saved my back. Since I started wearing them, my back has improved by at least 50%, even while working in a kitchen on my feet 10-12 hours a day, 6 days a week. I’ve been in constant pain and now realize a big part of it was my shoes. At 58 years old, I’ve finally become a believer in how much of a difference the right shoes can make. A kitchen is an entirely different environment—up and down stairs, hard tile floors, slippery conditions—and these clogs addressed all those issues.</p>",
+            "quote_author": "Bennett O.",
+            "quote_caption": ""
+          }
+        }
+      },
+      "block_order": [
+        "1636106673daa45393-0",
+        "1636106673daa45393-1",
+        "95c555f2-e81f-4479-895d-d65b0f4b142e",
+        "45940e4e-8ada-4520-b198-d02589033b4a",
+        "text_3B8YAd",
+        "text_kxbGmg"
+      ],
+      "custom_css": [
+        ".text-size--large {font-size: calc(16px / 16 * var(--base-body-size) + 0px);}"
+      ],
+      "settings": {
+        "title": "What Top Chefs Are Saying",
+        "subtitle": "Hear from professionals who have elevated their kitchens with Fiumara Apparel.",
+        "show_avatars": true,
+        "custom_background": "#ffffff",
+        "custom_text": "#262221",
+        "mobile_layout": true,
+        "seo_h_tag": "h2"
       }
     },
     "heading_QtRPz9": {
@@ -727,7 +419,7 @@
           "type": "heading",
           "settings": {
             "heading": "Discover Our Culinary Workwear",
-            "heading_size": "h2",
+            "heading_size": "h1",
             "seo_h_tag": "h2"
           }
         },
@@ -744,7 +436,6 @@
         "text_YqBCtP"
       ],
       "settings": {
-        "section_padding": 30,
         "text_alignment": "left",
         "custom_background": "#eceeed",
         "custom_text": "rgba(0,0,0,0)"
@@ -820,19 +511,68 @@
         "text_alignment": "horizontal-left vertical-middle"
       }
     },
-    "best_products_7AR9Y9": {
-      "type": "best-products",
-      "name": "Best Products",
+    "16371348113d6d6d6d": {
+      "type": "collection-list",
+      "blocks": {
+        "1637134811779b275e-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "coats",
+            "image": "shopify://shop_images/Fiumara-Culinary-Bragard-Julia-6718-1532x862.jpg"
+          }
+        },
+        "1637134811779b275e-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "chef-pants",
+            "image": "shopify://shop_images/Fiumara-Culinary-Birkenstock-24AW-Chef-OM-68021-1532x862.jpg"
+          }
+        },
+        "collection_znDakc": {
+          "type": "collection",
+          "settings": {
+            "collection": "aprons",
+            "image": "shopify://shop_images/Fiumara-Culinary-Kentaur-23516-105-1532x862.jpg"
+          }
+        },
+        "collection_mMt4n4": {
+          "type": "collection",
+          "settings": {
+            "collection": "footwear",
+            "image": "shopify://shop_images/Fiumara-Culinary-Birkenstock-24AW-1532x862.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "1637134811779b275e-0",
+        "1637134811779b275e-1",
+        "collection_znDakc",
+        "collection_mMt4n4"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".site-box .site-box-background.with-image:after {background: #262221;}",
+        ".title.h3 {color: #fff;}",
+        ".underline-animation {background-image: linear-gradient(to right, white, white);}"
+      ],
+      "settings": {
+        "title": "Discover Our Culinary Workwear",
+        "subtitle": "Explore our full range of premium products designed for culinary professionals.",
+        "text_alignment": "horizontal-left vertical-bottom",
+        "custom_background": "#eceeed",
+        "custom_text": "rgba(0,0,0,0)",
+        "bg_overlay": true,
+        "seo_h_tag": "h2"
+      }
+    },
+    "collection_slider_CWPzgh": {
+      "type": "collection-slider",
       "settings": {
         "title": "Trending Products",
         "collection": "trending-chef-gear-best-sellers-at-fiumara-culinary",
-        "products_to_show": 12,
-        "custom_background": "#ffffff",
-        "custom_text": "#262221",
-        "padding_top": 50,
-        "padding_bottom": 0,
-        "seo_h_tag": "h2",
-        "heading_size": "h2"
+        "products_per_page": 5,
+        "show_view_all": true,
+        "seo_h_tag": "h2"
       }
     },
     "heading_JBbTT4": {
@@ -846,21 +586,21 @@
           "type": "heading",
           "settings": {
             "heading": "A Simple Plan to Get Started",
-            "heading_size": "h2",
+            "heading_size": "h1",
             "seo_h_tag": "h2"
           }
         },
         "text_tYXfTp": {
           "type": "text",
           "settings": {
-            "text": "<p>Finding high-quality, stylish chef uniforms shouldn’t be complicated — which is why we’ve made it effortless to upgrade your workwear:</p><p><br/></p><ol><li><strong>Search:</strong> Explore our curated collection to find the culinary apparel that fits your style and performance needs.</li><li><strong>Purchase:</strong> Order directly online or request a bulk purchase for your team.</li><li><strong>Stand Out:</strong> Receive premium workwear that enhances your image and supports your success.<br/></li></ol>"
+            "text": "<p>Finding high-quality, stylish uniforms shouldn’t be complicated—that’s why we’ve made it easy to elevate your workwear:</p><p><br/></p><ol><li><strong>Search:</strong> Search for your desired workwear.</li><li><strong>Purchase:</strong> Place your order online or request a bulk purchase.</li><li><strong>Stand Out:</strong> Receive apparel that elevates your image and meets your needs.</li></ol>"
           }
         },
         "button_xNemT6": {
           "type": "button",
           "settings": {
             "button_label": "Shop Now",
-            "button_link": "https://fiumaraculinary.com/collections/best-chef-uniforms"
+            "button_link": "shopify://collections"
           }
         }
       },
@@ -871,7 +611,6 @@
         "button_xNemT6"
       ],
       "settings": {
-        "section_padding": 30,
         "text_alignment": "left",
         "custom_background": "#eceeed",
         "custom_text": "rgba(0,0,0,0)"
@@ -884,7 +623,7 @@
           "type": "heading",
           "settings": {
             "heading": "Perfect Fit Guarantee",
-            "heading_size": "h2",
+            "heading_size": "h1",
             "seo_h_tag": "h2"
           }
         }
@@ -893,10 +632,9 @@
         "heading_bJjert"
       ],
       "custom_css": [
-        ".box--small-fl-auto {min-height: 15vh !important; padding-bottom: 0;}"
+        ".box--small-fl-auto {min-height: 25vh !important; padding-bottom: 0;}"
       ],
       "settings": {
-        "section_padding": 0,
         "text_alignment": "center",
         "custom_background": "#262221",
         "custom_text": "#ffffff"
@@ -943,12 +681,9 @@
       ],
       "custom_css": [
         "#section-template--16766725587007__text_columns_with_icons_EzDXre {--grid-borders: 0;}",
-        ".box--small-fl-auto {min-height: 15vh !important; padding-top: 2.5%;}"
+        ".box--small-fl-auto {min-height: 25vh !important; padding-top: 2.5%;}"
       ],
       "settings": {
-        "section_padding": 30,
-        "icon_size": 44,
-        "heading_font_size": 16,
         "custom_background": "#262221",
         "custom_text": "#ffffff",
         "seo_h_tag": "h3"
@@ -963,7 +698,7 @@
             "title": "Bulk Order Discounts",
             "body": "<p>Get up to 25% off culinary workwear when you order in bulk.</p>",
             "label": "LEARN MORE",
-            "link": "https://fiumaraculinary.com/pages/business-accounts",
+            "link": "shopify://pages/business-accounts-old",
             "select_icon": "currency"
           }
         },
@@ -986,12 +721,135 @@
         ".h4 {font-size: calc(30px / 60 * var(--base-headings-size) + 0px);}"
       ],
       "settings": {
-        "section_padding": 30,
-        "icon_size": 64,
-        "heading_font_size": 24,
         "custom_background": "rgba(0,0,0,0)",
         "custom_text": "rgba(0,0,0,0)",
         "seo_h_tag": "h2"
+      }
+    },
+    "image_with_text_tTxgdM": {
+      "type": "image-with-text",
+      "blocks": {
+        "image_zVeXEP": {
+          "type": "image",
+          "settings": {
+            "subtitle": "Stylish and functional outerwear that commands attention in the kitchen.",
+            "title": "Chef Jackets and Coats",
+            "button_label": "Shop Now",
+            "url": "",
+            "image": "shopify://shop_images/Fiumara-Apparel-Slideshow-01-Le-Nouveau-Male.jpg",
+            "custom_text": "rgba(0,0,0,0)",
+            "custom_overlay": "#eceeed",
+            "seo_h_tag": "h2"
+          }
+        },
+        "image_xtxE8Q": {
+          "type": "image",
+          "settings": {
+            "subtitle": "Superior footwear built for safety, comfort, and long shifts.",
+            "title": "Slip-Resistant Shoes",
+            "button_label": "Shop Now",
+            "url": "",
+            "image": "shopify://shop_images/Fiumara-Apparel-Slideshow-01-Le-Nouveau-Male.jpg",
+            "custom_text": "rgba(0,0,0,0)",
+            "custom_overlay": "#eceeed",
+            "seo_h_tag": "h2"
+          }
+        },
+        "image_xncMCd": {
+          "type": "image",
+          "settings": {
+            "subtitle": "Durable, customizable aprons and must-have kitchen essentials.",
+            "title": "Aprons and Accessories",
+            "button_label": "Shop Now",
+            "url": "",
+            "image": "shopify://shop_images/Fiumara-Apparel-Slideshow-01-Le-Nouveau-Male.jpg",
+            "custom_text": "rgba(0,0,0,0)",
+            "custom_overlay": "#eceeed",
+            "seo_h_tag": "h2"
+          }
+        },
+        "image_RhwWUB": {
+          "type": "image",
+          "settings": {
+            "subtitle": "Embroidery services to add a touch of distinction and professionalism.",
+            "title": "Personalized Uniforms",
+            "button_label": "Shop Now",
+            "url": "",
+            "image": "shopify://shop_images/Fiumara-Apparel-Slideshow-01-Le-Nouveau-Male.jpg",
+            "custom_text": "rgba(0,0,0,0)",
+            "custom_overlay": "#eceeed",
+            "seo_h_tag": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "image_zVeXEP",
+        "image_xtxE8Q",
+        "image_xncMCd",
+        "image_RhwWUB"
+      ],
+      "disabled": true,
+      "settings": {
+        "image_height": "half",
+        "text_alignment": "horizontal-center vertical-middle"
+      }
+    },
+    "16372498804121dda9": {
+      "type": "split-screen-slider",
+      "blocks": {
+        "1637249880c19b891c-2": {
+          "type": "slide",
+          "settings": {
+            "tagline": "",
+            "title": "Unique, High-End Designs",
+            "subtitle": "Apparel crafted for culinary professionals who want to stand out.",
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections",
+            "image": "shopify://shop_images/Fiumara-Culinary-Kentaur-25207-1442x1532.jpg",
+            "seo_h_tag": "h2"
+          }
+        },
+        "1637249880c19b891c-0": {
+          "type": "slide",
+          "settings": {
+            "tagline": "",
+            "title": "Uncompromising Quality",
+            "subtitle": "Durable materials and functional designs that work as hard as you do.",
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections",
+            "image": "shopify://shop_images/Fiumara-Culinary-Le-Nouveau-101154001-1442x1532.jpg",
+            "seo_h_tag": "h2"
+          }
+        },
+        "1637249880c19b891c-1": {
+          "type": "slide",
+          "settings": {
+            "tagline": "",
+            "title": "Trusted by Top Chefs",
+            "subtitle": "Exclusive brands and uniforms made for the best in the industry.",
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections",
+            "image": "shopify://shop_images/Fiumara-Culinary-ISP-1445691726-1442x1532.jpg",
+            "seo_h_tag": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "1637249880c19b891c-2",
+        "1637249880c19b891c-0",
+        "1637249880c19b891c-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "desktop_layout": "split",
+        "desktop_image_positioning": "image-on-left",
+        "desktop_text": "rgba(0,0,0,0)",
+        "desktop_background": "#eaebea",
+        "desktop_overlay": "rgba(0,0,0,0)",
+        "mobile_height": "var(--window-height)",
+        "mobile_text": "#ffffff",
+        "mobile_background": "#262221",
+        "heading_size": "h2"
       }
     },
     "image_with_text_K77c33": {
@@ -1083,9 +941,7 @@
         "button_dxLzRT"
       ],
       "custom_css": [
-        ".site-box-container:not(.remove-background) {background: url(https://cdn.shopify.com/s/files/1/0116/8492/files/Fiumara-Culinary-ISP-2164900943-2560x1440.jpg); background-size: cover;}",
-        ".title.h1 {font-size: 23px; font-weight: 400;}",
-        "@media screen and (min-width: 768px) {.title.h1 {font-size: 38px; }}"
+        ".site-box-container:not(.remove-background) {background: url(https://cdn.shopify.com/s/files/1/0116/8492/files/Fiumara-Culinary-ISP-2164900943-2560x1440.jpg); background-size: cover;}"
       ],
       "settings": {
         "title": "Free Guide to Premium Workwear",
@@ -1093,125 +949,32 @@
         "map_address": "",
         "map_api": "",
         "map_style": "light",
-        "seo_h_tag": "h2",
-        "enable_fullheight": false,
-        "section_padding_top": 60,
-        "section_padding_bottom": 60,
-        "form_spacing": 20
-      }
-    },
-    "faq_with_image_homepage": {
-      "type": "faq-with-image",
-      "blocks": {
-        "faq_1": {
-          "type": "faq_item",
-          "settings": {
-            "title": "What makes shopping with Fiumara Culinary different from other retailers?",
-            "description": "We curate top-performing chef apparel from the industry’s most trusted brands, bringing you a selection of high-quality, stylish, and durable uniforms all in one place—so you can easily find the right gear for your needs."
-          }
-        },
-        "faq_2": {
-          "type": "faq_item",
-          "settings": {
-            "title": "How do I choose the right size or fit across different brands?",
-            "description": "Every product page includes a brand-specific size guide to help you choose the right fit. If you're unsure, our team can also assist in recommending sizes based on the brand’s typical fit and your measurements."
-          }
-        },
-        "faq_3": {
-          "type": "faq_item",
-          "settings": {
-            "title": "Are the uniforms durable enough for professional kitchen environments?",
-            "description": "Yes—because we only stock brands known for chef-grade durability, breathability, and long-lasting performance. Each item is designed to withstand heat, movement, and daily use in demanding culinary settings."
-          }
-        },
-        "faq_4": {
-          "type": "faq_item",
-          "settings": {
-            "title": "Do you offer embroidery or customization on the brands you carry?",
-            "description": "Absolutely. We provide embroidery services for many of the products we sell, including names, logos, and custom branding. Just select embroidery options during checkout or contact us for team customization."
-          }
-        },
-        "faq_5": {
-          "type": "faq_item",
-          "settings": {
-            "title": "Can I place a bulk order for my restaurant, hotel, or culinary program?",
-            "description": "Yes—we make bulk ordering simple. We can help you select products, confirm availability across multiple brands, and provide custom embroidery for your whole team."
-          }
-        },
-        "faq_6": {
-          "type": "faq_item",
-          "settings": {
-            "title": "How fast will my order ship?",
-            "description": "Most items ship quickly, depending on brand availability. You’ll receive tracking information as soon as your order is on the way, and expedited shipping options are available at checkout."
-          }
-        },
-        "faq_7": {
-          "type": "faq_item",
-          "settings": {
-            "title": "What is your return or exchange policy?",
-            "description": "We offer easy returns and exchanges for unworn items within our return window. Since sizing can vary by brand, we’re happy to help you select the right replacement if a product doesn't fit as expected."
-          }
-        }
-      },
-      "block_order": [
-        "faq_1",
-        "faq_2",
-        "faq_3",
-        "faq_4",
-        "faq_5",
-        "faq_6",
-        "faq_7"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/an-image-for-faq-section-of-the-restaurants-clouses-company-Photoroom.png",
-        "title": "Frequently Asked Questions",
-        "bg_color": "#ffffff",
-        "text_color": "#262221",
-        "padding_top": 50,
-        "padding_bottom": 50,
-        "padding_top_mb": 32,
-        "padding_bottom_mb": 32
-      }
-    },
-    "final_cta_new": {
-      "type": "final-cta",
-      "settings": {
-        "image": "shopify://shop_images/final-cta-bg-image-for-restaurants-close-company.png",
-        "height": 450,
-        "overlay_color": "#000000",
-        "overlay_opacity": 50,
-        "title": "Chef uniforms should work as hard as you do—durable, stylish, and engineered for the kitchen.",
-        "text": "<p>Fiumara Culinary gives professionals the confidence, comfort and performance they need to excel.</p>",
-        "text_color": "#ffffff",
-        "button_label": "SHOP NOW",
-        "button_link": "https://fiumaraculinary.com/collections/best-chef-uniforms"
+        "seo_h_tag": "h2"
       }
     }
   },
   "order": [
     "video_background_ttW8eA",
-    "icons_marquee_home",
-    "scrolling_logos_bar",
-    "16372293330d0f5bf6",
+    "1636443645b6d4e74b",
+    "heading_bNBpna",
     "16361066840a222f4b",
-    "heading_tKBxWr",
-    "benefits_section_n4XMan",
-    "heading_9Lb63a",
-    "brand_essentials_EDXbbD",
+    "16372293330d0f5bf6",
     "heading_rUXAGC",
-    "testimonials_v3_custom",
+    "1637571021f6bdff72",
     "1636106675d59d7642",
     "rich_text_MBckaU",
+    "1636106673daa45393",
     "heading_QtRPz9",
     "image_with_text_Nj8R6X",
-    "best_products_7AR9Y9",
+    "16371348113d6d6d6d",
+    "collection_slider_CWPzgh",
     "heading_JBbTT4",
     "heading_RTpqYK",
     "text_columns_with_icons_EzDXre",
     "text_columns_with_icons_8eLBJA",
+    "image_with_text_tTxgdM",
+    "16372498804121dda9",
     "image_with_text_K77c33",
-    "contact_form_nHGEkH",
-    "faq_with_image_homepage",
-    "final_cta_new"
+    "contact_form_nHGEkH"
   ]
 }

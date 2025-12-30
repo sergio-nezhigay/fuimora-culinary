@@ -31,7 +31,7 @@
           "type": "text",
           "settings": {
             "title": "About Us",
-            "content": "<p>Most culinary professionals struggle to find unique, high-quality uniforms that match their standards and reflect their craft. At Fiumara Culinary, we make it easy to shop top industry brands and access exclusive, fashion-forward workwear designed for performance, comfort, and professional prestige.</p>",
+            "content": "<p>Most culinary professionals struggle to find unique, high-quality uniforms that meet their standards. At Fiumara Culinary, we make it easy to access exclusive, fashion-forward workwear designed for performance and prestige. </p>",
             "size": ""
           }
         },
@@ -57,9 +57,7 @@
         "enable_follow_on_shop": false,
         "custom_background": "#262221",
         "custom_text": "#ffffff",
-        "seo_h_tag": "h4",
-        "section_padding_top": 30,
-        "section_padding_bottom": 30
+        "seo_h_tag": "h4"
       }
     }
   },

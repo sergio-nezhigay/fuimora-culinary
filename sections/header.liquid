@@ -4,7 +4,7 @@
 data-sticky="{{ section.settings.menu_sticky }}">
 
   <!-- logo -->
-
+  
   <span class="logo">
     {%- if section.settings.logo_src -%}
       <a class="logo-img" href="{{ routes.root_url }}" style="height:var(--header-logo);display:flex;align-items:center">
@@ -43,7 +43,7 @@ data-sticky="{{ section.settings.menu_sticky }}">
                   srcset="{{ image | image_url: width: 240 }} 180w, {{ image | image_url: width: 360 }} 300w, {{ image | image_url: width: 600 }} 480w, {{ image | image_url: width: 860 }} 720w"
                   sizes="380px"
                   width="{{ image.width }}" height="{{ image.height }}"
-                  loading="lazy"
+                  loading="lazy" 
                 />
               </div>
             {%- endunless -%}
@@ -100,13 +100,13 @@ data-sticky="{{ section.settings.menu_sticky }}">
       </noscript>
     {%- endif -%}
 
-    <span
-      class="site-search-handle site-menu-handle"
+    <span 
+      class="site-search-handle site-menu-handle" 
       title="{{ 'general.accessibility_labels.open_search' | t }}"
-      {% if template != 'search' %}
-        id="site-search-handle" aria-expanded="false" aria-controls="site-search"
+      {% if template != 'search' %} 
+        id="site-search-handle" aria-expanded="false" aria-controls="site-search" 
         data-js-sidebar-handle
-      {% endif %}
+      {% endif %} 
     >
       <span class="visually-hidden">{{ 'general.accessibility_labels.open_search' | t }}</span>
       <a href="{{ routes.search_url }}" title="{{ 'general.accessibility_labels.open_search' | t }}<">
@@ -116,11 +116,11 @@ data-sticky="{{ section.settings.menu_sticky }}">
       </a>
     </span>
 
-    <span
+    <span 
       class="site-cart-handle site-menu-handle {{ settings.cart_action }}"
       title="{{ 'general.accessibility_labels.open_cart' | t }}"
-      {% if settings.cart_action == 'overlay' %}
-        id="site-cart-handle" aria-expanded="false" aria-controls="site-cart"
+      {% if settings.cart_action == 'overlay' %} 
+        id="site-cart-handle" aria-expanded="false" aria-controls="site-cart" 
         data-js-sidebar-handle
       {% endif %}
     >
@@ -145,18 +145,10 @@ data-sticky="{{ section.settings.menu_sticky }}">
   </div>
 
 </main-header>
-
-<style>
-  @media screen and (min-width: 481px) {
-    #site-header {
-      --header-padding: {{ section.settings.desktop_padding }}px;
-    }
-  }
-</style>
 <script>window.fixVhByVars();</script>
 
 <sidebar-drawer id="site-nav--mobile" class="site-nav style--sidebar" tabindex="-1" role="dialog" aria-modal="true" style="display:none">
-
+  
   <button class="site-close-handle" title="{{ 'general.accessibility_labels.close_sidebar' | t }}">
     <span class="visually-hidden">{{ 'general.accessibility_labels.close_sidebar' | t }}</span>
     <span class="hamburger-menu" aria-hidden="true">{%- render 'theme-symbols', icon: 'close' -%}</span>
@@ -216,16 +208,6 @@ data-sticky="{{ section.settings.menu_sticky }}">
         "max": 140,
         "step": 2,
         "default": 40
-      },
-      {
-        "type": "range",
-        "id": "desktop_padding",
-        "label": "Desktop vertical padding",
-        "unit": "px",
-        "min": 0,
-        "max": 100,
-        "step": 1,
-        "default": 20
       },
       {
         "type": "link_list",

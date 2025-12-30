@@ -1,27 +1,6 @@
-
-
-
 {%- if section.blocks.size > 0 -%}
 
-
-
 	{{ 'section-text-columns-with-icons.css' | asset_url | stylesheet_tag }}
-
-  {% style %}
-    #section-{{ section.id }} .box--small-fl-auto {
-      --box-auto-top: {{ section.settings.section_padding }}px;
-      padding-top: var(--box-auto-top);
-      padding-bottom: var(--box-auto-top);
-    }
-    #section-{{ section.id }} .text-w-icon__icon svg,
-    #section-{{ section.id }} .text-w-icon__icon img {
-      width: {{ section.settings.icon_size }}px;
-      height: {{ section.settings.icon_size }}px;
-    }
-    #section-{{ section.id }} .text-w-icon__title {
-      font-size: {{ section.settings.heading_font_size }}px;
-    }
-  {% endstyle %}
 
 	{%- render 'custom-colors', id: section.id, background: section.settings.custom_background, text: section.settings.custom_text -%}
 
@@ -36,19 +15,15 @@
 					<div class="text-w-icon__icon">
 						<span>
 							{%- if block.settings.custom_icon != blank -%}
-								{%- assign icon_size = section.settings.icon_size -%}
-								{%- assign icon_size_2x = icon_size | times: 2 -%}
-								{%- assign icon_size_3x = icon_size | times: 3 -%}
-								{%- assign icon_size_4x = icon_size | times: 4 -%}
-				        <img
-									src="{{ block.settings.custom_icon | image_url: width: icon_size, height: icon_size, crop: 'center' }}"
-									alt="{{ block.settings.custom_icon.alt | escape }}"
-									width="{{ icon_size }}" height="{{ icon_size }}" loading="lazy"
+				        <img 
+									src="{{ block.settings.custom_icon | image_url: width: 64, height: 64, crop: 'center' }}" 
+									alt="{{ block.settings.custom_icon.alt | escape }}" 
+									width="64" height="64" style="width:64px;height:64px;" loading="lazy"
 									srcset="
-										{{ block.settings.custom_icon | image_url: width: icon_size, height: icon_size, crop: 'center' }} {{ icon_size }}w
-										{% if block.settings.custom_icon.width >= icon_size_2x %} ,{{ block.settings.custom_icon | image_url: width: icon_size_2x, height: icon_size_2x, crop: 'center' }} {{ icon_size_2x }}w, {% endif %}
-										{% if block.settings.custom_icon.width >= icon_size_3x %} ,{{ block.settings.custom_icon | image_url: width: icon_size_3x, height: icon_size_3x, crop: 'center' }} {{ icon_size_3x }}w, {% endif %}
-										{% if block.settings.custom_icon.width >= icon_size_4x %} ,{{ block.settings.custom_icon | image_url: width: icon_size_4x, height: icon_size_4x, crop: 'center' }} {{ icon_size_4x }}w, {% endif %}
+										{{ block.settings.custom_icon | image_url: width: 64, height: 64, crop: 'center' }} 64w
+										{% if block.settings.custom_icon.width >= 128 %} ,{{ block.settings.custom_icon | image_url: width: 128, height: 128, crop: 'center' }} 128w, {% endif %} 
+										{% if block.settings.custom_icon.width >= 192 %} ,{{ block.settings.custom_icon | image_url: width: 192, height: 192, crop: 'center' }} 192w, {% endif %} 
+										{% if block.settings.custom_icon.width >= 256 %} ,{{ block.settings.custom_icon | image_url: width: 256, height: 256, crop: 'center' }} 256w, {% endif %} 
 									"
 								/>
 					    {%- else -%}
@@ -80,39 +55,9 @@
 {% schema %}
   {
 		"name": "t:sections.text-columns-with-icons.name",
-    "max_blocks": 7,
+    "max_blocks": 3,
 		"class": "mount-text-columns-with-icons",
     "settings": [
-      {
-        "type": "range",
-        "id": "section_padding",
-        "label": "Section padding",
-        "min": 0,
-        "max": 140,
-        "step": 2,
-        "unit": "px",
-        "default": 100
-      },
-      {
-        "type": "range",
-        "id": "icon_size",
-        "label": "Icon size",
-        "min": 24,
-        "max": 200,
-        "step": 4,
-        "unit": "px",
-        "default": 64
-      },
-      {
-        "type": "range",
-        "id": "heading_font_size",
-        "label": "Heading font size",
-        "min": 12,
-        "max": 72,
-        "step": 2,
-        "unit": "px",
-        "default": 24
-      },
     	{
         "type": "header",
         "content": "t:sections.split-extra-words.settings_schema.colors.headings.custom_colors"
