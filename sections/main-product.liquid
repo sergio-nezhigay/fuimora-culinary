@@ -713,151 +713,84 @@
 {{ 'component-pagination.css' | asset_url | stylesheet_tag }}
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const fixedBtnContainer = document.getElementById('btn_add_to_card_fixed_container');
-      const addToCartBtn = document.querySelector('.js-click-from-sticky-button');
-      if (!fixedBtnContainer) return;
+  document.addEventListener('DOMContentLoaded', function () {
+    const fixedBtnContainer = document.getElementById('btn_add_to_card_fixed_container');
+    const addToCartBtn = document.querySelector('.js-click-from-sticky-button');
+    if (!fixedBtnContainer) return;
 
-      const fixedBtn = fixedBtnContainer.querySelector('button');
-      let observer = null;
-      const blockersSelectors = ['product-form-w3', '.site-footer', '.product-gallery', '.product-header', 'product-variants'];
+    const fixedBtn = fixedBtnContainer.querySelector('button');
+    let observer = null;
+    const blockersSelectors = ['product-form-w3', '.site-footer', '.product-gallery', '.product-header', 'product-variants'];
 
-      const checkVisibility = () => {
-        if (window.innerWidth > 1024) {
-          fixedBtnContainer.classList.remove('show');
-          return;
-        }
-
-        const blockers = blockersSelectors.map((sel) => document.querySelector(sel)).filter((el) => el !== null);
-
-        if (blockers.length === 0) {
-          fixedBtnContainer.classList.remove('show');
-          return;
-        }
-
-        const isAnyVisible = blockers.some((el) => {
-          const rect = el.getBoundingClientRect();
-          return rect.bottom > 0 && rect.top < window.innerHeight;
-        });
-
-        if (isAnyVisible) {
-          fixedBtnContainer.classList.remove('show');
-        } else {
-          fixedBtnContainer.classList.add('show');
-        }
-      };
-
-      const initObserver = () => {
-        if (observer) observer.disconnect();
-
-        if (window.innerWidth > 1024) return;
-
-        const blockers = blockersSelectors.map((sel) => document.querySelector(sel)).filter((el) => el !== null);
-
-        if (blockers.length === 0) return;
-
-        observer = new IntersectionObserver(
-          () => {
-            checkVisibility();
-          },
-          { root: null, threshold: 0.1 }
-        );
-
-        blockers.forEach((el) => observer.observe(el));
-
-        checkVisibility();
-      };
-
-      initObserver();
-
-      window.addEventListener('resize', initObserver);
-      window.addEventListener('scroll', checkVisibility);
-
-      if (fixedBtn && addToCartBtn) {
-        fixedBtn.addEventListener('click', function (e) {
-          e.preventDefault();
-
-          if (addToCartBtn.getBoundingClientRect().top < 0 || addToCartBtn.getBoundingClientRect().bottom > window.innerHeight) {
-            addToCartBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          }
-
-          const realClick = new MouseEvent('click', {
-            view: window,
-            bubbles: true,
-            cancelable: true,
-          });
-
-          addToCartBtn.dispatchEvent(realClick);
-        });
+    const checkVisibility = () => {
+      if (window.innerWidth > 1024) {
+        fixedBtnContainer.classList.remove('show');
+        return;
       }
 
-      const productId = {{ current_variant.id }};
-      const qtyInput = document.querySelector('[id^="qty-template"]');
-      const customButtonAddToCart = document.getElementById('pdp_main_add_to_cart_button');
+      const blockers = blockersSelectors.map(sel => document.querySelector(sel)).filter(el => el !== null);
 
-      function showAddToCartSuccess() {
-        const el = document.querySelector('.js-add-to-cart-product-succesful-text');
-        if (!el) return;
-
-        el.classList.add('active');
-
-        setTimeout(() => {
-          el.classList.remove('active');
-        }, 3000);
-      }
-      function updateCartCounter() {
-        fetch('/cart.js')
-          .then(res => res.json())
-          .then(cart => {
-            const count = cart.item_count;
-            const counter = document.querySelector('.cart-menu .count-holder [data-header-cart-count]');
-
-            if (counter) {
-              if (count > 0) {
-                counter.textContent = count;
-                counter.classList.add('visible');
-              } else {
-                counter.textContent = '';
-                counter.classList.remove('visible');
-              }
-            }
-          });
+      if (blockers.length === 0) {
+        fixedBtnContainer.classList.remove('show');
+        return;
       }
 
-      if (!customButtonAddToCart) return;
-
-      customButtonAddToCart.addEventListener('click', (event) => {
-        event.preventDefault();
-
-        const quantity = qtyInput ? Number(qtyInput.value) || 1 : 1;
-
-        const formData = {
-          items: [
-            {
-              id: productId,
-              quantity: quantity,
-            },
-          ],
-        };
-
-        fetch('/cart/add.js', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json',
-          },
-          body: JSON.stringify(formData),
-        })
-          .then((res) => res.json())
-          .then((data) => {
-            updateCartCounter();
-            showAddToCartSuccess();
-          })
-          .catch((error) => {
-          });
-
+      const isAnyVisible = blockers.some(el => {
+        const rect = el.getBoundingClientRect();
+        return rect.bottom > 0 && rect.top < window.innerHeight;
       });
-    });
+
+      if (isAnyVisible) {
+        fixedBtnContainer.classList.remove('show');
+      } else {
+        fixedBtnContainer.classList.add('show');
+      }
+    };
+
+    const initObserver = () => {
+      if (observer) observer.disconnect();
+
+      if (window.innerWidth > 1024) return;
+
+      const blockers = blockersSelectors.map(sel => document.querySelector(sel)).filter(el => el !== null);
+
+      if (blockers.length === 0) return;
+
+      observer = new IntersectionObserver(
+        () => {
+          checkVisibility();
+        },
+        { root: null, threshold: 0.1 }
+      );
+
+      blockers.forEach(el => observer.observe(el));
+
+      checkVisibility();
+    };
+
+    initObserver();
+
+    window.addEventListener('resize', initObserver);
+    window.addEventListener('scroll', checkVisibility);
+
+    if (fixedBtn && addToCartBtn) {
+      fixedBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        if (addToCartBtn.getBoundingClientRect().top < 0 || addToCartBtn.getBoundingClientRect().bottom > window.innerHeight) {
+          addToCartBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        const realClick = new MouseEvent('click', {
+          view: window,
+          bubbles: true,
+          cancelable: true
+        });
+
+        addToCartBtn.dispatchEvent(realClick);
+      });
+    }
+  });
 </script>
 
 {% schema %}

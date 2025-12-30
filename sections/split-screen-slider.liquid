@@ -1,7 +1,7 @@
 {%- if section.blocks.size > 0 -%}
 
   {{ 'section-split-screen-slider.css' | asset_url | stylesheet_tag }}
-
+  
   {%- if section.settings.desktop_layout == 'split' -%}
     {%- render 'custom-colors', id: section.id, background: section.settings.desktop_background, text: section.settings.desktop_text -%}
   {%- else -%}
@@ -35,11 +35,11 @@
         {%- endif -%}
         {%- liquid
           assign main_text_brightness = main_text | color_brightness
-          if main_text_brightness > 150
-            assign main_text_foreground = '#000'
-          else
-            assign main_text_foreground = '#fff'
-          endif
+          if main_text_brightness > 150 
+            assign main_text_foreground = '#000' 
+          else 
+            assign main_text_foreground = '#fff' 
+          endif 
         -%}
         --main-text-foreground: {{ main_text_foreground }};
       }
@@ -106,7 +106,7 @@
                   {%- endunless -%}
 
                   {%- unless block.settings.button_label == blank -%}
-                    <a class="button button--solid button--with-icon" {% unless block.settings.button_link == blank %} href="{{ block.settings.button_link }}" {% endunless %}>
+                    <a class="button button--solid button--with-icon" {% unless block.settings.button_link == blank %} href="{{ block.settings.button_link }}" {% endunless %}> 
                       <span>
                       {{ block.settings.button_label | escape }}</span>
                       <span class="icon" aria-hidden="true">{%- render 'theme-symbols', icon: 'arrow_icon_smallest' -%}</span>
@@ -120,7 +120,7 @@
             <div class="slider-item-media">
 
               {%- liquid
-                if section.index == 1 and forloop.first
+                if section.index == 1 and forloop.first 
                   assign preload = true
                 else
                   assign preload = false
@@ -184,7 +184,7 @@
                           if settings.show_preloader
                             render 'preloader'
                           endif
-
+                          
                         -%}
 
                       {%- if block.settings.video_object != blank -%}
@@ -254,7 +254,7 @@
             "type": "text",
             "id": "subtitle",
             "label": "t:sections.split-extra-words.settings_schema.headings.subtitle",
-            "default": "Showcase your trending products"
+            "default": "Showcase your best products"
           },
           {
             "type": "text",
@@ -323,7 +323,7 @@
           }
         ]
       }
-    ],
+    ],  
     "settings": [
       {
         "type": "header",
@@ -447,7 +447,7 @@
         "settings": {
           "tagline": "Introducing",
           "title": "Our brand new store",
-          "subtitle": "Showcase your trending products",
+          "subtitle": "Showcase your best products",
           "button_label": "Explore all"
         }
       },{
