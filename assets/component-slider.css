@@ -211,7 +211,7 @@ html[dir=ltr] .css-slider-next {
   .css-slider-navigation-container:before {
     content: "";
     width: 100%;
-    background: var(--grid-borders);
+    /*background: var(--grid-borders);*/
     position: absolute;
     left: 0;
     top: 0;
