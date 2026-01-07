@@ -51,6 +51,7 @@
 .site-footer .site-payment {
   max-width: 50vw;
   display: flex;
+  flex-wrap: wrap;
   gap: 4px;
   justify-content: flex-end;
   align-items: center;
