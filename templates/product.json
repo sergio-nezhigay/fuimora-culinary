@@ -41,7 +41,7 @@
           "settings": {
             "show_quantity_selector": true,
             "show_preorder": false,
-            "show_dynamic_checkout": true,
+            "show_dynamic_checkout": false,
             "show_gift_card_recipient": false,
             "btn_bg_color": "#bb2826",
             "btn_border_color": "#bb2826",
@@ -73,6 +73,9 @@
         "description",
         "share"
       ],
+      "custom_css": [
+        ".test1 {color: red;}"
+      ],
       "settings": {
         "gallery_style": "slider",
         "gallery_aspect": false,
@@ -97,7 +100,9 @@
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
             "review_data": "sample_data",
-            "max_width": 1200
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
           }
         }
       },

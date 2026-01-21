@@ -107,10 +107,12 @@
     "product_overlay_bg": "#262221",
     "product_overlay_txt": "#ffffff",
     "product_thumbnail_color_swatches": false,
-    "reviews_badge_desktop": "hover",
+    "reviews_badge_desktop": "always",
+    "reviews_badge_mobile": true,
     "reviews_app": "judgeme",
-    "product_card_badge_regular_background_color": "#262221",
-    "product_card_badge_regular_text_color": "#ffffff",
+    "product_card_show_badges": true,
+    "product_card_badge_regular_background_color": "#ffffff",
+    "product_card_badge_regular_text_color": "#262221",
     "product_card_badge_regular_border_color": "rgba(0,0,0,0)",
     "product_card_badge_sale_type": "text",
     "product_card_badge_sale_color": "#bb2826",
@@ -177,6 +179,8 @@
     }
   },
   "platform_customizations": {
-    "custom_css": []
+    "custom_css": [
+      ".test {color: red;}"
+    ]
   }
 }
